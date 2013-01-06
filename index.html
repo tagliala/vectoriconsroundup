@@ -6,6 +6,7 @@
   <title>Vector Icons Roundup - FontAwesome 3 vs FontAwesome 2 vs BS 3.0 Glyphicons vs Elusive icons</title>
   <meta name="description" content="Vector Icons Roundup: a comparison between FontAwesome, Twitter Bootstrap, Elusive"/>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <link rel="stylesheet" href="css/font-awesome3.css"/>
   <link rel="stylesheet" href="css/font-awesome2.css"/>
   <link rel="stylesheet" href="css/glyphicons.css"/>
@@ -16,8 +17,19 @@
     }
     td:not(:first-child) {
       text-align: center;
+      vertical-align: middle;
+    }
+    table.bordered-icons i::before  {
+      border: 1px solid red !important;
     }
   </style>
+  <script>
+    $(function() {
+      return $('#show-borders').on('change', function() {
+        return $('table').toggleClass('bordered-icons');
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="container">
@@ -36,6 +48,11 @@
       <li class="text-warning"><i class="icon3-circle"></i> <b>Icon with a mismatching name in FontAwesome</b></li>
     </ul>
     <hr/>
+    <form action="#">
+      <label class="checkbox inline">
+        <input type="checkbox" id="show-borders"> Show borders
+      </label>
+    </form>
     <table class="table">
       <thead>
         <tr>
