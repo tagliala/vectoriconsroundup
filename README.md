@@ -1,5 +1,6 @@
-Simple comparison between FontAwesome v3, FontAwesome v2, Bootstrap 3.0 and Elusive icons
+A side-by-side comparison between Font Awesome 3.1.1, Glyphicons 1.7 and Elusive-Icons
 
 * FontAwesome: https://github.com/FortAwesome/Font-Awesome
-* Bootstrap: https://github.com/twitter/bootstrap
-* Elusive: http://aristath.github.com/elusive-iconfont/
+* Elusive: http://shoestrap.org/downloads/elusive-icons-webfont/
+
+BS3.0 is under development
