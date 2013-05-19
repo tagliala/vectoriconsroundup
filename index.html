@@ -3,15 +3,18 @@
 <head>
   <meta charset='utf-8'/>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
-  <title>Vector Icons Roundup - FontAwesome 3 vs FontAwesome 2 vs BS 3.0 Glyphicons vs Elusive icons</title>
-  <meta name="description" content="Vector Icons Roundup: a comparison between FontAwesome, Twitter Bootstrap, Elusive"/>
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <link rel="stylesheet" href="css/font-awesome3.css"/>
-  <link rel="stylesheet" href="css/font-awesome2.css"/>
+  <title>Vector Icons Roundup - Font Awesome vs Glyphicons vs Elusive-Icons</title>
+  <meta name="description" content="Vector Icons Roundup: a comparison between FontAwesome, Glyphicons, Elusive-Icons"/>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/font-awesome.css"/>
   <link rel="stylesheet" href="css/glyphicons.css"/>
   <link rel="stylesheet" href="css/elusive-webfont.css"/>
   <style>
+    body {
+      font-family: 'Lato', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
     .table {
       width: auto
     }
@@ -19,10 +22,578 @@
       text-align: center;
       vertical-align: middle;
     }
+    td:last-child {
+      text-align: left;
+    }
     table.bordered-icons i::before  {
       border: 1px solid red !important;
     }
+    .jumbotron {
+      background: #0088cc;
+    }
+    .no-margin-bottom {
+      margin-bottom: 0;
+    }
+    #main-title {
+      padding: 40px 0;
+      color: #fff;
+    }
+    #main-title h2 {
+      font-size: 24.5px;
+    }
+    #asocial {
+      padding-top: 10px;
+      background: #eeeeee;
+    }
+    @media(max-width: 767px) {
+      #main-title,
+      #asocial {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      #main-title {
+        padding: 20px;
+      }
+      #main-title h1 {
+        font-size: 31.5px;
+      }
+      #main-title h2 {
+        line-height: 20px;
+        font-size: 17.5px;
+      }
+    }
+    @media(max-width: 479px) {
+      td:first-child,
+      td:last-child {
+        font-size: 10px;
+      }
+    }
   </style>
+</head>
+<body>
+  <div id="main-title" class="jumbotron">
+    <div class="container">
+      <h1>Vector Icons Roundup</h1>
+      <h2>A side-by-side comparison between popular icon fonts made for Bootstrap.</h2>
+    </div>
+  </div>
+  <div id="asocial">
+    <div class="container">
+      <ul class="inline">
+        <li><i class="fontawesome-github"></i> <a href="https://github.com/tagliala/vectoriconsroundup">tagliala/vectoriconsroundup</a></li>
+        <li><i class="fontawesome-twitter"></i> <a href="https://twitter.com/gtagliala">@gtagliala</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row text-center">
+      <div class="span12">
+        <h2>Three icon sets</h2>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="span4">
+        <h3 class="no-margin-bottom"><a href="http://fontawesome.io/">Font Awesome 3.1.1</a></h3>
+        <p>The iconic font designed for Bootstrap</p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=FortAwesome&repo=Font-Awesome&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=FortAwesome&repo=Font-Awesome&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20"></iframe>
+        <ul class="inline">
+          <li><i class="fontawesome-twitter"></i> <a href="http://twitter.com/byscuits">@byscuits</a></li>
+        </ul>
+      </div>
+      <div class="span4">
+        <h3 class="no-margin-bottom">Glyphicons 1.7</h3>
+        <p>Bootstrap 3.0's default icon font.</p>
+        <p class="muted">BS 3.0 is under development at the moment</p>
+      </div>
+      <div class="span4">
+        <h3 class="no-margin-bottom"><a href="http://shoestrap.org/downloads/elusive-icons-webfont/">Elusive-Icons</a></h3>
+        <p>283 Sleek vector icons for bootstrap.</p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=aristath&repo=elusive-iconfont&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=aristath&repo=elusive-iconfont&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20"></iframe>
+        <ul class="inline">
+          <li><i class="fontawesome-twitter"></i> <a href="https://twitter.com/aristath">@aristah</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row text-center">
+      <div class="span12">
+        <h2>One huge table</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <h4>Legend</h4>
+        <ul class="icons-ul">
+          <li class="text-error"><i class="icon-li fontawesome-circle"></i> <b>Missing icon</b></li>
+          <li class="text-warning"><i class="icon-li fontawesome-circle"></i> <b>Mismatching name / behaviour</b></li>
+        </ul>
+        <h4>Options</h4>
+        <form action="#">
+          <label class="checkbox inline">
+            <input type="checkbox" id="show-borders"> Show icon borders
+          </label>
+        </form>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Icon name</th>
+              <th>FA</th>
+              <th>GL</th>
+              <th>ELS</th>
+              <th>Personal Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>address-book</td><td><i class="fontawesome-address-book"></i></td><td><i class="glyphicon glyphicon-address-book"></i></td><td><i class="elusive-address-book"></i></td><td></td></tr>
+            <tr><td>address-book-alt</td><td><i class="fontawesome-address-book-alt"></i></td><td><i class="glyphicon glyphicon-address-book-alt"></i></td><td><i class="elusive-address-book-alt"></i></td><td></td></tr>
+            <tr><td>adjust</td><td><i class="fontawesome-adjust"></i></td><td><i class="glyphicon glyphicon-adjust"></i></td><td><i class="elusive-adjust"></i></td><td></td></tr>
+            <tr><td>adult</td><td><i class="fontawesome-adult"></i></td><td><i class="glyphicon glyphicon-adult"></i></td><td><i class="elusive-adult"></i></td><td></td></tr>
+            <tr><td>align-center</td><td><i class="fontawesome-align-center"></i></td><td><i class="glyphicon glyphicon-align-center"></i></td><td><i class="elusive-align-center"></i></td><td></td></tr>
+            <tr><td>align-justify</td><td><i class="fontawesome-align-justify"></i></td><td><i class="glyphicon glyphicon-align-justify"></i></td><td><i class="elusive-align-justify"></i></td><td></td></tr>
+            <tr><td>align-left</td><td><i class="fontawesome-align-left"></i></td><td><i class="glyphicon glyphicon-align-left"></i></td><td><i class="elusive-align-left"></i></td><td></td></tr>
+            <tr><td>align-right</td><td><i class="fontawesome-align-right"></i></td><td><i class="glyphicon glyphicon-align-right"></i></td><td><i class="elusive-align-right"></i></td><td></td></tr>
+            <tr><td>ambulance</td><td><i class="fontawesome-ambulance"></i></td><td><i class="glyphicon glyphicon-ambulance"></i></td><td><i class="elusive-ambulance"></i></td><td></td></tr>
+            <tr><td>anchor</td><td><i class="fontawesome-anchor"></i></td><td><i class="glyphicon glyphicon-anchor"></i></td><td><i class="elusive-anchor"></i></td><td></td></tr>
+            <tr><td>angle-down</td><td><i class="fontawesome-angle-down"></i></td><td><i class="glyphicon glyphicon-angle-down"></i></td><td><i class="elusive-angle-down"></i></td><td></td></tr>
+            <tr><td>angle-left</td><td><i class="fontawesome-angle-left"></i></td><td><i class="glyphicon glyphicon-angle-left"></i></td><td><i class="elusive-angle-left"></i></td><td></td></tr>
+            <tr><td>angle-right</td><td><i class="fontawesome-angle-right"></i></td><td><i class="glyphicon glyphicon-angle-right"></i></td><td><i class="elusive-angle-right"></i></td><td></td></tr>
+            <tr><td>angle-up</td><td><i class="fontawesome-angle-up"></i></td><td><i class="glyphicon glyphicon-angle-up"></i></td><td><i class="elusive-angle-up"></i></td><td></td></tr>
+            <tr><td>arrow-down</td><td><i class="fontawesome-arrow-down"></i></td><td><i class="glyphicon glyphicon-arrow-down"></i></td><td><i class="elusive-arrow-down"></i></td><td></td></tr>
+            <tr><td>arrow-left</td><td><i class="fontawesome-arrow-left"></i></td><td><i class="glyphicon glyphicon-arrow-left"></i></td><td><i class="elusive-arrow-left"></i></td><td></td></tr>
+            <tr><td>arrow-right</td><td><i class="fontawesome-arrow-right"></i></td><td><i class="glyphicon glyphicon-arrow-right"></i></td><td><i class="elusive-arrow-right"></i></td><td></td></tr>
+            <tr><td>arrow-up</td><td><i class="fontawesome-arrow-up"></i></td><td><i class="glyphicon glyphicon-arrow-up"></i></td><td><i class="elusive-arrow-up"></i></td><td></td></tr>
+            <tr><td>asl</td><td><i class="fontawesome-asl"></i></td><td><i class="glyphicon glyphicon-asl"></i></td><td><i class="elusive-asl"></i></td><td></td></tr>
+            <tr><td>asterisk</td><td><i class="fontawesome-asterisk"></i></td><td><i class="glyphicon glyphicon-asterisk"></i></td><td><i class="elusive-asterisk"></i></td><td></td></tr>
+            <tr><td>backward</td><td><i class="fontawesome-backward"></i></td><td><i class="glyphicon glyphicon-backward"></i></td><td><i class="elusive-backward"></i></td><td></td></tr>
+            <tr><td>ban-circle</td><td><i class="fontawesome-ban-circle"></i></td><td><i class="glyphicon glyphicon-ban-circle"></i></td><td><i class="elusive-ban-circle"></i></td><td></td></tr>
+            <tr><td>bar-chart</td><td><i class="fontawesome-bar-chart"></i></td><td><i class="glyphicon glyphicon-bar-chart"></i></td><td><i class="elusive-bar-chart"></i></td><td></td></tr>
+            <tr><td>barcode</td><td><i class="fontawesome-barcode"></i></td><td><i class="glyphicon glyphicon-barcode"></i></td><td><i class="elusive-barcode"></i></td><td></td></tr>
+            <tr><td>beaker</td><td><i class="fontawesome-beaker"></i></td><td><i class="glyphicon glyphicon-beaker"></i></td><td><i class="elusive-beaker"></i></td><td></td></tr>
+            <tr><td>beer</td><td><i class="fontawesome-beer"></i></td><td><i class="glyphicon glyphicon-beer"></i></td><td><i class="elusive-beer"></i></td><td></td></tr>
+            <tr><td>behance</td><td><i class="fontawesome-behance"></i></td><td><i class="glyphicon glyphicon-behance"></i></td><td><i class="elusive-behance"></i></td><td></td></tr>
+            <tr class="warning"><td>bell</td><td><i class="fontawesome-bell"></i></td><td><i class="glyphicon glyphicon-bell"></i></td><td><i class="elusive-bell"></i></td><td><small class="muted">FA should rename as <code>bell-alt</code></small></td></tr>
+            <tr class="warning"><td>bell-alt</td><td><i class="fontawesome-bell-alt"></i></td><td><i class="glyphicon glyphicon-bell-alt"></i></td><td><i class="elusive-bell-alt"></i></td><td><small class="muted">FA should rename as <code>bell</code></small></td></tr>
+            <tr><td>blind</td><td><i class="fontawesome-blind"></i></td><td><i class="glyphicon glyphicon-blind"></i></td><td><i class="elusive-blind"></i></td><td></td></tr>
+            <tr><td>blogger</td><td><i class="fontawesome-blogger"></i></td><td><i class="glyphicon glyphicon-blogger"></i></td><td><i class="elusive-blogger"></i></td><td></td></tr>
+            <tr><td>bold</td><td><i class="fontawesome-bold"></i></td><td><i class="glyphicon glyphicon-bold"></i></td><td><i class="elusive-bold"></i></td><td></td></tr>
+            <tr><td>bolt</td><td><i class="fontawesome-bolt"></i></td><td><i class="glyphicon glyphicon-bolt"></i></td><td><i class="elusive-bolt"></i></td><td></td></tr>
+            <tr><td>book</td><td><i class="fontawesome-book"></i></td><td><i class="glyphicon glyphicon-book"></i></td><td><i class="elusive-book"></i></td><td></td></tr>
+            <tr><td>bookmark</td><td><i class="fontawesome-bookmark"></i></td><td><i class="glyphicon glyphicon-bookmark"></i></td><td><i class="elusive-bookmark"></i></td><td></td></tr>
+            <tr><td>bookmark-empty</td><td><i class="fontawesome-bookmark-empty"></i></td><td><i class="glyphicon glyphicon-bookmark-empty"></i></td><td><i class="elusive-bookmark-empty"></i></td><td></td></tr>
+            <tr><td>braille</td><td><i class="fontawesome-braille"></i></td><td><i class="glyphicon glyphicon-braille"></i></td><td><i class="elusive-braille"></i></td><td></td></tr>
+            <tr><td>briefcase</td><td><i class="fontawesome-briefcase"></i></td><td><i class="glyphicon glyphicon-briefcase"></i></td><td><i class="elusive-briefcase"></i></td><td></td></tr>
+            <tr><td>broom</td><td><i class="fontawesome-broom"></i></td><td><i class="glyphicon glyphicon-broom"></i></td><td><i class="elusive-broom"></i></td><td></td></tr>
+            <tr><td>building</td><td><i class="fontawesome-building"></i></td><td><i class="glyphicon glyphicon-building"></i></td><td><i class="elusive-building"></i></td><td></td></tr>
+            <tr><td>bullhorn</td><td><i class="fontawesome-bullhorn"></i></td><td><i class="glyphicon glyphicon-bullhorn"></i></td><td><i class="elusive-bullhorn"></i></td><td></td></tr>
+            <tr><td>bullseye</td><td><i class="fontawesome-bullseye"></i></td><td><i class="glyphicon glyphicon-bullseye"></i></td><td><i class="elusive-bullseye"></i></td><td></td></tr>
+            <tr><td>calendar</td><td><i class="fontawesome-calendar"></i></td><td><i class="glyphicon glyphicon-calendar"></i></td><td><i class="elusive-calendar"></i></td><td></td></tr>
+            <tr><td>calendar-empty</td><td><i class="fontawesome-calendar-empty"></i></td><td><i class="glyphicon glyphicon-calendar-empty"></i></td><td><i class="elusive-calendar-empty"></i></td><td></td></tr>
+            <tr><td>calendar-sign</td><td><i class="fontawesome-calendar-sign"></i></td><td><i class="glyphicon glyphicon-calendar-sign"></i></td><td><i class="elusive-calendar-sign"></i></td><td></td></tr>
+            <tr><td>camera</td><td><i class="fontawesome-camera"></i></td><td><i class="glyphicon glyphicon-camera"></i></td><td><i class="elusive-camera"></i></td><td></td></tr>
+            <tr><td>camera-retro</td><td><i class="fontawesome-camera-retro"></i></td><td><i class="glyphicon glyphicon-camera-retro"></i></td><td><i class="elusive-camera-retro"></i></td><td></td></tr>
+            <tr><td>caret-down</td><td><i class="fontawesome-caret-down"></i></td><td><i class="glyphicon glyphicon-caret-down"></i></td><td><i class="elusive-caret-down"></i></td><td></td></tr>
+            <tr><td>caret-left</td><td><i class="fontawesome-caret-left"></i></td><td><i class="glyphicon glyphicon-caret-left"></i></td><td><i class="elusive-caret-left"></i></td><td></td></tr>
+            <tr><td>caret-right</td><td><i class="fontawesome-caret-right"></i></td><td><i class="glyphicon glyphicon-caret-right"></i></td><td><i class="elusive-caret-right"></i></td><td></td></tr>
+            <tr><td>caret-up</td><td><i class="fontawesome-caret-up"></i></td><td><i class="glyphicon glyphicon-caret-up"></i></td><td><i class="elusive-caret-up"></i></td><td></td></tr>
+            <tr><td>cc</td><td><i class="fontawesome-cc"></i></td><td><i class="glyphicon glyphicon-cc"></i></td><td><i class="elusive-cc"></i></td><td></td></tr>
+            <tr><td>certificate</td><td><i class="fontawesome-certificate"></i></td><td><i class="glyphicon glyphicon-certificate"></i></td><td><i class="elusive-certificate"></i></td><td></td></tr>
+            <tr><td>check</td><td><i class="fontawesome-check"></i></td><td><i class="glyphicon glyphicon-check"></i></td><td><i class="elusive-check"></i></td><td></td></tr>
+            <tr class="warning"><td>check-empty</td><td><i class="fontawesome-check-empty"></i></td><td><i class="glyphicon glyphicon-check-empty"></i></td><td><i class="elusive-check-empty"></i></td><td><small class="muted">Should rename/alias as <code>unchecked</code></small></td></tr>
+            <tr><td>check-minus</td><td><i class="fontawesome-check-minus"></i></td><td><i class="glyphicon glyphicon-check-minus"></i></td><td><i class="elusive-check-minus"></i></td><td></td></tr>
+            <tr><td>check-sign</td><td><i class="fontawesome-check-sign"></i></td><td><i class="glyphicon glyphicon-check-sign"></i></td><td><i class="elusive-check-sign"></i></td><td></td></tr>
+            <tr><td>chevron-down</td><td><i class="fontawesome-chevron-down"></i></td><td><i class="glyphicon glyphicon-chevron-down"></i></td><td><i class="elusive-chevron-down"></i></td><td></td></tr>
+            <tr><td>chevron-down</td><td><i class="fontawesome-chevron-down"></i></td><td><i class="glyphicon glyphicon-chevron-down"></i></td><td><i class="elusive-chevron-down"></i></td><td></td></tr>
+            <tr><td>chevron-left</td><td><i class="fontawesome-chevron-left"></i></td><td><i class="glyphicon glyphicon-chevron-left"></i></td><td><i class="elusive-chevron-left"></i></td><td></td></tr>
+            <tr><td>chevron-left</td><td><i class="fontawesome-chevron-left"></i></td><td><i class="glyphicon glyphicon-chevron-left"></i></td><td><i class="elusive-chevron-left"></i></td><td></td></tr>
+            <tr><td>chevron-right</td><td><i class="fontawesome-chevron-right"></i></td><td><i class="glyphicon glyphicon-chevron-right"></i></td><td><i class="elusive-chevron-right"></i></td><td></td></tr>
+            <tr><td>chevron-right</td><td><i class="fontawesome-chevron-right"></i></td><td><i class="glyphicon glyphicon-chevron-right"></i></td><td><i class="elusive-chevron-right"></i></td><td></td></tr>
+            <tr><td>chevron-sign-down</td><td><i class="fontawesome-chevron-sign-down"></i></td><td><i class="glyphicon glyphicon-chevron-sign-down"></i></td><td><i class="elusive-chevron-sign-down"></i></td><td></td></tr>
+            <tr><td>chevron-sign-left</td><td><i class="fontawesome-chevron-sign-left"></i></td><td><i class="glyphicon glyphicon-chevron-sign-left"></i></td><td><i class="elusive-chevron-sign-left"></i></td><td></td></tr>
+            <tr><td>chevron-sign-right</td><td><i class="fontawesome-chevron-sign-right"></i></td><td><i class="glyphicon glyphicon-chevron-sign-right"></i></td><td><i class="elusive-chevron-sign-right"></i></td><td></td></tr>
+            <tr><td>chevron-sign-up</td><td><i class="fontawesome-chevron-sign-up"></i></td><td><i class="glyphicon glyphicon-chevron-sign-up"></i></td><td><i class="elusive-chevron-sign-up"></i></td><td></td></tr>
+            <tr><td>chevron-up</td><td><i class="fontawesome-chevron-up"></i></td><td><i class="glyphicon glyphicon-chevron-up"></i></td><td><i class="elusive-chevron-up"></i></td><td></td></tr>
+            <tr><td>child</td><td><i class="fontawesome-child"></i></td><td><i class="glyphicon glyphicon-child"></i></td><td><i class="elusive-child"></i></td><td></td></tr>
+            <tr><td>circle</td><td><i class="fontawesome-circle"></i></td><td><i class="glyphicon glyphicon-circle"></i></td><td><i class="elusive-circle"></i></td><td></td></tr>
+            <tr><td>circle-arrow-down</td><td><i class="fontawesome-circle-arrow-down"></i></td><td><i class="glyphicon glyphicon-circle-arrow-down"></i></td><td><i class="elusive-circle-arrow-down"></i></td><td></td></tr>
+            <tr><td>circle-arrow-left</td><td><i class="fontawesome-circle-arrow-left"></i></td><td><i class="glyphicon glyphicon-circle-arrow-left"></i></td><td><i class="elusive-circle-arrow-left"></i></td><td></td></tr>
+            <tr><td>circle-arrow-right</td><td><i class="fontawesome-circle-arrow-right"></i></td><td><i class="glyphicon glyphicon-circle-arrow-right"></i></td><td><i class="elusive-circle-arrow-right"></i></td><td></td></tr>
+            <tr><td>circle-arrow-up</td><td><i class="fontawesome-circle-arrow-up"></i></td><td><i class="glyphicon glyphicon-circle-arrow-up"></i></td><td><i class="elusive-circle-arrow-up"></i></td><td></td></tr>
+            <tr><td>circle-blank</td><td><i class="fontawesome-circle-blank"></i></td><td><i class="glyphicon glyphicon-circle-blank"></i></td><td><i class="elusive-circle-blank"></i></td><td></td></tr>
+            <tr><td>cloud</td><td><i class="fontawesome-cloud"></i></td><td><i class="glyphicon glyphicon-cloud"></i></td><td><i class="elusive-cloud"></i></td><td></td></tr>
+            <tr><td>cloud-alt</td><td><i class="fontawesome-cloud-alt"></i></td><td><i class="glyphicon glyphicon-cloud-alt"></i></td><td><i class="elusive-cloud-alt"></i></td><td></td></tr>
+            <tr><td>cloud-download</td><td><i class="fontawesome-cloud-download"></i></td><td><i class="glyphicon glyphicon-cloud-download"></i></td><td><i class="elusive-cloud-download"></i></td><td></td></tr>
+            <tr><td>cloud-upload</td><td><i class="fontawesome-cloud-upload"></i></td><td><i class="glyphicon glyphicon-cloud-upload"></i></td><td><i class="elusive-cloud-upload"></i></td><td></td></tr>
+            <tr><td>code</td><td><i class="fontawesome-code"></i></td><td><i class="glyphicon glyphicon-code"></i></td><td><i class="elusive-code"></i></td><td></td></tr>
+            <tr><td>code-fork</td><td><i class="fontawesome-code-fork"></i></td><td><i class="glyphicon glyphicon-code-fork"></i></td><td><i class="elusive-code-fork"></i></td><td></td></tr>
+            <tr><td>coffee</td><td><i class="fontawesome-coffee"></i></td><td><i class="glyphicon glyphicon-coffee"></i></td><td><i class="elusive-coffee"></i></td><td></td></tr>
+            <tr><td>cog</td><td><i class="fontawesome-cog"></i></td><td><i class="glyphicon glyphicon-cog"></i></td><td><i class="elusive-cog"></i></td><td></td></tr>
+            <tr><td>cog-alt</td><td><i class="fontawesome-cog-alt"></i></td><td><i class="glyphicon glyphicon-cog-alt"></i></td><td><i class="elusive-cog-alt"></i></td><td></td></tr>
+            <tr><td>cogs</td><td><i class="fontawesome-cogs"></i></td><td><i class="glyphicon glyphicon-cogs"></i></td><td><i class="elusive-cogs"></i></td><td></td></tr>
+            <tr class="error"><td>collapse</td><td><i class="fontawesome-collapse"></i></td><td><i class="glyphicon glyphicon-collapse"></i></td><td><i class="elusive-collapse"></i></td><td></td></tr>
+            <tr><td>collapse-alt</td><td><i class="fontawesome-collapse-alt"></i></td><td><i class="glyphicon glyphicon-collapse-alt"></i></td><td><i class="elusive-collapse-alt"></i></td><td></td></tr>
+            <tr class="error"><td>collapse-top</td><td><i class="fontawesome-collapse-top"></i></td><td><i class="glyphicon glyphicon-collapse-top"></i></td><td><i class="elusive-collapse-top"></i></td><td></td></tr>
+            <tr><td>columns</td><td><i class="fontawesome-columns"></i></td><td><i class="glyphicon glyphicon-columns"></i></td><td><i class="elusive-columns"></i></td><td></td></tr>
+            <tr><td>comment</td><td><i class="fontawesome-comment"></i></td><td><i class="glyphicon glyphicon-comment"></i></td><td><i class="elusive-comment"></i></td><td></td></tr>
+            <tr><td>comment-alt</td><td><i class="fontawesome-comment-alt"></i></td><td><i class="glyphicon glyphicon-comment-alt"></i></td><td><i class="elusive-comment-alt"></i></td><td></td></tr>
+            <tr><td>comments</td><td><i class="fontawesome-comments"></i></td><td><i class="glyphicon glyphicon-comments"></i></td><td><i class="elusive-comments"></i></td><td></td></tr>
+            <tr><td>comments-alt</td><td><i class="fontawesome-comments-alt"></i></td><td><i class="glyphicon glyphicon-comments-alt"></i></td><td><i class="elusive-comments-alt"></i></td><td></td></tr>
+            <tr><td>compass</td><td><i class="fontawesome-compass"></i></td><td><i class="glyphicon glyphicon-compass"></i></td><td><i class="elusive-compass"></i></td><td></td></tr>
+            <tr><td>compass-alt</td><td><i class="fontawesome-compass-alt"></i></td><td><i class="glyphicon glyphicon-compass-alt"></i></td><td><i class="elusive-compass-alt"></i></td><td></td></tr>
+            <tr><td>copy</td><td><i class="fontawesome-copy"></i></td><td><i class="glyphicon glyphicon-copy"></i></td><td><i class="elusive-copy"></i></td><td></td></tr>
+            <tr><td>credit-card</td><td><i class="fontawesome-credit-card"></i></td><td><i class="glyphicon glyphicon-credit-card"></i></td><td><i class="elusive-credit-card"></i></td><td></td></tr>
+            <tr><td>crop</td><td><i class="fontawesome-crop"></i></td><td><i class="glyphicon glyphicon-crop"></i></td><td><i class="elusive-crop"></i></td><td></td></tr>
+            <tr><td>css</td><td><i class="fontawesome-css"></i></td><td><i class="glyphicon glyphicon-css"></i></td><td><i class="elusive-css"></i></td><td></td></tr>
+            <tr><td>css3</td><td><i class="fontawesome-css3"></i></td><td><i class="glyphicon glyphicon-css3"></i></td><td><i class="elusive-css3"></i></td><td></td></tr>
+            <tr><td>cut</td><td><i class="fontawesome-cut"></i></td><td><i class="glyphicon glyphicon-cut"></i></td><td><i class="elusive-cut"></i></td><td></td></tr>
+            <tr><td>dashboard</td><td><i class="fontawesome-dashboard"></i></td><td><i class="glyphicon glyphicon-dashboard"></i></td><td><i class="elusive-dashboard"></i></td><td></td></tr>
+            <tr><td>delicious</td><td><i class="fontawesome-delicious"></i></td><td><i class="glyphicon glyphicon-delicious"></i></td><td><i class="elusive-delicious"></i></td><td></td></tr>
+            <tr><td>desktop</td><td><i class="fontawesome-desktop"></i></td><td><i class="glyphicon glyphicon-desktop"></i></td><td><i class="elusive-desktop"></i></td><td></td></tr>
+            <tr><td>deviantart</td><td><i class="fontawesome-deviantart"></i></td><td><i class="glyphicon glyphicon-deviantart"></i></td><td><i class="elusive-deviantart"></i></td><td></td></tr>
+            <tr><td>digg</td><td><i class="fontawesome-digg"></i></td><td><i class="glyphicon glyphicon-digg"></i></td><td><i class="elusive-digg"></i></td><td></td></tr>
+            <tr><td>double-angle-down</td><td><i class="fontawesome-double-angle-down"></i></td><td><i class="glyphicon glyphicon-double-angle-down"></i></td><td><i class="elusive-double-angle-down"></i></td><td></td></tr>
+            <tr><td>double-angle-left</td><td><i class="fontawesome-double-angle-left"></i></td><td><i class="glyphicon glyphicon-double-angle-left"></i></td><td><i class="elusive-double-angle-left"></i></td><td></td></tr>
+            <tr><td>double-angle-right</td><td><i class="fontawesome-double-angle-right"></i></td><td><i class="glyphicon glyphicon-double-angle-right"></i></td><td><i class="elusive-double-angle-right"></i></td><td></td></tr>
+            <tr><td>double-angle-up</td><td><i class="fontawesome-double-angle-up"></i></td><td><i class="glyphicon glyphicon-double-angle-up"></i></td><td><i class="elusive-double-angle-up"></i></td><td></td></tr>
+            <tr><td>download</td><td><i class="fontawesome-download"></i></td><td><i class="glyphicon glyphicon-download"></i></td><td><i class="elusive-download"></i></td><td></td></tr>
+            <tr><td>download-alt</td><td><i class="fontawesome-download-alt"></i></td><td><i class="glyphicon glyphicon-download-alt"></i></td><td><i class="elusive-download-alt"></i></td><td></td></tr>
+            <tr><td>dribble</td><td><i class="fontawesome-dribble"></i></td><td><i class="glyphicon glyphicon-dribble"></i></td><td><i class="elusive-dribble"></i></td><td></td></tr>
+            <tr><td>edit</td><td><i class="fontawesome-edit"></i></td><td><i class="glyphicon glyphicon-edit"></i></td><td><i class="elusive-edit"></i></td><td></td></tr>
+            <tr><td>edit-sign</td><td><i class="fontawesome-edit-sign"></i></td><td><i class="glyphicon glyphicon-edit-sign"></i></td><td><i class="elusive-edit-sign"></i></td><td></td></tr>
+            <tr><td>eject</td><td><i class="fontawesome-eject"></i></td><td><i class="glyphicon glyphicon-eject"></i></td><td><i class="elusive-eject"></i></td><td></td></tr>
+            <tr><td>ellipsis-horizontal</td><td><i class="fontawesome-ellipsis-horizontal"></i></td><td><i class="glyphicon glyphicon-ellipsis-horizontal"></i></td><td><i class="elusive-ellipsis-horizontal"></i></td><td></td></tr>
+            <tr><td>ellipsis-vertical</td><td><i class="fontawesome-ellipsis-vertical"></i></td><td><i class="glyphicon glyphicon-ellipsis-vertical"></i></td><td><i class="elusive-ellipsis-vertical"></i></td><td></td></tr>
+            <tr class="warning"><td>envelope</td><td><i class="fontawesome-envelope"></i></td><td><i class="glyphicon glyphicon-envelope"></i></td><td><i class="elusive-envelope"></i></td><td><small class="muted">FA should rename as <code>envelope-alt</code></small></td></tr>
+            <tr class="warning"><td>envelope-alt</td><td><i class="fontawesome-envelope-alt"></i></td><td><i class="glyphicon glyphicon-envelope-alt"></i></td><td><i class="elusive-envelope-alt"></i></td><td><small class="muted">FA should rename as <code>envelope</code></small></td></tr>
+            <tr><td>eraser</td><td><i class="fontawesome-eraser"></i></td><td><i class="glyphicon glyphicon-eraser"></i></td><td><i class="elusive-eraser"></i></td><td></td></tr>
+            <tr><td>error</td><td><i class="fontawesome-error"></i></td><td><i class="glyphicon glyphicon-error"></i></td><td><i class="elusive-error"></i></td><td></td></tr>
+            <tr><td>error-alt</td><td><i class="fontawesome-error-alt"></i></td><td><i class="glyphicon glyphicon-error-alt"></i></td><td><i class="elusive-error-alt"></i></td><td></td></tr>
+            <tr class="error"><td>euro</td><td><i class="fontawesome-euro"></i></td><td><i class="glyphicon glyphicon-euro"></i></td><td><i class="elusive-euro"></i></td><td></td></tr>
+            <tr><td>exchange</td><td><i class="fontawesome-exchange"></i></td><td><i class="glyphicon glyphicon-exchange"></i></td><td><i class="elusive-exchange"></i></td><td></td></tr>
+            <tr><td>exclamation</td><td><i class="fontawesome-exclamation"></i></td><td><i class="glyphicon glyphicon-exclamation"></i></td><td><i class="elusive-exclamation"></i></td><td></td></tr>
+            <tr><td>exclamation-sign</td><td><i class="fontawesome-exclamation-sign"></i></td><td><i class="glyphicon glyphicon-exclamation-sign"></i></td><td><i class="elusive-exclamation-sign"></i></td><td></td></tr>
+            <tr class="error"><td>expand</td><td><i class="fontawesome-expand"></i></td><td><i class="glyphicon glyphicon-expand"></i></td><td><i class="elusive-expand"></i></td><td></td></tr>
+            <tr><td>expand-alt</td><td><i class="fontawesome-expand-alt"></i></td><td><i class="glyphicon glyphicon-expand-alt"></i></td><td><i class="elusive-expand-alt"></i></td><td></td></tr>
+            <tr><td>external-link</td><td><i class="fontawesome-external-link"></i></td><td><i class="glyphicon glyphicon-external-link"></i></td><td><i class="elusive-external-link"></i></td><td></td></tr>
+            <tr><td>external-link-sign</td><td><i class="fontawesome-external-link-sign"></i></td><td><i class="glyphicon glyphicon-external-link-sign"></i></td><td><i class="elusive-external-link-sign"></i></td><td></td></tr>
+            <tr><td>eye-close</td><td><i class="fontawesome-eye-close"></i></td><td><i class="glyphicon glyphicon-eye-close"></i></td><td><i class="elusive-eye-close"></i></td><td></td></tr>
+            <tr><td>eye-open</td><td><i class="fontawesome-eye-open"></i></td><td><i class="glyphicon glyphicon-eye-open"></i></td><td><i class="elusive-eye-open"></i></td><td></td></tr>
+            <tr><td>facebook</td><td><i class="fontawesome-facebook"></i></td><td><i class="glyphicon glyphicon-facebook"></i></td><td><i class="elusive-facebook"></i></td><td></td></tr>
+            <tr><td>facebook-sign</td><td><i class="fontawesome-facebook-sign"></i></td><td><i class="glyphicon glyphicon-facebook-sign"></i></td><td><i class="elusive-facebook-sign"></i></td><td></td></tr>
+            <tr><td>facetime-video</td><td><i class="fontawesome-facetime-video"></i></td><td><i class="glyphicon glyphicon-facetime-video"></i></td><td><i class="elusive-facetime-video"></i></td><td></td></tr>
+            <tr><td>fast-backward</td><td><i class="fontawesome-fast-backward"></i></td><td><i class="glyphicon glyphicon-fast-backward"></i></td><td><i class="elusive-fast-backward"></i></td><td></td></tr>
+            <tr><td>fast-forward</td><td><i class="fontawesome-fast-forward"></i></td><td><i class="glyphicon glyphicon-fast-forward"></i></td><td><i class="elusive-fast-forward"></i></td><td></td></tr>
+            <tr><td>female</td><td><i class="fontawesome-female"></i></td><td><i class="glyphicon glyphicon-female"></i></td><td><i class="elusive-female"></i></td><td></td></tr>
+            <tr><td>fighter-jet</td><td><i class="fontawesome-fighter-jet"></i></td><td><i class="glyphicon glyphicon-fighter-jet"></i></td><td><i class="elusive-fighter-jet"></i></td><td></td></tr>
+            <tr class="warning"><td>file</td><td><i class="fontawesome-file"></i></td><td><i class="glyphicon glyphicon-file"></i></td><td><i class="elusive-file"></i></td><td><small class="muted">FA should be filled up</small></td></tr>
+            <tr><td>file-alt</td><td><i class="fontawesome-file-alt"></i></td><td><i class="glyphicon glyphicon-file-alt"></i></td><td><i class="elusive-file-alt"></i></td><td></td></tr>
+            <tr><td>file-edit</td><td><i class="fontawesome-file-edit"></i></td><td><i class="glyphicon glyphicon-file-edit"></i></td><td><i class="elusive-file-edit"></i></td><td></td></tr>
+            <tr><td>file-edit-alt</td><td><i class="fontawesome-file-edit-alt"></i></td><td><i class="glyphicon glyphicon-file-edit-alt"></i></td><td><i class="elusive-file-edit-alt"></i></td><td></td></tr>
+            <tr><td>file-new</td><td><i class="fontawesome-file-new"></i></td><td><i class="glyphicon glyphicon-file-new"></i></td><td><i class="elusive-file-new"></i></td><td></td></tr>
+            <tr><td>file-new-alt</td><td><i class="fontawesome-file-new-alt"></i></td><td><i class="glyphicon glyphicon-file-new-alt"></i></td><td><i class="elusive-file-new-alt"></i></td><td></td></tr>
+            <tr><td>film</td><td><i class="fontawesome-film"></i></td><td><i class="glyphicon glyphicon-film"></i></td><td><i class="elusive-film"></i></td><td></td></tr>
+            <tr><td>filter</td><td><i class="fontawesome-filter"></i></td><td><i class="glyphicon glyphicon-filter"></i></td><td><i class="elusive-filter"></i></td><td></td></tr>
+            <tr><td>fire</td><td><i class="fontawesome-fire"></i></td><td><i class="glyphicon glyphicon-fire"></i></td><td><i class="elusive-fire"></i></td><td></td></tr>
+            <tr><td>fire-extinguisher</td><td><i class="fontawesome-fire-extinguisher"></i></td><td><i class="glyphicon glyphicon-fire-extinguisher"></i></td><td><i class="elusive-fire-extinguisher"></i></td><td></td></tr>
+            <tr><td>flag</td><td><i class="fontawesome-flag"></i></td><td><i class="glyphicon glyphicon-flag"></i></td><td><i class="elusive-flag"></i></td><td></td></tr>
+            <tr><td>flag-alt</td><td><i class="fontawesome-flag-alt"></i></td><td><i class="glyphicon glyphicon-flag-alt"></i></td><td><i class="elusive-flag-alt"></i></td><td></td></tr>
+            <tr><td>flag-checkered</td><td><i class="fontawesome-flag-checkered"></i></td><td><i class="glyphicon glyphicon-flag-checkered"></i></td><td><i class="elusive-flag-checkered"></i></td><td></td></tr>
+            <tr><td>flickr</td><td><i class="fontawesome-flickr"></i></td><td><i class="glyphicon glyphicon-flickr"></i></td><td><i class="elusive-flickr"></i></td><td></td></tr>
+            <tr><td>folder</td><td><i class="fontawesome-folder"></i></td><td><i class="glyphicon glyphicon-folder"></i></td><td><i class="elusive-folder"></i></td><td></td></tr>
+            <tr><td>folder-close</td><td><i class="fontawesome-folder-close"></i></td><td><i class="glyphicon glyphicon-folder-close"></i></td><td><i class="elusive-folder-close"></i></td><td></td></tr>
+            <tr><td>folder-close-alt</td><td><i class="fontawesome-folder-close-alt"></i></td><td><i class="glyphicon glyphicon-folder-close-alt"></i></td><td><i class="elusive-folder-close-alt"></i></td><td></td></tr>
+            <tr><td>folder-open</td><td><i class="fontawesome-folder-open"></i></td><td><i class="glyphicon glyphicon-folder-open"></i></td><td><i class="elusive-folder-open"></i></td><td></td></tr>
+            <tr><td>folder-open-alt</td><td><i class="fontawesome-folder-open-alt"></i></td><td><i class="glyphicon glyphicon-folder-open-alt"></i></td><td><i class="elusive-folder-open-alt"></i></td><td></td></tr>
+            <tr><td>folder-sign</td><td><i class="fontawesome-folder-sign"></i></td><td><i class="glyphicon glyphicon-folder-sign"></i></td><td><i class="elusive-folder-sign"></i></td><td></td></tr>
+            <tr><td>font</td><td><i class="fontawesome-font"></i></td><td><i class="glyphicon glyphicon-font"></i></td><td><i class="elusive-font"></i></td><td></td></tr>
+            <tr><td>fontsize</td><td><i class="fontawesome-fontsize"></i></td><td><i class="glyphicon glyphicon-fontsize"></i></td><td><i class="elusive-fontsize"></i></td><td></td></tr>
+            <tr><td>food</td><td><i class="fontawesome-food"></i></td><td><i class="glyphicon glyphicon-food"></i></td><td><i class="elusive-food"></i></td><td></td></tr>
+            <tr><td>fork</td><td><i class="fontawesome-fork"></i></td><td><i class="glyphicon glyphicon-fork"></i></td><td><i class="elusive-fork"></i></td><td></td></tr>
+            <tr><td>forward</td><td><i class="fontawesome-forward"></i></td><td><i class="glyphicon glyphicon-forward"></i></td><td><i class="elusive-forward"></i></td><td></td></tr>
+            <tr><td>forward-alt</td><td><i class="fontawesome-forward-alt"></i></td><td><i class="glyphicon glyphicon-forward-alt"></i></td><td><i class="elusive-forward-alt"></i></td><td></td></tr>
+            <tr><td>foursquare</td><td><i class="fontawesome-foursquare"></i></td><td><i class="glyphicon glyphicon-foursquare"></i></td><td><i class="elusive-foursquare"></i></td><td></td></tr>
+            <tr><td>friendfeed</td><td><i class="fontawesome-friendfeed"></i></td><td><i class="glyphicon glyphicon-friendfeed"></i></td><td><i class="elusive-friendfeed"></i></td><td></td></tr>
+            <tr><td>friendfeed-rect</td><td><i class="fontawesome-friendfeed-rect"></i></td><td><i class="glyphicon glyphicon-friendfeed-rect"></i></td><td><i class="elusive-friendfeed-rect"></i></td><td></td></tr>
+            <tr><td>frown</td><td><i class="fontawesome-frown"></i></td><td><i class="glyphicon glyphicon-frown"></i></td><td><i class="elusive-frown"></i></td><td></td></tr>
+            <tr><td>fullscreen</td><td><i class="fontawesome-fullscreen"></i></td><td><i class="glyphicon glyphicon-fullscreen"></i></td><td><i class="elusive-fullscreen"></i></td><td></td></tr>
+            <tr><td>gamepad</td><td><i class="fontawesome-gamepad"></i></td><td><i class="glyphicon glyphicon-gamepad"></i></td><td><i class="elusive-gamepad"></i></td><td></td></tr>
+            <tr class="error"><td>gbp</td><td><i class="fontawesome-gbp"></i></td><td><i class="glyphicon glyphicon-gbp"></i></td><td><i class="elusive-gbp"></i></td><td></td></tr>
+            <tr><td>gift</td><td><i class="fontawesome-gift"></i></td><td><i class="glyphicon glyphicon-gift"></i></td><td><i class="elusive-gift"></i></td><td></td></tr>
+            <tr><td>github</td><td><i class="fontawesome-github"></i></td><td><i class="glyphicon glyphicon-github"></i></td><td><i class="elusive-github"></i></td><td></td></tr>
+            <!-- <tr><td>github-alt</td><td><i class="fontawesome-github-alt"></i></td><td><i class="glyphicon glyphicon-github-alt"></i></td><td><i class="elusive-github-alt"></i></td><td></td></tr> -->
+            <tr><td>github-sign</td><td><i class="fontawesome-github-sign"></i></td><td><i class="glyphicon glyphicon-github-sign"></i></td><td><i class="elusive-github-sign"></i></td><td></td></tr>
+            <tr><td>github-text</td><td><i class="fontawesome-github-text"></i></td><td><i class="glyphicon glyphicon-github-text"></i></td><td><i class="elusive-github-text"></i></td><td></td></tr>
+            <tr><td>glass</td><td><i class="fontawesome-glass"></i></td><td><i class="glyphicon glyphicon-glass"></i></td><td><i class="elusive-glass"></i></td><td></td></tr>
+            <tr><td>glasses</td><td><i class="fontawesome-glasses"></i></td><td><i class="glyphicon glyphicon-glasses"></i></td><td><i class="elusive-glasses"></i></td><td></td></tr>
+            <tr><td>globe</td><td><i class="fontawesome-globe"></i></td><td><i class="glyphicon glyphicon-globe"></i></td><td><i class="elusive-globe"></i></td><td></td></tr>
+            <tr><td>globe-alt</td><td><i class="fontawesome-globe-alt"></i></td><td><i class="glyphicon glyphicon-globe-alt"></i></td><td><i class="elusive-globe-alt"></i></td><td></td></tr>
+            <tr><td>googleplus</td><td><i class="fontawesome-googleplus"></i></td><td><i class="glyphicon glyphicon-googleplus"></i></td><td><i class="elusive-googleplus"></i></td><td></td></tr>
+            <tr><td>google-plus</td><td><i class="fontawesome-google-plus"></i></td><td><i class="glyphicon glyphicon-google-plus"></i></td><td><i class="elusive-google-plus"></i></td><td></td></tr>
+            <tr><td>google-plus-sign</td><td><i class="fontawesome-google-plus-sign"></i></td><td><i class="glyphicon glyphicon-google-plus-sign"></i></td><td><i class="elusive-google-plus-sign"></i></td><td></td></tr>
+            <tr><td>graph</td><td><i class="fontawesome-graph"></i></td><td><i class="glyphicon glyphicon-graph"></i></td><td><i class="elusive-graph"></i></td><td></td></tr>
+            <tr><td>graph-alt</td><td><i class="fontawesome-graph-alt"></i></td><td><i class="glyphicon glyphicon-graph-alt"></i></td><td><i class="elusive-graph-alt"></i></td><td></td></tr>
+            <tr><td>group</td><td><i class="fontawesome-group"></i></td><td><i class="glyphicon glyphicon-group"></i></td><td><i class="elusive-group"></i></td><td></td></tr>
+            <tr><td>group-alt</td><td><i class="fontawesome-group-alt"></i></td><td><i class="glyphicon glyphicon-group-alt"></i></td><td><i class="elusive-group-alt"></i></td><td></td></tr>
+            <tr><td>guidedog</td><td><i class="fontawesome-guidedog"></i></td><td><i class="glyphicon glyphicon-guidedog"></i></td><td><i class="elusive-guidedog"></i></td><td></td></tr>
+            <tr><td>hand-down</td><td><i class="fontawesome-hand-down"></i></td><td><i class="glyphicon glyphicon-hand-down"></i></td><td><i class="elusive-hand-down"></i></td><td></td></tr>
+            <tr><td>hand-left</td><td><i class="fontawesome-hand-left"></i></td><td><i class="glyphicon glyphicon-hand-left"></i></td><td><i class="elusive-hand-left"></i></td><td></td></tr>
+            <tr><td>hand-right</td><td><i class="fontawesome-hand-right"></i></td><td><i class="glyphicon glyphicon-hand-right"></i></td><td><i class="elusive-hand-right"></i></td><td></td></tr>
+            <tr><td>hand-up</td><td><i class="fontawesome-hand-up"></i></td><td><i class="glyphicon glyphicon-hand-up"></i></td><td><i class="elusive-hand-up"></i></td><td></td></tr>
+            <tr><td>hdd</td><td><i class="fontawesome-hdd"></i></td><td><i class="glyphicon glyphicon-hdd"></i></td><td><i class="elusive-hdd"></i></td><td></td></tr>
+            <tr><td>headphones</td><td><i class="fontawesome-headphones"></i></td><td><i class="glyphicon glyphicon-headphones"></i></td><td><i class="elusive-headphones"></i></td><td></td></tr>
+            <tr><td>hearing-impaired</td><td><i class="fontawesome-hearing-impaired"></i></td><td><i class="glyphicon glyphicon-hearing-impaired"></i></td><td><i class="elusive-hearing-impaired"></i></td><td></td></tr>
+            <tr><td>heart</td><td><i class="fontawesome-heart"></i></td><td><i class="glyphicon glyphicon-heart"></i></td><td><i class="elusive-heart"></i></td><td></td></tr>
+            <tr><td>heart-alt</td><td><i class="fontawesome-heart-alt"></i></td><td><i class="glyphicon glyphicon-heart-alt"></i></td><td><i class="elusive-heart-alt"></i></td><td></td></tr>
+            <tr><td>heart-empty</td><td><i class="fontawesome-heart-empty"></i></td><td><i class="glyphicon glyphicon-heart-empty"></i></td><td><i class="elusive-heart-empty"></i></td><td></td></tr>
+            <tr><td>home</td><td><i class="fontawesome-home"></i></td><td><i class="glyphicon glyphicon-home"></i></td><td><i class="elusive-home"></i></td><td></td></tr>
+            <tr><td>home-alt</td><td><i class="fontawesome-home-alt"></i></td><td><i class="glyphicon glyphicon-home-alt"></i></td><td><i class="elusive-home-alt"></i></td><td></td></tr>
+            <tr><td>hospital</td><td><i class="fontawesome-hospital"></i></td><td><i class="glyphicon glyphicon-hospital"></i></td><td><i class="elusive-hospital"></i></td><td></td></tr>
+            <tr><td>h-sign</td><td><i class="fontawesome-h-sign"></i></td><td><i class="glyphicon glyphicon-h-sign"></i></td><td><i class="elusive-h-sign"></i></td><td></td></tr>
+            <tr><td>html5</td><td><i class="fontawesome-html5"></i></td><td><i class="glyphicon glyphicon-html5"></i></td><td><i class="elusive-html5"></i></td><td></td></tr>
+            <tr><td>idea</td><td><i class="fontawesome-idea"></i></td><td><i class="glyphicon glyphicon-idea"></i></td><td><i class="elusive-idea"></i></td><td></td></tr>
+            <tr><td>idea-alt</td><td><i class="fontawesome-idea-alt"></i></td><td><i class="glyphicon glyphicon-idea-alt"></i></td><td><i class="elusive-idea-alt"></i></td><td></td></tr>
+            <tr><td>inbox</td><td><i class="fontawesome-inbox"></i></td><td><i class="glyphicon glyphicon-inbox"></i></td><td><i class="elusive-inbox"></i></td><td></td></tr>
+            <tr><td>inbox-alt</td><td><i class="fontawesome-inbox-alt"></i></td><td><i class="glyphicon glyphicon-inbox-alt"></i></td><td><i class="elusive-inbox-alt"></i></td><td></td></tr>
+            <tr><td>inbox-box</td><td><i class="fontawesome-inbox-box"></i></td><td><i class="glyphicon glyphicon-inbox-box"></i></td><td><i class="elusive-inbox-box"></i></td><td></td></tr>
+            <tr><td>indent-left</td><td><i class="fontawesome-indent-left"></i></td><td><i class="glyphicon glyphicon-indent-left"></i></td><td><i class="elusive-indent-left"></i></td><td></td></tr>
+            <tr><td>indent-right</td><td><i class="fontawesome-indent-right"></i></td><td><i class="glyphicon glyphicon-indent-right"></i></td><td><i class="elusive-indent-right"></i></td><td></td></tr>
+            <tr><td>info</td><td><i class="fontawesome-info"></i></td><td><i class="glyphicon glyphicon-info"></i></td><td><i class="elusive-info"></i></td><td></td></tr>
+            <tr><td>info-sign</td><td><i class="fontawesome-info-sign"></i></td><td><i class="glyphicon glyphicon-info-sign"></i></td><td><i class="elusive-info-sign"></i></td><td></td></tr>
+            <tr><td>instagram</td><td><i class="fontawesome-instagram"></i></td><td><i class="glyphicon glyphicon-instagram"></i></td><td><i class="elusive-instagram"></i></td><td></td></tr>
+            <tr><td>iphone-home</td><td><i class="fontawesome-iphone-home"></i></td><td><i class="glyphicon glyphicon-iphone-home"></i></td><td><i class="elusive-iphone-home"></i></td><td></td></tr>
+            <tr><td>italic</td><td><i class="fontawesome-italic"></i></td><td><i class="glyphicon glyphicon-italic"></i></td><td><i class="elusive-italic"></i></td><td></td></tr>
+            <tr><td>key</td><td><i class="fontawesome-key"></i></td><td><i class="glyphicon glyphicon-key"></i></td><td><i class="elusive-key"></i></td><td></td></tr>
+            <tr><td>keyboard</td><td><i class="fontawesome-keyboard"></i></td><td><i class="glyphicon glyphicon-keyboard"></i></td><td><i class="elusive-keyboard"></i></td><td></td></tr>
+            <tr><td>laptop</td><td><i class="fontawesome-laptop"></i></td><td><i class="glyphicon glyphicon-laptop"></i></td><td><i class="elusive-laptop"></i></td><td></td></tr>
+            <tr><td>laptop-alt</td><td><i class="fontawesome-laptop-alt"></i></td><td><i class="glyphicon glyphicon-laptop-alt"></i></td><td><i class="elusive-laptop-alt"></i></td><td></td></tr>
+            <tr><td>lastfm</td><td><i class="fontawesome-lastfm"></i></td><td><i class="glyphicon glyphicon-lastfm"></i></td><td><i class="elusive-lastfm"></i></td><td></td></tr>
+            <tr><td>leaf</td><td><i class="fontawesome-leaf"></i></td><td><i class="glyphicon glyphicon-leaf"></i></td><td><i class="elusive-leaf"></i></td><td></td></tr>
+            <tr><td>legal</td><td><i class="fontawesome-legal"></i></td><td><i class="glyphicon glyphicon-legal"></i></td><td><i class="elusive-legal"></i></td><td></td></tr>
+            <tr><td>lemon</td><td><i class="fontawesome-lemon"></i></td><td><i class="glyphicon glyphicon-lemon"></i></td><td><i class="elusive-lemon"></i></td><td></td></tr>
+            <tr><td>level-down</td><td><i class="fontawesome-level-down"></i></td><td><i class="glyphicon glyphicon-level-down"></i></td><td><i class="elusive-level-down"></i></td><td></td></tr>
+            <tr><td>level-up</td><td><i class="fontawesome-level-up"></i></td><td><i class="glyphicon glyphicon-level-up"></i></td><td><i class="elusive-level-up"></i></td><td></td></tr>
+            <tr><td>lightbulb</td><td><i class="fontawesome-lightbulb"></i></td><td><i class="glyphicon glyphicon-lightbulb"></i></td><td><i class="elusive-lightbulb"></i></td><td></td></tr>
+            <tr><td>link</td><td><i class="fontawesome-link"></i></td><td><i class="glyphicon glyphicon-link"></i></td><td><i class="elusive-link"></i></td><td></td></tr>
+            <tr><td>linkedin</td><td><i class="fontawesome-linkedin"></i></td><td><i class="glyphicon glyphicon-linkedin"></i></td><td><i class="elusive-linkedin"></i></td><td></td></tr>
+            <tr><td>linkedin-sign</td><td><i class="fontawesome-linkedin-sign"></i></td><td><i class="glyphicon glyphicon-linkedin-sign"></i></td><td><i class="elusive-linkedin-sign"></i></td><td></td></tr>
+            <tr><td>list</td><td><i class="fontawesome-list"></i></td><td><i class="glyphicon glyphicon-list"></i></td><td><i class="elusive-list"></i></td><td></td></tr>
+            <tr><td>list-alt</td><td><i class="fontawesome-list-alt"></i></td><td><i class="glyphicon glyphicon-list-alt"></i></td><td><i class="elusive-list-alt"></i></td><td></td></tr>
+            <tr><td>list-ol</td><td><i class="fontawesome-list-ol"></i></td><td><i class="glyphicon glyphicon-list-ol"></i></td><td><i class="elusive-list-ol"></i></td><td></td></tr>
+            <tr><td>list-ul</td><td><i class="fontawesome-list-ul"></i></td><td><i class="glyphicon glyphicon-list-ul"></i></td><td><i class="elusive-list-ul"></i></td><td></td></tr>
+            <tr><td>livejournal</td><td><i class="fontawesome-livejournal"></i></td><td><i class="glyphicon glyphicon-livejournal"></i></td><td><i class="elusive-livejournal"></i></td><td></td></tr>
+            <tr><td>location-arrow</td><td><i class="fontawesome-location-arrow"></i></td><td><i class="glyphicon glyphicon-location-arrow"></i></td><td><i class="elusive-location-arrow"></i></td><td></td></tr>
+            <tr><td>lock</td><td><i class="fontawesome-lock"></i></td><td><i class="glyphicon glyphicon-lock"></i></td><td><i class="elusive-lock"></i></td><td></td></tr>
+            <tr><td>lock-alt</td><td><i class="fontawesome-lock-alt"></i></td><td><i class="glyphicon glyphicon-lock-alt"></i></td><td><i class="elusive-lock-alt"></i></td><td></td></tr>
+            <tr><td>magic</td><td><i class="fontawesome-magic"></i></td><td><i class="glyphicon glyphicon-magic"></i></td><td><i class="elusive-magic"></i></td><td></td></tr>
+            <tr><td>magnet</td><td><i class="fontawesome-magnet"></i></td><td><i class="glyphicon glyphicon-magnet"></i></td><td><i class="elusive-magnet"></i></td><td></td></tr>
+            <tr><td>mail-alt</td><td><i class="fontawesome-mail-alt"></i></td><td><i class="glyphicon glyphicon-mail-alt"></i></td><td><i class="elusive-mail-alt"></i></td><td></td></tr>
+            <tr><td>mail-forward</td><td><i class="fontawesome-mail-forward"></i></td><td><i class="glyphicon glyphicon-mail-forward"></i></td><td><i class="elusive-mail-forward"></i></td><td></td></tr>
+            <tr><td>mail-reply</td><td><i class="fontawesome-mail-reply"></i></td><td><i class="glyphicon glyphicon-mail-reply"></i></td><td><i class="elusive-mail-reply"></i></td><td></td></tr>
+            <tr><td>mail-reply-all</td><td><i class="fontawesome-mail-reply-all"></i></td><td><i class="glyphicon glyphicon-mail-reply-all"></i></td><td><i class="elusive-mail-reply-all"></i></td><td></td></tr>
+            <tr><td>male</td><td><i class="fontawesome-male"></i></td><td><i class="glyphicon glyphicon-male"></i></td><td><i class="elusive-male"></i></td><td></td></tr>
+            <tr><td>map-marker</td><td><i class="fontawesome-map-marker"></i></td><td><i class="glyphicon glyphicon-map-marker"></i></td><td><i class="elusive-map-marker"></i></td><td></td></tr>
+            <tr><td>map-marker-alt</td><td><i class="fontawesome-map-marker-alt"></i></td><td><i class="glyphicon glyphicon-map-marker-alt"></i></td><td><i class="elusive-map-marker-alt"></i></td><td></td></tr>
+            <tr><td>maxcdn</td><td><i class="fontawesome-maxcdn"></i></td><td><i class="glyphicon glyphicon-maxcdn"></i></td><td><i class="elusive-maxcdn"></i></td><td></td></tr>
+            <tr><td>medkit</td><td><i class="fontawesome-medkit"></i></td><td><i class="glyphicon glyphicon-medkit"></i></td><td><i class="elusive-medkit"></i></td><td></td></tr>
+            <tr><td>meh</td><td><i class="fontawesome-meh"></i></td><td><i class="glyphicon glyphicon-meh"></i></td><td><i class="elusive-meh"></i></td><td></td></tr>
+            <tr><td>mic</td><td><i class="fontawesome-mic"></i></td><td><i class="glyphicon glyphicon-mic"></i></td><td><i class="elusive-mic"></i></td><td></td></tr>
+            <tr><td>mic-alt</td><td><i class="fontawesome-mic-alt"></i></td><td><i class="glyphicon glyphicon-mic-alt"></i></td><td><i class="elusive-mic-alt"></i></td><td></td></tr>
+            <tr><td>microphone</td><td><i class="fontawesome-microphone"></i></td><td><i class="glyphicon glyphicon-microphone"></i></td><td><i class="elusive-microphone"></i></td><td></td></tr>
+            <tr><td>microphone-off</td><td><i class="fontawesome-microphone-off"></i></td><td><i class="glyphicon glyphicon-microphone-off"></i></td><td><i class="elusive-microphone-off"></i></td><td></td></tr>
+            <tr><td>minus</td><td><i class="fontawesome-minus"></i></td><td><i class="glyphicon glyphicon-minus"></i></td><td><i class="elusive-minus"></i></td><td></td></tr>
+            <tr><td>minus-sign</td><td><i class="fontawesome-minus-sign"></i></td><td><i class="glyphicon glyphicon-minus-sign"></i></td><td><i class="elusive-minus-sign"></i></td><td></td></tr>
+            <tr><td>minus-sign-alt</td><td><i class="fontawesome-minus-sign-alt"></i></td><td><i class="glyphicon glyphicon-minus-sign-alt"></i></td><td><i class="elusive-minus-sign-alt"></i></td><td></td></tr>
+            <tr><td>mobile-phone</td><td><i class="fontawesome-mobile-phone"></i></td><td><i class="glyphicon glyphicon-mobile-phone"></i></td><td><i class="elusive-mobile-phone"></i></td><td></td></tr>
+            <tr><td>money</td><td><i class="fontawesome-money"></i></td><td><i class="glyphicon glyphicon-money"></i></td><td><i class="elusive-money"></i></td><td></td></tr>
+            <tr><td>move</td><td><i class="fontawesome-move"></i></td><td><i class="glyphicon glyphicon-move"></i></td><td><i class="elusive-move"></i></td><td></td></tr>
+            <tr><td>music</td><td><i class="fontawesome-music"></i></td><td><i class="glyphicon glyphicon-music"></i></td><td><i class="elusive-music"></i></td><td></td></tr>
+            <tr><td>myspace</td><td><i class="fontawesome-myspace"></i></td><td><i class="glyphicon glyphicon-myspace"></i></td><td><i class="elusive-myspace"></i></td><td></td></tr>
+            <tr><td>network</td><td><i class="fontawesome-network"></i></td><td><i class="glyphicon glyphicon-network"></i></td><td><i class="elusive-network"></i></td><td></td></tr>
+            <tr><td>off</td><td><i class="fontawesome-off"></i></td><td><i class="glyphicon glyphicon-off"></i></td><td><i class="elusive-off"></i></td><td></td></tr>
+            <tr><td>ok</td><td><i class="fontawesome-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="elusive-ok"></i></td><td></td></tr>
+            <tr><td>ok-circle</td><td><i class="fontawesome-ok-circle"></i></td><td><i class="glyphicon glyphicon-ok-circle"></i></td><td><i class="elusive-ok-circle"></i></td><td></td></tr>
+            <tr><td>ok-sign</td><td><i class="fontawesome-ok-sign"></i></td><td><i class="glyphicon glyphicon-ok-sign"></i></td><td><i class="elusive-ok-sign"></i></td><td></td></tr>
+            <tr class="warning"><td>paperclip</td><td><i class="fontawesome-paperclip"></i></td><td><i class="glyphicon glyphicon-paperclip"></i></td><td><i class="elusive-paperclip"></i></td><td><small class="muted">Available as <code>paper-clip</code></small></td></tr>
+            <tr class="warning"><td>paper-clip</td><td><i class="fontawesome-paper-clip"></i></td><td><i class="glyphicon glyphicon-paper-clip"></i></td><td><i class="elusive-paper-clip"></i></td><td><small class="muted">Should rename/alias as <code>paperclip</code></small></td></td></tr>
+            <tr><td>paper-clip-alt</td><td><i class="fontawesome-paper-clip-alt"></i></td><td><i class="glyphicon glyphicon-paper-clip-alt"></i></td><td><i class="elusive-paper-clip-alt"></i></td><td></td></tr>
+            <tr><td>paste</td><td><i class="fontawesome-paste"></i></td><td><i class="glyphicon glyphicon-paste"></i></td><td><i class="elusive-paste"></i></td><td></td></tr>
+            <tr><td>path</td><td><i class="fontawesome-path"></i></td><td><i class="glyphicon glyphicon-path"></i></td><td><i class="elusive-path"></i></td><td></td></tr>
+            <tr><td>pause</td><td><i class="fontawesome-pause"></i></td><td><i class="glyphicon glyphicon-pause"></i></td><td><i class="elusive-pause"></i></td><td></td></tr>
+            <tr><td>pause-alt</td><td><i class="fontawesome-pause-alt"></i></td><td><i class="glyphicon glyphicon-pause-alt"></i></td><td><i class="elusive-pause-alt"></i></td><td></td></tr>
+            <tr><td>pencil</td><td><i class="fontawesome-pencil"></i></td><td><i class="glyphicon glyphicon-pencil"></i></td><td><i class="elusive-pencil"></i></td><td></td></tr>
+            <tr><td>pencil-alt</td><td><i class="fontawesome-pencil-alt"></i></td><td><i class="glyphicon glyphicon-pencil-alt"></i></td><td><i class="elusive-pencil-alt"></i></td><td></td></tr>
+            <tr><td>person</td><td><i class="fontawesome-person"></i></td><td><i class="glyphicon glyphicon-person"></i></td><td><i class="elusive-person"></i></td><td></td></tr>
+            <tr><td>phone</td><td><i class="fontawesome-phone"></i></td><td><i class="glyphicon glyphicon-phone"></i></td><td><i class="elusive-phone"></i></td><td></td></tr>
+            <tr><td>phone-alt</td><td><i class="fontawesome-phone-alt"></i></td><td><i class="glyphicon glyphicon-phone-alt"></i></td><td><i class="elusive-phone-alt"></i></td><td></td></tr>
+            <tr><td>phone-sign</td><td><i class="fontawesome-phone-sign"></i></td><td><i class="glyphicon glyphicon-phone-sign"></i></td><td><i class="elusive-phone-sign"></i></td><td></td></tr>
+            <tr><td>photo</td><td><i class="fontawesome-photo"></i></td><td><i class="glyphicon glyphicon-photo"></i></td><td><i class="elusive-photo"></i></td><td></td></tr>
+            <tr><td>photo-alt</td><td><i class="fontawesome-photo-alt"></i></td><td><i class="glyphicon glyphicon-photo-alt"></i></td><td><i class="elusive-photo-alt"></i></td><td></td></tr>
+            <tr><td>picasa</td><td><i class="fontawesome-picasa"></i></td><td><i class="glyphicon glyphicon-picasa"></i></td><td><i class="elusive-picasa"></i></td><td></td></tr>
+            <tr><td>picture</td><td><i class="fontawesome-picture"></i></td><td><i class="glyphicon glyphicon-picture"></i></td><td><i class="elusive-picture"></i></td><td></td></tr>
+            <tr><td>pinterest</td><td><i class="fontawesome-pinterest"></i></td><td><i class="glyphicon glyphicon-pinterest"></i></td><td><i class="elusive-pinterest"></i></td><td></td></tr>
+            <tr><td>pinterest-sign</td><td><i class="fontawesome-pinterest-sign"></i></td><td><i class="glyphicon glyphicon-pinterest-sign"></i></td><td><i class="elusive-pinterest-sign"></i></td><td></td></tr>
+            <tr><td>plane</td><td><i class="fontawesome-plane"></i></td><td><i class="glyphicon glyphicon-plane"></i></td><td><i class="elusive-plane"></i></td><td></td></tr>
+            <tr><td>play</td><td><i class="fontawesome-play"></i></td><td><i class="glyphicon glyphicon-play"></i></td><td><i class="elusive-play"></i></td><td></td></tr>
+            <tr><td>play-alt</td><td><i class="fontawesome-play-alt"></i></td><td><i class="glyphicon glyphicon-play-alt"></i></td><td><i class="elusive-play-alt"></i></td><td></td></tr>
+            <tr><td>play-circle</td><td><i class="fontawesome-play-circle"></i></td><td><i class="glyphicon glyphicon-play-circle"></i></td><td><i class="elusive-play-circle"></i></td><td></td></tr>
+            <tr><td>play-sign</td><td><i class="fontawesome-play-sign"></i></td><td><i class="glyphicon glyphicon-play-sign"></i></td><td><i class="elusive-play-sign"></i></td><td></td></tr>
+            <tr><td>plus</td><td><i class="fontawesome-plus"></i></td><td><i class="glyphicon glyphicon-plus"></i></td><td><i class="elusive-plus"></i></td><td></td></tr>
+            <tr><td>plus-sign</td><td><i class="fontawesome-plus-sign"></i></td><td><i class="glyphicon glyphicon-plus-sign"></i></td><td><i class="elusive-plus-sign"></i></td><td></td></tr>
+            <tr><td>plus-sign-alt</td><td><i class="fontawesome-plus-sign-alt"></i></td><td><i class="glyphicon glyphicon-plus-sign-alt"></i></td><td><i class="elusive-plus-sign-alt"></i></td><td></td></tr>
+            <tr><td>print</td><td><i class="fontawesome-print"></i></td><td><i class="glyphicon glyphicon-print"></i></td><td><i class="elusive-print"></i></td><td></td></tr>
+            <tr><td>pushpin</td><td><i class="fontawesome-pushpin"></i></td><td><i class="glyphicon glyphicon-pushpin"></i></td><td><i class="elusive-pushpin"></i></td><td></td></tr>
+            <tr><td>puzzle-piece</td><td><i class="fontawesome-puzzle-piece"></i></td><td><i class="glyphicon glyphicon-puzzle-piece"></i></td><td><i class="elusive-puzzle-piece"></i></td><td></td></tr>
+            <tr><td>qrcode</td><td><i class="fontawesome-qrcode"></i></td><td><i class="glyphicon glyphicon-qrcode"></i></td><td><i class="elusive-qrcode"></i></td><td></td></tr>
+            <tr><td>question</td><td><i class="fontawesome-question"></i></td><td><i class="glyphicon glyphicon-question"></i></td><td><i class="elusive-question"></i></td><td></td></tr>
+            <tr><td>question-sign</td><td><i class="fontawesome-question-sign"></i></td><td><i class="glyphicon glyphicon-question-sign"></i></td><td><i class="elusive-question-sign"></i></td><td></td></tr>
+            <tr><td>quote-left</td><td><i class="fontawesome-quote-left"></i></td><td><i class="glyphicon glyphicon-quote-left"></i></td><td><i class="elusive-quote-left"></i></td><td></td></tr>
+            <tr><td>quote-right</td><td><i class="fontawesome-quote-right"></i></td><td><i class="glyphicon glyphicon-quote-right"></i></td><td><i class="elusive-quote-right"></i></td><td></td></tr>
+            <tr><td>quotes</td><td><i class="fontawesome-quotes"></i></td><td><i class="glyphicon glyphicon-quotes"></i></td><td><i class="elusive-quotes"></i></td><td></td></tr>
+            <tr><td>quotes-alt</td><td><i class="fontawesome-quotes-alt"></i></td><td><i class="glyphicon glyphicon-quotes-alt"></i></td><td><i class="elusive-quotes-alt"></i></td><td></td></tr>
+            <tr><td>random</td><td><i class="fontawesome-random"></i></td><td><i class="glyphicon glyphicon-random"></i></td><td><i class="elusive-random"></i></td><td></td></tr>
+            <tr><td>record</td><td><i class="fontawesome-record"></i></td><td><i class="glyphicon glyphicon-record"></i></td><td><i class="elusive-record"></i></td><td></td></tr>
+            <tr><td>reddit</td><td><i class="fontawesome-reddit"></i></td><td><i class="glyphicon glyphicon-reddit"></i></td><td><i class="elusive-reddit"></i></td><td></td></tr>
+            <tr><td>refresh</td><td><i class="fontawesome-refresh"></i></td><td><i class="glyphicon glyphicon-refresh"></i></td><td><i class="elusive-refresh"></i></td><td></td></tr>
+            <tr><td>remove</td><td><i class="fontawesome-remove"></i></td><td><i class="glyphicon glyphicon-remove"></i></td><td><i class="elusive-remove"></i></td><td></td></tr>
+            <tr><td>remove-circle</td><td><i class="fontawesome-remove-circle"></i></td><td><i class="glyphicon glyphicon-remove-circle"></i></td><td><i class="elusive-remove-circle"></i></td><td></td></tr>
+            <tr><td>remove-sign</td><td><i class="fontawesome-remove-sign"></i></td><td><i class="glyphicon glyphicon-remove-sign"></i></td><td><i class="elusive-remove-sign"></i></td><td></td></tr>
+            <tr><td>reorder</td><td><i class="fontawesome-reorder"></i></td><td><i class="glyphicon glyphicon-reorder"></i></td><td><i class="elusive-reorder"></i></td><td></td></tr>
+            <tr><td>repeat</td><td><i class="fontawesome-repeat"></i></td><td><i class="glyphicon glyphicon-repeat"></i></td><td><i class="elusive-repeat"></i></td><td></td></tr>
+            <tr><td>repeat-alt</td><td><i class="fontawesome-repeat-alt"></i></td><td><i class="glyphicon glyphicon-repeat-alt"></i></td><td><i class="elusive-repeat-alt"></i></td><td></td></tr>
+            <tr><td>reply</td><td><i class="fontawesome-reply"></i></td><td><i class="glyphicon glyphicon-reply"></i></td><td><i class="elusive-reply"></i></td><td></td></tr>
+            <tr><td>reply-all</td><td><i class="fontawesome-reply-all"></i></td><td><i class="glyphicon glyphicon-reply-all"></i></td><td><i class="elusive-reply-all"></i></td><td></td></tr>
+            <tr><td>resize-full</td><td><i class="fontawesome-resize-full"></i></td><td><i class="glyphicon glyphicon-resize-full"></i></td><td><i class="elusive-resize-full"></i></td><td></td></tr>
+            <tr><td>resize-horizontal</td><td><i class="fontawesome-resize-horizontal"></i></td><td><i class="glyphicon glyphicon-resize-horizontal"></i></td><td><i class="elusive-resize-horizontal"></i></td><td></td></tr>
+            <tr><td>resize-small</td><td><i class="fontawesome-resize-small"></i></td><td><i class="glyphicon glyphicon-resize-small"></i></td><td><i class="elusive-resize-small"></i></td><td></td></tr>
+            <tr><td>resize-vertical</td><td><i class="fontawesome-resize-vertical"></i></td><td><i class="glyphicon glyphicon-resize-vertical"></i></td><td><i class="elusive-resize-vertical"></i></td><td></td></tr>
+            <tr><td>return-key</td><td><i class="fontawesome-return-key"></i></td><td><i class="glyphicon glyphicon-return-key"></i></td><td><i class="elusive-return-key"></i></td><td></td></tr>
+            <tr><td>retweet</td><td><i class="fontawesome-retweet"></i></td><td><i class="glyphicon glyphicon-retweet"></i></td><td><i class="elusive-retweet"></i></td><td></td></tr>
+            <tr><td>reverse-alt</td><td><i class="fontawesome-reverse-alt"></i></td><td><i class="glyphicon glyphicon-reverse-alt"></i></td><td><i class="elusive-reverse-alt"></i></td><td></td></tr>
+            <tr><td>road</td><td><i class="fontawesome-road"></i></td><td><i class="glyphicon glyphicon-road"></i></td><td><i class="elusive-road"></i></td><td></td></tr>
+            <tr><td>rocket</td><td><i class="fontawesome-rocket"></i></td><td><i class="glyphicon glyphicon-rocket"></i></td><td><i class="elusive-rocket"></i></td><td></td></tr>
+            <tr><td>rotate-left</td><td><i class="fontawesome-rotate-left"></i></td><td><i class="glyphicon glyphicon-rotate-left"></i></td><td><i class="elusive-rotate-left"></i></td><td></td></tr>
+            <tr><td>rotate-right</td><td><i class="fontawesome-rotate-right"></i></td><td><i class="glyphicon glyphicon-rotate-right"></i></td><td><i class="elusive-rotate-right"></i></td><td></td></tr>
+            <tr><td>rss</td><td><i class="fontawesome-rss"></i></td><td><i class="glyphicon glyphicon-rss"></i></td><td><i class="elusive-rss"></i></td><td></td></tr>
+            <tr><td>rss-sign</td><td><i class="fontawesome-rss-sign"></i></td><td><i class="glyphicon glyphicon-rss-sign"></i></td><td><i class="elusive-rss-sign"></i></td><td></td></tr>
+            <tr><td>save</td><td><i class="fontawesome-save"></i></td><td><i class="glyphicon glyphicon-save"></i></td><td><i class="elusive-save"></i></td><td></td></tr>
+            <tr><td>screen</td><td><i class="fontawesome-screen"></i></td><td><i class="glyphicon glyphicon-screen"></i></td><td><i class="elusive-screen"></i></td><td></td></tr>
+            <tr><td>screen-alt</td><td><i class="fontawesome-screen-alt"></i></td><td><i class="glyphicon glyphicon-screen-alt"></i></td><td><i class="elusive-screen-alt"></i></td><td></td></tr>
+            <tr><td>screenshot</td><td><i class="fontawesome-screenshot"></i></td><td><i class="glyphicon glyphicon-screenshot"></i></td><td><i class="elusive-screenshot"></i></td><td></td></tr>
+            <tr><td>search</td><td><i class="fontawesome-search"></i></td><td><i class="glyphicon glyphicon-search"></i></td><td><i class="elusive-search"></i></td><td></td></tr>
+            <tr><td>search-alt</td><td><i class="fontawesome-search-alt"></i></td><td><i class="glyphicon glyphicon-search-alt"></i></td><td><i class="elusive-search-alt"></i></td><td></td></tr>
+            <tr><td>share</td><td><i class="fontawesome-share"></i></td><td><i class="glyphicon glyphicon-share"></i></td><td><i class="elusive-share"></i></td><td></td></tr>
+            <tr><td>share-alt</td><td><i class="fontawesome-share-alt"></i></td><td><i class="glyphicon glyphicon-share-alt"></i></td><td><i class="elusive-share-alt"></i></td><td></td></tr>
+            <tr><td>share-sign</td><td><i class="fontawesome-share-sign"></i></td><td><i class="glyphicon glyphicon-share-sign"></i></td><td><i class="elusive-share-sign"></i></td><td></td></tr>
+            <tr><td>shield</td><td><i class="fontawesome-shield"></i></td><td><i class="glyphicon glyphicon-shield"></i></td><td><i class="elusive-shield"></i></td><td></td></tr>
+            <tr><td>shopping-cart</td><td><i class="fontawesome-shopping-cart"></i></td><td><i class="glyphicon glyphicon-shopping-cart"></i></td><td><i class="elusive-shopping-cart"></i></td><td></td></tr>
+            <tr><td>shopping-cart-sign</td><td><i class="fontawesome-shopping-cart-sign"></i></td><td><i class="glyphicon glyphicon-shopping-cart-sign"></i></td><td><i class="elusive-shopping-cart-sign"></i></td><td></td></tr>
+            <tr><td>signal</td><td><i class="fontawesome-signal"></i></td><td><i class="glyphicon glyphicon-signal"></i></td><td><i class="elusive-signal"></i></td><td></td></tr>
+            <tr><td>sign-blank</td><td><i class="fontawesome-sign-blank"></i></td><td><i class="glyphicon glyphicon-sign-blank"></i></td><td><i class="elusive-sign-blank"></i></td><td></td></tr>
+            <tr><td>signin</td><td><i class="fontawesome-signin"></i></td><td><i class="glyphicon glyphicon-signin"></i></td><td><i class="elusive-signin"></i></td><td></td></tr>
+            <tr><td>signout</td><td><i class="fontawesome-signout"></i></td><td><i class="glyphicon glyphicon-signout"></i></td><td><i class="elusive-signout"></i></td><td></td></tr>
+            <tr><td>sitemap</td><td><i class="fontawesome-sitemap"></i></td><td><i class="glyphicon glyphicon-sitemap"></i></td><td><i class="elusive-sitemap"></i></td><td></td></tr>
+            <tr><td>skype</td><td><i class="fontawesome-skype"></i></td><td><i class="glyphicon glyphicon-skype"></i></td><td><i class="elusive-skype"></i></td><td></td></tr>
+            <tr><td>slideshare</td><td><i class="fontawesome-slideshare"></i></td><td><i class="glyphicon glyphicon-slideshare"></i></td><td><i class="elusive-slideshare"></i></td><td></td></tr>
+            <tr><td>smile</td><td><i class="fontawesome-smile"></i></td><td><i class="glyphicon glyphicon-smile"></i></td><td><i class="elusive-smile"></i></td><td></td></tr>
+            <tr><td>smiley</td><td><i class="fontawesome-smiley"></i></td><td><i class="glyphicon glyphicon-smiley"></i></td><td><i class="elusive-smiley"></i></td><td></td></tr>
+            <tr><td>smiley-alt</td><td><i class="fontawesome-smiley-alt"></i></td><td><i class="glyphicon glyphicon-smiley-alt"></i></td><td><i class="elusive-smiley-alt"></i></td><td></td></tr>
+            <tr><td>sort</td><td><i class="fontawesome-sort"></i></td><td><i class="glyphicon glyphicon-sort"></i></td><td><i class="elusive-sort"></i></td><td></td></tr>
+            <tr class="error"><td>sort-by-alphabet</td><td><i class="fontawesome-sort-by-alphabet"></i></td><td><i class="glyphicon glyphicon-sort-by-alphabet"></i></td><td><i class="elusive-sort-by-alphabet"></i></td><td></td></tr>
+            <tr class="error"><td>sort-by-alphabet-alt</td><td><i class="fontawesome-sort-by-alphabet-alt"></i></td><td><i class="glyphicon glyphicon-sort-by-alphabet-alt"></i></td><td><i class="elusive-sort-by-alphabet-alt"></i></td><td></td></tr>
+            <tr class="error"><td>sort-by-attributes</td><td><i class="fontawesome-sort-by-attributes"></i></td><td><i class="glyphicon glyphicon-sort-by-attributes"></i></td><td><i class="elusive-sort-by-attributes"></i></td><td></td></tr>
+            <tr class="error"><td>sort-by-attributes-alt</td><td><i class="fontawesome-sort-by-attributes-alt"></i></td><td><i class="glyphicon glyphicon-sort-by-attributes-alt"></i></td><td><i class="elusive-sort-by-attributes-alt"></i></td><td></td></tr>
+            <tr class="error"><td>sort-by-order</td><td><i class="fontawesome-sort-by-order"></i></td><td><i class="glyphicon glyphicon-sort-by-order"></i></td><td><i class="elusive-sort-by-order"></i></td><td></td></tr>
+            <tr class="error"><td>sort-by-order-alt</td><td><i class="fontawesome-sort-by-order-alt"></i></td><td><i class="glyphicon glyphicon-sort-by-order-alt"></i></td><td><i class="elusive-sort-by-order-alt"></i></td><td></td></tr>
+            <tr><td>sort-down</td><td><i class="fontawesome-sort-down"></i></td><td><i class="glyphicon glyphicon-sort-down"></i></td><td><i class="elusive-sort-down"></i></td><td></td></tr>
+            <tr><td>sort-up</td><td><i class="fontawesome-sort-up"></i></td><td><i class="glyphicon glyphicon-sort-up"></i></td><td><i class="elusive-sort-up"></i></td><td></td></tr>
+            <tr><td>soundcloud</td><td><i class="fontawesome-soundcloud"></i></td><td><i class="glyphicon glyphicon-soundcloud"></i></td><td><i class="elusive-soundcloud"></i></td><td></td></tr>
+            <tr><td>speaker</td><td><i class="fontawesome-speaker"></i></td><td><i class="glyphicon glyphicon-speaker"></i></td><td><i class="elusive-speaker"></i></td><td></td></tr>
+            <tr><td>spinner</td><td><i class="fontawesome-spinner"></i></td><td><i class="glyphicon glyphicon-spinner"></i></td><td><i class="elusive-spinner"></i></td><td></td></tr>
+            <tr><td>spotify</td><td><i class="fontawesome-spotify"></i></td><td><i class="glyphicon glyphicon-spotify"></i></td><td><i class="elusive-spotify"></i></td><td></td></tr>
+            <tr><td>stackoverflow</td><td><i class="fontawesome-stackoverflow"></i></td><td><i class="glyphicon glyphicon-stackoverflow"></i></td><td><i class="elusive-stackoverflow"></i></td><td></td></tr>
+            <tr><td>star</td><td><i class="fontawesome-star"></i></td><td><i class="glyphicon glyphicon-star"></i></td><td><i class="elusive-star"></i></td><td></td></tr>
+            <tr><td>star-alt</td><td><i class="fontawesome-star-alt"></i></td><td><i class="glyphicon glyphicon-star-alt"></i></td><td><i class="elusive-star-alt"></i></td><td></td></tr>
+            <tr><td>star-empty</td><td><i class="fontawesome-star-empty"></i></td><td><i class="glyphicon glyphicon-star-empty"></i></td><td><i class="elusive-star-empty"></i></td><td></td></tr>
+            <tr><td>star-half</td><td><i class="fontawesome-star-half"></i></td><td><i class="glyphicon glyphicon-star-half"></i></td><td><i class="elusive-star-half"></i></td><td></td></tr>
+            <tr><td>star-half-empty</td><td><i class="fontawesome-star-half-empty"></i></td><td><i class="glyphicon glyphicon-star-half-empty"></i></td><td><i class="elusive-star-half-empty"></i></td><td></td></tr>
+            <tr><td>star-half-full</td><td><i class="fontawesome-star-half-full"></i></td><td><i class="glyphicon glyphicon-star-half-full"></i></td><td><i class="elusive-star-half-full"></i></td><td></td></tr>
+            <tr><td>step-backward</td><td><i class="fontawesome-step-backward"></i></td><td><i class="glyphicon glyphicon-step-backward"></i></td><td><i class="elusive-step-backward"></i></td><td></td></tr>
+            <tr><td>step-forward</td><td><i class="fontawesome-step-forward"></i></td><td><i class="glyphicon glyphicon-step-forward"></i></td><td><i class="elusive-step-forward"></i></td><td></td></tr>
+            <tr><td>stethoscope</td><td><i class="fontawesome-stethoscope"></i></td><td><i class="glyphicon glyphicon-stethoscope"></i></td><td><i class="elusive-stethoscope"></i></td><td></td></tr>
+            <tr><td>stop</td><td><i class="fontawesome-stop"></i></td><td><i class="glyphicon glyphicon-stop"></i></td><td><i class="elusive-stop"></i></td><td></td></tr>
+            <tr><td>stop-alt</td><td><i class="fontawesome-stop-alt"></i></td><td><i class="glyphicon glyphicon-stop-alt"></i></td><td><i class="elusive-stop-alt"></i></td><td></td></tr>
+            <tr><td>strikethrough</td><td><i class="fontawesome-strikethrough"></i></td><td><i class="glyphicon glyphicon-strikethrough"></i></td><td><i class="elusive-strikethrough"></i></td><td></td></tr>
+            <tr><td>stumbleupon</td><td><i class="fontawesome-stumbleupon"></i></td><td><i class="glyphicon glyphicon-stumbleupon"></i></td><td><i class="elusive-stumbleupon"></i></td><td></td></tr>
+            <tr><td>subscript</td><td><i class="fontawesome-subscript"></i></td><td><i class="glyphicon glyphicon-subscript"></i></td><td><i class="elusive-subscript"></i></td><td></td></tr>
+            <tr><td>suitcase</td><td><i class="fontawesome-suitcase"></i></td><td><i class="glyphicon glyphicon-suitcase"></i></td><td><i class="elusive-suitcase"></i></td><td></td></tr>
+            <tr><td>superscript</td><td><i class="fontawesome-superscript"></i></td><td><i class="glyphicon glyphicon-superscript"></i></td><td><i class="elusive-superscript"></i></td><td></td></tr>
+            <tr><td>table</td><td><i class="fontawesome-table"></i></td><td><i class="glyphicon glyphicon-table"></i></td><td><i class="elusive-table"></i></td><td></td></tr>
+            <tr><td>tablet</td><td><i class="fontawesome-tablet"></i></td><td><i class="glyphicon glyphicon-tablet"></i></td><td><i class="elusive-tablet"></i></td><td></td></tr>
+            <tr><td>tag</td><td><i class="fontawesome-tag"></i></td><td><i class="glyphicon glyphicon-tag"></i></td><td><i class="elusive-tag"></i></td><td></td></tr>
+            <tr><td>tags</td><td><i class="fontawesome-tags"></i></td><td><i class="glyphicon glyphicon-tags"></i></td><td><i class="elusive-tags"></i></td><td></td></tr>
+            <tr><td>tasks</td><td><i class="fontawesome-tasks"></i></td><td><i class="glyphicon glyphicon-tasks"></i></td><td><i class="elusive-tasks"></i></td><td></td></tr>
+            <tr><td>terminal</td><td><i class="fontawesome-terminal"></i></td><td><i class="glyphicon glyphicon-terminal"></i></td><td><i class="elusive-terminal"></i></td><td></td></tr>
+            <tr><td>text-height</td><td><i class="fontawesome-text-height"></i></td><td><i class="glyphicon glyphicon-text-height"></i></td><td><i class="elusive-text-height"></i></td><td></td></tr>
+            <tr><td>text-width</td><td><i class="fontawesome-text-width"></i></td><td><i class="glyphicon glyphicon-text-width"></i></td><td><i class="elusive-text-width"></i></td><td></td></tr>
+            <tr><td>th</td><td><i class="fontawesome-th"></i></td><td><i class="glyphicon glyphicon-th"></i></td><td><i class="elusive-th"></i></td><td></td></tr>
+            <tr><td>th-large</td><td><i class="fontawesome-th-large"></i></td><td><i class="glyphicon glyphicon-th-large"></i></td><td><i class="elusive-th-large"></i></td><td></td></tr>
+            <tr><td>th-list</td><td><i class="fontawesome-th-list"></i></td><td><i class="glyphicon glyphicon-th-list"></i></td><td><i class="elusive-th-list"></i></td><td></td></tr>
+            <tr class="warning"><td>thumbs-down</td><td><i class="fontawesome-thumbs-down"></i></td><td><i class="glyphicon glyphicon-thumbs-down"></i></td><td><i class="elusive-thumbs-down"></i></td><td><small class="muted">FA should be filled up</small></td></tr>
+            <tr class="warning"><td>thumbs-up</td><td><i class="fontawesome-thumbs-up"></i></td><td><i class="glyphicon glyphicon-thumbs-up"></i></td><td><i class="elusive-thumbs-up"></i></td><td><small class="muted">FA should be filled up</small></td></tr>
+            <tr><td>ticket</td><td><i class="fontawesome-ticket"></i></td><td><i class="glyphicon glyphicon-ticket"></i></td><td><i class="elusive-ticket"></i></td><td></td></tr>
+            <tr><td>time</td><td><i class="fontawesome-time"></i></td><td><i class="glyphicon glyphicon-time"></i></td><td><i class="elusive-time"></i></td><td></td></tr>
+            <tr><td>time-alt</td><td><i class="fontawesome-time-alt"></i></td><td><i class="glyphicon glyphicon-time-alt"></i></td><td><i class="elusive-time-alt"></i></td><td></td></tr>
+            <tr><td>tint</td><td><i class="fontawesome-tint"></i></td><td><i class="glyphicon glyphicon-tint"></i></td><td><i class="elusive-tint"></i></td><td></td></tr>
+            <tr><td>torso</td><td><i class="fontawesome-torso"></i></td><td><i class="glyphicon glyphicon-torso"></i></td><td><i class="elusive-torso"></i></td><td></td></tr>
+            <tr><td>trash</td><td><i class="fontawesome-trash"></i></td><td><i class="glyphicon glyphicon-trash"></i></td><td><i class="elusive-trash"></i></td><td></td></tr>
+            <tr><td>trash-alt</td><td><i class="fontawesome-trash-alt"></i></td><td><i class="glyphicon glyphicon-trash-alt"></i></td><td><i class="elusive-trash-alt"></i></td><td></td></tr>
+            <tr><td>trophy</td><td><i class="fontawesome-trophy"></i></td><td><i class="glyphicon glyphicon-trophy"></i></td><td><i class="elusive-trophy"></i></td><td></td></tr>
+            <tr><td>truck</td><td><i class="fontawesome-truck"></i></td><td><i class="glyphicon glyphicon-truck"></i></td><td><i class="elusive-truck"></i></td><td></td></tr>
+            <tr><td>tumblr</td><td><i class="fontawesome-tumblr"></i></td><td><i class="glyphicon glyphicon-tumblr"></i></td><td><i class="elusive-tumblr"></i></td><td></td></tr>
+            <tr><td>twitter</td><td><i class="fontawesome-twitter"></i></td><td><i class="glyphicon glyphicon-twitter"></i></td><td><i class="elusive-twitter"></i></td><td></td></tr>
+            <tr><td>twitter-sign</td><td><i class="fontawesome-twitter-sign"></i></td><td><i class="glyphicon glyphicon-twitter-sign"></i></td><td><i class="elusive-twitter-sign"></i></td><td></td></tr>
+            <tr><td>umbrella</td><td><i class="fontawesome-umbrella"></i></td><td><i class="glyphicon glyphicon-umbrella"></i></td><td><i class="elusive-umbrella"></i></td><td></td></tr>
+            <tr class="warning"><td>unchecked</td><td><i class="fontawesome-unchecked"></i></td><td><i class="glyphicon glyphicon-unchecked"></i></td><td><i class="elusive-unchecked"></i></td><td><small class="muted">Available as <code>check-empty</code></small></td></tr>
+            <tr><td>underline</td><td><i class="fontawesome-underline"></i></td><td><i class="glyphicon glyphicon-underline"></i></td><td><i class="elusive-underline"></i></td><td></td></tr>
+            <tr><td>undo</td><td><i class="fontawesome-undo"></i></td><td><i class="glyphicon glyphicon-undo"></i></td><td><i class="elusive-undo"></i></td><td></td></tr>
+            <tr><td>universal-access</td><td><i class="fontawesome-universal-access"></i></td><td><i class="glyphicon glyphicon-universal-access"></i></td><td><i class="elusive-universal-access"></i></td><td></td></tr>
+            <tr><td>unlink</td><td><i class="fontawesome-unlink"></i></td><td><i class="glyphicon glyphicon-unlink"></i></td><td><i class="elusive-unlink"></i></td><td></td></tr>
+            <tr><td>unlock</td><td><i class="fontawesome-unlock"></i></td><td><i class="glyphicon glyphicon-unlock"></i></td><td><i class="elusive-unlock"></i></td><td></td></tr>
+            <tr><td>unlock-alt</td><td><i class="fontawesome-unlock-alt"></i></td><td><i class="glyphicon glyphicon-unlock-alt"></i></td><td><i class="elusive-unlock-alt"></i></td><td></td></tr>
+            <tr><td>upload</td><td><i class="fontawesome-upload"></i></td><td><i class="glyphicon glyphicon-upload"></i></td><td><i class="elusive-upload"></i></td><td></td></tr>
+            <tr><td>upload-alt</td><td><i class="fontawesome-upload-alt"></i></td><td><i class="glyphicon glyphicon-upload-alt"></i></td><td><i class="elusive-upload-alt"></i></td><td></td></tr>
+            <tr class="error"><td>usd</td><td><i class="fontawesome-usd"></i></td><td><i class="glyphicon glyphicon-usd"></i></td><td><i class="elusive-usd"></i></td><td></td></tr>
+            <tr><td>user</td><td><i class="fontawesome-user"></i></td><td><i class="glyphicon glyphicon-user"></i></td><td><i class="elusive-user"></i></td><td></td></tr>
+            <tr><td>user-md</td><td><i class="fontawesome-user-md"></i></td><td><i class="glyphicon glyphicon-user-md"></i></td><td><i class="elusive-user-md"></i></td><td></td></tr>
+            <tr><td>viadeo</td><td><i class="fontawesome-viadeo"></i></td><td><i class="glyphicon glyphicon-viadeo"></i></td><td><i class="elusive-viadeo"></i></td><td></td></tr>
+            <tr><td>video</td><td><i class="fontawesome-video"></i></td><td><i class="glyphicon glyphicon-video"></i></td><td><i class="elusive-video"></i></td><td></td></tr>
+            <tr><td>video-alt</td><td><i class="fontawesome-video-alt"></i></td><td><i class="glyphicon glyphicon-video-alt"></i></td><td><i class="elusive-video-alt"></i></td><td></td></tr>
+            <tr><td>video-chat</td><td><i class="fontawesome-video-chat"></i></td><td><i class="glyphicon glyphicon-video-chat"></i></td><td><i class="elusive-video-chat"></i></td><td></td></tr>
+            <tr><td>view-mode</td><td><i class="fontawesome-view-mode"></i></td><td><i class="glyphicon glyphicon-view-mode"></i></td><td><i class="elusive-view-mode"></i></td><td></td></tr>
+            <tr><td>vimeo</td><td><i class="fontawesome-vimeo"></i></td><td><i class="glyphicon glyphicon-vimeo"></i></td><td><i class="elusive-vimeo"></i></td><td></td></tr>
+            <tr><td>vkontakte</td><td><i class="fontawesome-vkontakte"></i></td><td><i class="glyphicon glyphicon-vkontakte"></i></td><td><i class="elusive-vkontakte"></i></td><td></td></tr>
+            <tr><td>volume-down</td><td><i class="fontawesome-volume-down"></i></td><td><i class="glyphicon glyphicon-volume-down"></i></td><td><i class="elusive-volume-down"></i></td><td></td></tr>
+            <tr><td>volume-off</td><td><i class="fontawesome-volume-off"></i></td><td><i class="glyphicon glyphicon-volume-off"></i></td><td><i class="elusive-volume-off"></i></td><td></td></tr>
+            <tr><td>volume-up</td><td><i class="fontawesome-volume-up"></i></td><td><i class="glyphicon glyphicon-volume-up"></i></td><td><i class="elusive-volume-up"></i></td><td></td></tr>
+            <tr><td>w3c</td><td><i class="fontawesome-w3c"></i></td><td><i class="glyphicon glyphicon-w3c"></i></td><td><i class="elusive-w3c"></i></td><td></td></tr>
+            <tr><td>warning-sign</td><td><i class="fontawesome-warning-sign"></i></td><td><i class="glyphicon glyphicon-warning-sign"></i></td><td><i class="elusive-warning-sign"></i></td><td></td></tr>
+            <tr><td>website</td><td><i class="fontawesome-website"></i></td><td><i class="glyphicon glyphicon-website"></i></td><td><i class="elusive-website"></i></td><td></td></tr>
+            <tr><td>website-alt</td><td><i class="fontawesome-website-alt"></i></td><td><i class="glyphicon glyphicon-website-alt"></i></td><td><i class="elusive-website-alt"></i></td><td></td></tr>
+            <tr><td>wheelchair</td><td><i class="fontawesome-wheelchair"></i></td><td><i class="glyphicon glyphicon-wheelchair"></i></td><td><i class="elusive-wheelchair"></i></td><td></td></tr>
+            <tr><td>wordpress</td><td><i class="fontawesome-wordpress"></i></td><td><i class="glyphicon glyphicon-wordpress"></i></td><td><i class="elusive-wordpress"></i></td><td></td></tr>
+            <tr><td>wrench</td><td><i class="fontawesome-wrench"></i></td><td><i class="glyphicon glyphicon-wrench"></i></td><td><i class="elusive-wrench"></i></td><td></td></tr>
+            <tr><td>wrench-alt</td><td><i class="fontawesome-wrench-alt"></i></td><td><i class="glyphicon glyphicon-wrench-alt"></i></td><td><i class="elusive-wrench-alt"></i></td><td></td></tr>
+            <tr><td>youtube</td><td><i class="fontawesome-youtube"></i></td><td><i class="glyphicon glyphicon-youtube"></i></td><td><i class="elusive-youtube"></i></td><td></td></tr>
+            <tr><td>zoom-in</td><td><i class="fontawesome-zoom-in"></i></td><td><i class="glyphicon glyphicon-zoom-in"></i></td><td><i class="elusive-zoom-in"></i></td><td></td></tr>
+            <tr><td>zoom-out</td><td><i class="fontawesome-zoom-out"></i></td><td><i class="glyphicon glyphicon-zoom-out"></i></td><td><i class="elusive-zoom-out"></i></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
   <script>
     $(function() {
       return $('#show-borders').on('change', function() {
@@ -30,418 +601,5 @@
       });
     });
   </script>
-</head>
-<body>
-  <div class="container">
-    <h1>Vector Icons Roundup</h1>
-    A side-by-side comparison between:
-    <ul>
-      <li>FontAwesome 3.0.2</li>
-      <li>FontAwesome 2.0</li>
-      <li>Bootstrap 3.0 Glyphicons</li>
-      <li>Elusive Icons</li>
-    </ul>
-    <hr/>
-    <h4>Legend</h4>
-    <ul class="unstyled">
-      <li class="text-error"><i class="icon3-circle"></i> <b>BS 3.0 icon missing in FontAwesome</b></li>
-      <li class="text-warning"><i class="icon3-circle"></i> <b>Icon with a mismatching name in FontAwesome</b></li>
-    </ul>
-    <hr/>
-    <form action="#">
-      <label class="checkbox inline">
-        <input type="checkbox" id="show-borders"> Show borders
-      </label>
-    </form>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Icon name</th>
-          <th>FAv3</th>
-          <th>FAv2</th>
-          <th>BS30</th>
-          <th>ELSV</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>address-book</td><td><i class="icon3-address-book"></i></td><td><i class="icon2-address-book"></i></td><td><i class="glyphicon-address-book"></i></td><td><i class="elusive-address-book"></i></td></tr>
-        <tr><td>address-book-alt</td><td><i class="icon3-address-book-alt"></i></td><td><i class="icon2-address-book-alt"></i></td><td><i class="glyphicon-address-book-alt"></i></td><td><i class="elusive-address-book-alt"></i></td></tr>
-        <tr><td>adjust</td><td><i class="icon3-adjust"></i></td><td><i class="icon2-adjust"></i></td><td><i class="glyphicon-adjust"></i></td><td><i class="elusive-adjust"></i></td></tr>
-        <tr><td>adult</td><td><i class="icon3-adult"></i></td><td><i class="icon2-adult"></i></td><td><i class="glyphicon-adult"></i></td><td><i class="elusive-adult"></i></td></tr>
-        <tr><td>align-center</td><td><i class="icon3-align-center"></i></td><td><i class="icon2-align-center"></i></td><td><i class="glyphicon-align-center"></i></td><td><i class="elusive-align-center"></i></td></tr>
-        <tr><td>align-justify</td><td><i class="icon3-align-justify"></i></td><td><i class="icon2-align-justify"></i></td><td><i class="glyphicon-align-justify"></i></td><td><i class="elusive-align-justify"></i></td></tr>
-        <tr><td>align-left</td><td><i class="icon3-align-left"></i></td><td><i class="icon2-align-left"></i></td><td><i class="glyphicon-align-left"></i></td><td><i class="elusive-align-left"></i></td></tr>
-        <tr><td>align-right</td><td><i class="icon3-align-right"></i></td><td><i class="icon2-align-right"></i></td><td><i class="glyphicon-align-right"></i></td><td><i class="elusive-align-right"></i></td></tr>
-        <tr><td>ambulance</td><td><i class="icon3-ambulance"></i></td><td><i class="icon2-ambulance"></i></td><td><i class="glyphicon-ambulance"></i></td><td><i class="elusive-ambulance"></i></td></tr>
-        <tr><td>angle-down</td><td><i class="icon3-angle-down"></i></td><td><i class="icon2-angle-down"></i></td><td><i class="glyphicon-angle-down"></i></td><td><i class="elusive-angle-down"></i></td></tr>
-        <tr><td>angle-left</td><td><i class="icon3-angle-left"></i></td><td><i class="icon2-angle-left"></i></td><td><i class="glyphicon-angle-left"></i></td><td><i class="elusive-angle-left"></i></td></tr>
-        <tr><td>angle-right</td><td><i class="icon3-angle-right"></i></td><td><i class="icon2-angle-right"></i></td><td><i class="glyphicon-angle-right"></i></td><td><i class="elusive-angle-right"></i></td></tr>
-        <tr><td>angle-up</td><td><i class="icon3-angle-up"></i></td><td><i class="icon2-angle-up"></i></td><td><i class="glyphicon-angle-up"></i></td><td><i class="elusive-angle-up"></i></td></tr>
-        <tr><td>arrow-down</td><td><i class="icon3-arrow-down"></i></td><td><i class="icon2-arrow-down"></i></td><td><i class="glyphicon-arrow-down"></i></td><td><i class="elusive-arrow-down"></i></td></tr>
-        <tr><td>arrow-left</td><td><i class="icon3-arrow-left"></i></td><td><i class="icon2-arrow-left"></i></td><td><i class="glyphicon-arrow-left"></i></td><td><i class="elusive-arrow-left"></i></td></tr>
-        <tr><td>arrow-right</td><td><i class="icon3-arrow-right"></i></td><td><i class="icon2-arrow-right"></i></td><td><i class="glyphicon-arrow-right"></i></td><td><i class="elusive-arrow-right"></i></td></tr>
-        <tr><td>arrow-up</td><td><i class="icon3-arrow-up"></i></td><td><i class="icon2-arrow-up"></i></td><td><i class="glyphicon-arrow-up"></i></td><td><i class="elusive-arrow-up"></i></td></tr>
-        <tr><td>asl</td><td><i class="icon3-asl"></i></td><td><i class="icon2-asl"></i></td><td><i class="glyphicon-asl"></i></td><td><i class="elusive-asl"></i></td></tr>
-        <tr><td>asterisk</td><td><i class="icon3-asterisk"></i></td><td><i class="icon2-asterisk"></i></td><td><i class="glyphicon-asterisk"></i></td><td><i class="elusive-asterisk"></i></td></tr>
-        <tr><td>backward</td><td><i class="icon3-backward"></i></td><td><i class="icon2-backward"></i></td><td><i class="glyphicon-backward"></i></td><td><i class="elusive-backward"></i></td></tr>
-        <tr><td>ban-circle</td><td><i class="icon3-ban-circle"></i></td><td><i class="icon2-ban-circle"></i></td><td><i class="glyphicon-ban-circle"></i></td><td><i class="elusive-ban-circle"></i></td></tr>
-        <tr><td>bar-chart</td><td><i class="icon3-bar-chart"></i></td><td><i class="icon2-bar-chart"></i></td><td><i class="glyphicon-bar-chart"></i></td><td><i class="elusive-bar-chart"></i></td></tr>
-        <tr><td>barcode</td><td><i class="icon3-barcode"></i></td><td><i class="icon2-barcode"></i></td><td><i class="glyphicon-barcode"></i></td><td><i class="elusive-barcode"></i></td></tr>
-        <tr><td>beaker</td><td><i class="icon3-beaker"></i></td><td><i class="icon2-beaker"></i></td><td><i class="glyphicon-beaker"></i></td><td><i class="elusive-beaker"></i></td></tr>
-        <tr><td>beer</td><td><i class="icon3-beer"></i></td><td><i class="icon2-beer"></i></td><td><i class="glyphicon-beer"></i></td><td><i class="elusive-beer"></i></td></tr>
-        <tr><td>behance</td><td><i class="icon3-behance"></i></td><td><i class="icon2-behance"></i></td><td><i class="glyphicon-behance"></i></td><td><i class="elusive-behance"></i></td></tr>
-        <tr><td>bell</td><td><i class="icon3-bell"></i></td><td><i class="icon2-bell"></i></td><td><i class="glyphicon-bell"></i></td><td><i class="elusive-bell"></i></td></tr>
-        <tr><td>bell-alt</td><td><i class="icon3-bell-alt"></i></td><td><i class="icon2-bell-alt"></i></td><td><i class="glyphicon-bell-alt"></i></td><td><i class="elusive-bell-alt"></i></td></tr>
-        <tr><td>blind</td><td><i class="icon3-blind"></i></td><td><i class="icon2-blind"></i></td><td><i class="glyphicon-blind"></i></td><td><i class="elusive-blind"></i></td></tr>
-        <tr><td>blogger</td><td><i class="icon3-blogger"></i></td><td><i class="icon2-blogger"></i></td><td><i class="glyphicon-blogger"></i></td><td><i class="elusive-blogger"></i></td></tr>
-        <tr><td>bold</td><td><i class="icon3-bold"></i></td><td><i class="icon2-bold"></i></td><td><i class="glyphicon-bold"></i></td><td><i class="elusive-bold"></i></td></tr>
-        <tr><td>bolt</td><td><i class="icon3-bolt"></i></td><td><i class="icon2-bolt"></i></td><td><i class="glyphicon-bolt"></i></td><td><i class="elusive-bolt"></i></td></tr>
-        <tr><td>book</td><td><i class="icon3-book"></i></td><td><i class="icon2-book"></i></td><td><i class="glyphicon-book"></i></td><td><i class="elusive-book"></i></td></tr>
-        <tr><td>bookmark</td><td><i class="icon3-bookmark"></i></td><td><i class="icon2-bookmark"></i></td><td><i class="glyphicon-bookmark"></i></td><td><i class="elusive-bookmark"></i></td></tr>
-        <tr><td>bookmark-empty</td><td><i class="icon3-bookmark-empty"></i></td><td><i class="icon2-bookmark-empty"></i></td><td><i class="glyphicon-bookmark-empty"></i></td><td><i class="elusive-bookmark-empty"></i></td></tr>
-        <tr><td>braille</td><td><i class="icon3-braille"></i></td><td><i class="icon2-braille"></i></td><td><i class="glyphicon-braille"></i></td><td><i class="elusive-braille"></i></td></tr>
-        <tr><td>briefcase</td><td><i class="icon3-briefcase"></i></td><td><i class="icon2-briefcase"></i></td><td><i class="glyphicon-briefcase"></i></td><td><i class="elusive-briefcase"></i></td></tr>
-        <tr><td>building</td><td><i class="icon3-building"></i></td><td><i class="icon2-building"></i></td><td><i class="glyphicon-building"></i></td><td><i class="elusive-building"></i></td></tr>
-        <tr><td>bullhorn</td><td><i class="icon3-bullhorn"></i></td><td><i class="icon2-bullhorn"></i></td><td><i class="glyphicon-bullhorn"></i></td><td><i class="elusive-bullhorn"></i></td></tr>
-        <tr><td>calendar</td><td><i class="icon3-calendar"></i></td><td><i class="icon2-calendar"></i></td><td><i class="glyphicon-calendar"></i></td><td><i class="elusive-calendar"></i></td></tr>
-        <tr><td>calendar-sign</td><td><i class="icon3-calendar-sign"></i></td><td><i class="icon2-calendar-sign"></i></td><td><i class="glyphicon-calendar-sign"></i></td><td><i class="elusive-calendar-sign"></i></td></tr>
-        <tr><td>camera</td><td><i class="icon3-camera"></i></td><td><i class="icon2-camera"></i></td><td><i class="glyphicon-camera"></i></td><td><i class="elusive-camera"></i></td></tr>
-        <tr><td>camera-retro</td><td><i class="icon3-camera-retro"></i></td><td><i class="icon2-camera-retro"></i></td><td><i class="glyphicon-camera-retro"></i></td><td><i class="elusive-camera-retro"></i></td></tr>
-        <tr><td>caret-down</td><td><i class="icon3-caret-down"></i></td><td><i class="icon2-caret-down"></i></td><td><i class="glyphicon-caret-down"></i></td><td><i class="elusive-caret-down"></i></td></tr>
-        <tr><td>caret-left</td><td><i class="icon3-caret-left"></i></td><td><i class="icon2-caret-left"></i></td><td><i class="glyphicon-caret-left"></i></td><td><i class="elusive-caret-left"></i></td></tr>
-        <tr><td>caret-right</td><td><i class="icon3-caret-right"></i></td><td><i class="icon2-caret-right"></i></td><td><i class="glyphicon-caret-right"></i></td><td><i class="elusive-caret-right"></i></td></tr>
-        <tr><td>caret-up</td><td><i class="icon3-caret-up"></i></td><td><i class="icon2-caret-up"></i></td><td><i class="glyphicon-caret-up"></i></td><td><i class="elusive-caret-up"></i></td></tr>
-        <tr><td>cc</td><td><i class="icon3-cc"></i></td><td><i class="icon2-cc"></i></td><td><i class="glyphicon-cc"></i></td><td><i class="elusive-cc"></i></td></tr>
-        <tr><td>certificate</td><td><i class="icon3-certificate"></i></td><td><i class="icon2-certificate"></i></td><td><i class="glyphicon-certificate"></i></td><td><i class="elusive-certificate"></i></td></tr>
-        <tr><td>check</td><td><i class="icon3-check"></i></td><td><i class="icon2-check"></i></td><td><i class="glyphicon-check"></i></td><td><i class="elusive-check"></i></td></tr>
-        <tr class="warning"><td>check-empty<br/><small class="muted">should be: unchecked</small></td><td><i class="icon3-check-empty"></i></td><td><i class="icon2-check-empty"></i></td><td><i class="glyphicon-check-empty"></i></td><td><i class="elusive-check-empty"></i></td></tr>
-        <tr><td>chevron-down</td><td><i class="icon3-chevron-down"></i></td><td><i class="icon2-chevron-down"></i></td><td><i class="glyphicon-chevron-down"></i></td><td><i class="elusive-chevron-down"></i></td></tr>
-        <tr><td>chevron-left</td><td><i class="icon3-chevron-left"></i></td><td><i class="icon2-chevron-left"></i></td><td><i class="glyphicon-chevron-left"></i></td><td><i class="elusive-chevron-left"></i></td></tr>
-        <tr><td>chevron-right</td><td><i class="icon3-chevron-right"></i></td><td><i class="icon2-chevron-right"></i></td><td><i class="glyphicon-chevron-right"></i></td><td><i class="elusive-chevron-right"></i></td></tr>
-        <tr><td>chevron-up</td><td><i class="icon3-chevron-up"></i></td><td><i class="icon2-chevron-up"></i></td><td><i class="glyphicon-chevron-up"></i></td><td><i class="elusive-chevron-up"></i></td></tr>
-        <tr><td>child</td><td><i class="icon3-child"></i></td><td><i class="icon2-child"></i></td><td><i class="glyphicon-child"></i></td><td><i class="elusive-child"></i></td></tr>
-        <tr><td>circle</td><td><i class="icon3-circle"></i></td><td><i class="icon2-circle"></i></td><td><i class="glyphicon-circle"></i></td><td><i class="elusive-circle"></i></td></tr>
-        <tr><td>circle-arrow-down</td><td><i class="icon3-circle-arrow-down"></i></td><td><i class="icon2-circle-arrow-down"></i></td><td><i class="glyphicon-circle-arrow-down"></i></td><td><i class="elusive-circle-arrow-down"></i></td></tr>
-        <tr><td>circle-arrow-left</td><td><i class="icon3-circle-arrow-left"></i></td><td><i class="icon2-circle-arrow-left"></i></td><td><i class="glyphicon-circle-arrow-left"></i></td><td><i class="elusive-circle-arrow-left"></i></td></tr>
-        <tr><td>circle-arrow-right</td><td><i class="icon3-circle-arrow-right"></i></td><td><i class="icon2-circle-arrow-right"></i></td><td><i class="glyphicon-circle-arrow-right"></i></td><td><i class="elusive-circle-arrow-right"></i></td></tr>
-        <tr><td>circle-arrow-up</td><td><i class="icon3-circle-arrow-up"></i></td><td><i class="icon2-circle-arrow-up"></i></td><td><i class="glyphicon-circle-arrow-up"></i></td><td><i class="elusive-circle-arrow-up"></i></td></tr>
-        <tr><td>circle-blank</td><td><i class="icon3-circle-blank"></i></td><td><i class="icon2-circle-blank"></i></td><td><i class="glyphicon-circle-blank"></i></td><td><i class="elusive-circle-blank"></i></td></tr>
-        <tr><td>cloud</td><td><i class="icon3-cloud"></i></td><td><i class="icon2-cloud"></i></td><td><i class="glyphicon-cloud"></i></td><td><i class="elusive-cloud"></i></td></tr>
-        <tr><td>cloud-alt</td><td><i class="icon3-cloud-alt"></i></td><td><i class="icon2-cloud-alt"></i></td><td><i class="glyphicon-cloud-alt"></i></td><td><i class="elusive-cloud-alt"></i></td></tr>
-        <tr><td>cloud-download</td><td><i class="icon3-cloud-download"></i></td><td><i class="icon2-cloud-download"></i></td><td><i class="glyphicon-cloud-download"></i></td><td><i class="elusive-cloud-download"></i></td></tr>
-        <tr><td>cloud-upload</td><td><i class="icon3-cloud-upload"></i></td><td><i class="icon2-cloud-upload"></i></td><td><i class="glyphicon-cloud-upload"></i></td><td><i class="elusive-cloud-upload"></i></td></tr>
-        <tr><td>coffee</td><td><i class="icon3-coffee"></i></td><td><i class="icon2-coffee"></i></td><td><i class="glyphicon-coffee"></i></td><td><i class="elusive-coffee"></i></td></tr>
-        <tr><td>cog</td><td><i class="icon3-cog"></i></td><td><i class="icon2-cog"></i></td><td><i class="glyphicon-cog"></i></td><td><i class="elusive-cog"></i></td></tr>
-        <tr><td>cog-alt</td><td><i class="icon3-cog-alt"></i></td><td><i class="icon2-cog-alt"></i></td><td><i class="glyphicon-cog-alt"></i></td><td><i class="elusive-cog-alt"></i></td></tr>
-        <tr><td>cogs</td><td><i class="icon3-cogs"></i></td><td><i class="icon2-cogs"></i></td><td><i class="glyphicon-cogs"></i></td><td><i class="elusive-cogs"></i></td></tr>
-        <tr class="error"><td>collapse</td><td><i class="icon3-collapse"></i></td><td><i class="icon2-collapse"></i></td><td><i class="glyphicon-collapse"></i></td><td><i class="elusive-collapse"></i></td></tr>
-        <tr class="error"><td>collapse-top</td><td><i class="icon3-collapse-top"></i></td><td><i class="icon2-collapse-top"></i></td><td><i class="glyphicon-collapse-top"></i></td><td><i class="elusive-collapse-top"></i></td></tr>
-        <tr><td>columns</td><td><i class="icon3-columns"></i></td><td><i class="icon2-columns"></i></td><td><i class="glyphicon-columns"></i></td><td><i class="elusive-columns"></i></td></tr>
-        <tr><td>comment</td><td><i class="icon3-comment"></i></td><td><i class="icon2-comment"></i></td><td><i class="glyphicon-comment"></i></td><td><i class="elusive-comment"></i></td></tr>
-        <tr><td>comment-alt</td><td><i class="icon3-comment-alt"></i></td><td><i class="icon2-comment-alt"></i></td><td><i class="glyphicon-comment-alt"></i></td><td><i class="elusive-comment-alt"></i></td></tr>
-        <tr><td>comments</td><td><i class="icon3-comments"></i></td><td><i class="icon2-comments"></i></td><td><i class="glyphicon-comments"></i></td><td><i class="elusive-comments"></i></td></tr>
-        <tr><td>comments-alt</td><td><i class="icon3-comments-alt"></i></td><td><i class="icon2-comments-alt"></i></td><td><i class="glyphicon-comments-alt"></i></td><td><i class="elusive-comments-alt"></i></td></tr>
-        <tr><td>compass</td><td><i class="icon3-compass"></i></td><td><i class="icon2-compass"></i></td><td><i class="glyphicon-compass"></i></td><td><i class="elusive-compass"></i></td></tr>
-        <tr><td>compass-alt</td><td><i class="icon3-compass-alt"></i></td><td><i class="icon2-compass-alt"></i></td><td><i class="glyphicon-compass-alt"></i></td><td><i class="elusive-compass-alt"></i></td></tr>
-        <tr><td>copy</td><td><i class="icon3-copy"></i></td><td><i class="icon2-copy"></i></td><td><i class="glyphicon-copy"></i></td><td><i class="elusive-copy"></i></td></tr>
-        <tr><td>credit-card</td><td><i class="icon3-credit-card"></i></td><td><i class="icon2-credit-card"></i></td><td><i class="glyphicon-credit-card"></i></td><td><i class="elusive-credit-card"></i></td></tr>
-        <tr><td>css</td><td><i class="icon3-css"></i></td><td><i class="icon2-css"></i></td><td><i class="glyphicon-css"></i></td><td><i class="elusive-css"></i></td></tr>
-        <tr><td>cut</td><td><i class="icon3-cut"></i></td><td><i class="icon2-cut"></i></td><td><i class="glyphicon-cut"></i></td><td><i class="elusive-cut"></i></td></tr>
-        <tr><td>dashboard</td><td><i class="icon3-dashboard"></i></td><td><i class="icon2-dashboard"></i></td><td><i class="glyphicon-dashboard"></i></td><td><i class="elusive-dashboard"></i></td></tr>
-        <tr><td>delicious</td><td><i class="icon3-delicious"></i></td><td><i class="icon2-delicious"></i></td><td><i class="glyphicon-delicious"></i></td><td><i class="elusive-delicious"></i></td></tr>
-        <tr><td>desktop</td><td><i class="icon3-desktop"></i></td><td><i class="icon2-desktop"></i></td><td><i class="glyphicon-desktop"></i></td><td><i class="elusive-desktop"></i></td></tr>
-        <tr><td>deviantart</td><td><i class="icon3-deviantart"></i></td><td><i class="icon2-deviantart"></i></td><td><i class="glyphicon-deviantart"></i></td><td><i class="elusive-deviantart"></i></td></tr>
-        <tr><td>digg</td><td><i class="icon3-digg"></i></td><td><i class="icon2-digg"></i></td><td><i class="glyphicon-digg"></i></td><td><i class="elusive-digg"></i></td></tr>
-        <tr><td>double-angle-down</td><td><i class="icon3-double-angle-down"></i></td><td><i class="icon2-double-angle-down"></i></td><td><i class="glyphicon-double-angle-down"></i></td><td><i class="elusive-double-angle-down"></i></td></tr>
-        <tr><td>double-angle-left</td><td><i class="icon3-double-angle-left"></i></td><td><i class="icon2-double-angle-left"></i></td><td><i class="glyphicon-double-angle-left"></i></td><td><i class="elusive-double-angle-left"></i></td></tr>
-        <tr><td>double-angle-right</td><td><i class="icon3-double-angle-right"></i></td><td><i class="icon2-double-angle-right"></i></td><td><i class="glyphicon-double-angle-right"></i></td><td><i class="elusive-double-angle-right"></i></td></tr>
-        <tr><td>double-angle-up</td><td><i class="icon3-double-angle-up"></i></td><td><i class="icon2-double-angle-up"></i></td><td><i class="glyphicon-double-angle-up"></i></td><td><i class="elusive-double-angle-up"></i></td></tr>
-        <tr><td>download</td><td><i class="icon3-download"></i></td><td><i class="icon2-download"></i></td><td><i class="glyphicon-download"></i></td><td><i class="elusive-download"></i></td></tr>
-        <tr><td>download-alt</td><td><i class="icon3-download-alt"></i></td><td><i class="icon2-download-alt"></i></td><td><i class="glyphicon-download-alt"></i></td><td><i class="elusive-download-alt"></i></td></tr>
-        <tr><td>dribble</td><td><i class="icon3-dribble"></i></td><td><i class="icon2-dribble"></i></td><td><i class="glyphicon-dribble"></i></td><td><i class="elusive-dribble"></i></td></tr>
-        <tr><td>edit</td><td><i class="icon3-edit"></i></td><td><i class="icon2-edit"></i></td><td><i class="glyphicon-edit"></i></td><td><i class="elusive-edit"></i></td></tr>
-        <tr><td>eject</td><td><i class="icon3-eject"></i></td><td><i class="icon2-eject"></i></td><td><i class="glyphicon-eject"></i></td><td><i class="elusive-eject"></i></td></tr>
-        <tr><td>envelope</td><td><i class="icon3-envelope"></i></td><td><i class="icon2-envelope"></i></td><td><i class="glyphicon-envelope"></i></td><td><i class="elusive-envelope"></i></td></tr>
-        <tr><td>envelope-alt</td><td><i class="icon3-envelope-alt"></i></td><td><i class="icon2-envelope-alt"></i></td><td><i class="glyphicon-envelope-alt"></i></td><td><i class="elusive-envelope-alt"></i></td></tr>
-        <tr><td>error</td><td><i class="icon3-error"></i></td><td><i class="icon2-error"></i></td><td><i class="glyphicon-error"></i></td><td><i class="elusive-error"></i></td></tr>
-        <tr><td>error-alt</td><td><i class="icon3-error-alt"></i></td><td><i class="icon2-error-alt"></i></td><td><i class="glyphicon-error-alt"></i></td><td><i class="elusive-error-alt"></i></td></tr>
-        <tr><td>exchange</td><td><i class="icon3-exchange"></i></td><td><i class="icon2-exchange"></i></td><td><i class="glyphicon-exchange"></i></td><td><i class="elusive-exchange"></i></td></tr>
-        <tr><td>exclamation-sign</td><td><i class="icon3-exclamation-sign"></i></td><td><i class="icon2-exclamation-sign"></i></td><td><i class="glyphicon-exclamation-sign"></i></td><td><i class="elusive-exclamation-sign"></i></td></tr>
-        <tr class="error"><td>expand</td><td><i class="icon3-expand"></i></td><td><i class="icon2-expand"></i></td><td><i class="glyphicon-expand"></i></td><td><i class="elusive-expand"></i></td></tr>
-        <tr><td>external-link</td><td><i class="icon3-external-link"></i></td><td><i class="icon2-external-link"></i></td><td><i class="glyphicon-external-link"></i></td><td><i class="elusive-external-link"></i></td></tr>
-        <tr><td>eye-close</td><td><i class="icon3-eye-close"></i></td><td><i class="icon2-eye-close"></i></td><td><i class="glyphicon-eye-close"></i></td><td><i class="elusive-eye-close"></i></td></tr>
-        <tr><td>eye-open</td><td><i class="icon3-eye-open"></i></td><td><i class="icon2-eye-open"></i></td><td><i class="glyphicon-eye-open"></i></td><td><i class="elusive-eye-open"></i></td></tr>
-        <tr class="error"><td>euro</td><td><i class="icon3-euro"></i></td><td><i class="icon2-euro"></i></td><td><i class="glyphicon-euro"></i></td><td><i class="elusive-euro"></i></td></tr>
-        <tr><td>facebook</td><td><i class="icon3-facebook"></i></td><td><i class="icon2-facebook"></i></td><td><i class="glyphicon-facebook"></i></td><td><i class="elusive-facebook"></i></td></tr>
-        <tr><td>facebook-sign</td><td><i class="icon3-facebook-sign"></i></td><td><i class="icon2-facebook-sign"></i></td><td><i class="glyphicon-facebook-sign"></i></td><td><i class="elusive-facebook-sign"></i></td></tr>
-        <tr><td>facetime-video</td><td><i class="icon3-facetime-video"></i></td><td><i class="icon2-facetime-video"></i></td><td><i class="glyphicon-facetime-video"></i></td><td><i class="elusive-facetime-video"></i></td></tr>
-        <tr><td>fast-backward</td><td><i class="icon3-fast-backward"></i></td><td><i class="icon2-fast-backward"></i></td><td><i class="glyphicon-fast-backward"></i></td><td><i class="elusive-fast-backward"></i></td></tr>
-        <tr><td>fast-forward</td><td><i class="icon3-fast-forward"></i></td><td><i class="icon2-fast-forward"></i></td><td><i class="glyphicon-fast-forward"></i></td><td><i class="elusive-fast-forward"></i></td></tr>
-        <tr><td>female</td><td><i class="icon3-female"></i></td><td><i class="icon2-female"></i></td><td><i class="glyphicon-female"></i></td><td><i class="elusive-female"></i></td></tr>
-        <tr><td>fighter-jet</td><td><i class="icon3-fighter-jet"></i></td><td><i class="icon2-fighter-jet"></i></td><td><i class="glyphicon-fighter-jet"></i></td><td><i class="elusive-fighter-jet"></i></td></tr>
-        <tr><td>file</td><td><i class="icon3-file"></i></td><td><i class="icon2-file"></i></td><td><i class="glyphicon-file"></i></td><td><i class="elusive-file"></i></td></tr>
-        <tr><td>file-alt</td><td><i class="icon3-file-alt"></i></td><td><i class="icon2-file-alt"></i></td><td><i class="glyphicon-file-alt"></i></td><td><i class="elusive-file-alt"></i></td></tr>
-        <tr><td>file-edit</td><td><i class="icon3-file-edit"></i></td><td><i class="icon2-file-edit"></i></td><td><i class="glyphicon-file-edit"></i></td><td><i class="elusive-file-edit"></i></td></tr>
-        <tr><td>file-edit-alt</td><td><i class="icon3-file-edit-alt"></i></td><td><i class="icon2-file-edit-alt"></i></td><td><i class="glyphicon-file-edit-alt"></i></td><td><i class="elusive-file-edit-alt"></i></td></tr>
-        <tr><td>file-new</td><td><i class="icon3-file-new"></i></td><td><i class="icon2-file-new"></i></td><td><i class="glyphicon-file-new"></i></td><td><i class="elusive-file-new"></i></td></tr>
-        <tr><td>file-new-alt</td><td><i class="icon3-file-new-alt"></i></td><td><i class="icon2-file-new-alt"></i></td><td><i class="glyphicon-file-new-alt"></i></td><td><i class="elusive-file-new-alt"></i></td></tr>
-        <tr><td>film</td><td><i class="icon3-film"></i></td><td><i class="icon2-film"></i></td><td><i class="glyphicon-film"></i></td><td><i class="elusive-film"></i></td></tr>
-        <tr><td>filter</td><td><i class="icon3-filter"></i></td><td><i class="icon2-filter"></i></td><td><i class="glyphicon-filter"></i></td><td><i class="elusive-filter"></i></td></tr>
-        <tr><td>fire</td><td><i class="icon3-fire"></i></td><td><i class="icon2-fire"></i></td><td><i class="glyphicon-fire"></i></td><td><i class="elusive-fire"></i></td></tr>
-        <tr><td>flag</td><td><i class="icon3-flag"></i></td><td><i class="icon2-flag"></i></td><td><i class="glyphicon-flag"></i></td><td><i class="elusive-flag"></i></td></tr>
-        <tr><td>flag-alt</td><td><i class="icon3-flag-alt"></i></td><td><i class="icon2-flag-alt"></i></td><td><i class="glyphicon-flag-alt"></i></td><td><i class="elusive-flag-alt"></i></td></tr>
-        <tr><td>flickr</td><td><i class="icon3-flickr"></i></td><td><i class="icon2-flickr"></i></td><td><i class="glyphicon-flickr"></i></td><td><i class="elusive-flickr"></i></td></tr>
-        <tr><td>folder</td><td><i class="icon3-folder"></i></td><td><i class="icon2-folder"></i></td><td><i class="glyphicon-folder"></i></td><td><i class="elusive-folder"></i></td></tr>
-        <tr><td>folder-close</td><td><i class="icon3-folder-close"></i></td><td><i class="icon2-folder-close"></i></td><td><i class="glyphicon-folder-close"></i></td><td><i class="elusive-folder-close"></i></td></tr>
-        <tr><td>folder-close-alt</td><td><i class="icon3-folder-close-alt"></i></td><td><i class="icon2-folder-close-alt"></i></td><td><i class="glyphicon-folder-close-alt"></i></td><td><i class="elusive-folder-close-alt"></i></td></tr>
-        <tr><td>folder-open</td><td><i class="icon3-folder-open"></i></td><td><i class="icon2-folder-open"></i></td><td><i class="glyphicon-folder-open"></i></td><td><i class="elusive-folder-open"></i></td></tr>
-        <tr><td>folder-open-alt</td><td><i class="icon3-folder-open-alt"></i></td><td><i class="icon2-folder-open-alt"></i></td><td><i class="glyphicon-folder-open-alt"></i></td><td><i class="elusive-folder-open-alt"></i></td></tr>
-        <tr><td>folder-sign</td><td><i class="icon3-folder-sign"></i></td><td><i class="icon2-folder-sign"></i></td><td><i class="glyphicon-folder-sign"></i></td><td><i class="elusive-folder-sign"></i></td></tr>
-        <tr><td>font</td><td><i class="icon3-font"></i></td><td><i class="icon2-font"></i></td><td><i class="glyphicon-font"></i></td><td><i class="elusive-font"></i></td></tr>
-        <tr><td>fontsize</td><td><i class="icon3-fontsize"></i></td><td><i class="icon2-fontsize"></i></td><td><i class="glyphicon-fontsize"></i></td><td><i class="elusive-fontsize"></i></td></tr>
-        <tr><td>food</td><td><i class="icon3-food"></i></td><td><i class="icon2-food"></i></td><td><i class="glyphicon-food"></i></td><td><i class="elusive-food"></i></td></tr>
-        <tr><td>forward</td><td><i class="icon3-forward"></i></td><td><i class="icon2-forward"></i></td><td><i class="glyphicon-forward"></i></td><td><i class="elusive-forward"></i></td></tr>
-        <tr><td>forward-alt</td><td><i class="icon3-forward-alt"></i></td><td><i class="icon2-forward-alt"></i></td><td><i class="glyphicon-forward-alt"></i></td><td><i class="elusive-forward-alt"></i></td></tr>
-        <tr><td>foursquare</td><td><i class="icon3-foursquare"></i></td><td><i class="icon2-foursquare"></i></td><td><i class="glyphicon-foursquare"></i></td><td><i class="elusive-foursquare"></i></td></tr>
-        <tr><td>friendfeed</td><td><i class="icon3-friendfeed"></i></td><td><i class="icon2-friendfeed"></i></td><td><i class="glyphicon-friendfeed"></i></td><td><i class="elusive-friendfeed"></i></td></tr>
-        <tr><td>friendfeed-rect</td><td><i class="icon3-friendfeed-rect"></i></td><td><i class="icon2-friendfeed-rect"></i></td><td><i class="glyphicon-friendfeed-rect"></i></td><td><i class="elusive-friendfeed-rect"></i></td></tr>
-        <tr><td>fullscreen</td><td><i class="icon3-fullscreen"></i></td><td><i class="icon2-fullscreen"></i></td><td><i class="glyphicon-fullscreen"></i></td><td><i class="elusive-fullscreen"></i></td></tr>
-        <tr class="error"><td>gbp</td><td><i class="icon3-gbp"></i></td><td><i class="icon2-gbp"></i></td><td><i class="glyphicon-gbp"></i></td><td><i class="elusive-gbp"></i></td></tr>
-        <tr><td>gift</td><td><i class="icon3-gift"></i></td><td><i class="icon2-gift"></i></td><td><i class="glyphicon-gift"></i></td><td><i class="elusive-gift"></i></td></tr>
-        <tr><td>github</td><td><i class="icon3-github"></i></td><td><i class="icon2-github"></i></td><td><i class="glyphicon-github"></i></td><td><i class="elusive-github"></i></td></tr>
-        <tr><td>github-alt</td><td><i class="icon3-github-alt"></i></td><td><i class="icon2-github-alt"></i></td><td><i class="glyphicon-github-alt"></i></td><td><i class="elusive-github-alt"></i></td></tr>
-        <tr><td>github-sign</td><td><i class="icon3-github-sign"></i></td><td><i class="icon2-github-sign"></i></td><td><i class="glyphicon-github-sign"></i></td><td><i class="elusive-github-sign"></i></td></tr>
-        <tr><td>github-text</td><td><i class="icon3-github-text"></i></td><td><i class="icon2-github-text"></i></td><td><i class="glyphicon-github-text"></i></td><td><i class="elusive-github-text"></i></td></tr>
-        <tr><td>glass</td><td><i class="icon3-glass"></i></td><td><i class="icon2-glass"></i></td><td><i class="glyphicon-glass"></i></td><td><i class="elusive-glass"></i></td></tr>
-        <tr><td>glasses</td><td><i class="icon3-glasses"></i></td><td><i class="icon2-glasses"></i></td><td><i class="glyphicon-glasses"></i></td><td><i class="elusive-glasses"></i></td></tr>
-        <tr><td>globe</td><td><i class="icon3-globe"></i></td><td><i class="icon2-globe"></i></td><td><i class="glyphicon-globe"></i></td><td><i class="elusive-globe"></i></td></tr>
-        <tr><td>globe-alt</td><td><i class="icon3-globe-alt"></i></td><td><i class="icon2-globe-alt"></i></td><td><i class="glyphicon-globe-alt"></i></td><td><i class="elusive-globe-alt"></i></td></tr>
-        <tr><td>googleplus</td><td><i class="icon3-googleplus"></i></td><td><i class="icon2-googleplus"></i></td><td><i class="glyphicon-googleplus"></i></td><td><i class="elusive-googleplus"></i></td></tr>
-        <tr><td>google-plus</td><td><i class="icon3-google-plus"></i></td><td><i class="icon2-google-plus"></i></td><td><i class="glyphicon-google-plus"></i></td><td><i class="elusive-google-plus"></i></td></tr>
-        <tr><td>google-plus-sign</td><td><i class="icon3-google-plus-sign"></i></td><td><i class="icon2-google-plus-sign"></i></td><td><i class="glyphicon-google-plus-sign"></i></td><td><i class="elusive-google-plus-sign"></i></td></tr>
-        <tr><td>graph</td><td><i class="icon3-graph"></i></td><td><i class="icon2-graph"></i></td><td><i class="glyphicon-graph"></i></td><td><i class="elusive-graph"></i></td></tr>
-        <tr><td>graph-alt</td><td><i class="icon3-graph-alt"></i></td><td><i class="icon2-graph-alt"></i></td><td><i class="glyphicon-graph-alt"></i></td><td><i class="elusive-graph-alt"></i></td></tr>
-        <tr><td>group</td><td><i class="icon3-group"></i></td><td><i class="icon2-group"></i></td><td><i class="glyphicon-group"></i></td><td><i class="elusive-group"></i></td></tr>
-        <tr><td>group-alt</td><td><i class="icon3-group-alt"></i></td><td><i class="icon2-group-alt"></i></td><td><i class="glyphicon-group-alt"></i></td><td><i class="elusive-group-alt"></i></td></tr>
-        <tr><td>guidedog</td><td><i class="icon3-guidedog"></i></td><td><i class="icon2-guidedog"></i></td><td><i class="glyphicon-guidedog"></i></td><td><i class="elusive-guidedog"></i></td></tr>
-        <tr><td>hand-down</td><td><i class="icon3-hand-down"></i></td><td><i class="icon2-hand-down"></i></td><td><i class="glyphicon-hand-down"></i></td><td><i class="elusive-hand-down"></i></td></tr>
-        <tr><td>hand-left</td><td><i class="icon3-hand-left"></i></td><td><i class="icon2-hand-left"></i></td><td><i class="glyphicon-hand-left"></i></td><td><i class="elusive-hand-left"></i></td></tr>
-        <tr><td>hand-right</td><td><i class="icon3-hand-right"></i></td><td><i class="icon2-hand-right"></i></td><td><i class="glyphicon-hand-right"></i></td><td><i class="elusive-hand-right"></i></td></tr>
-        <tr><td>hand-up</td><td><i class="icon3-hand-up"></i></td><td><i class="icon2-hand-up"></i></td><td><i class="glyphicon-hand-up"></i></td><td><i class="elusive-hand-up"></i></td></tr>
-        <tr><td>hdd</td><td><i class="icon3-hdd"></i></td><td><i class="icon2-hdd"></i></td><td><i class="glyphicon-hdd"></i></td><td><i class="elusive-hdd"></i></td></tr>
-        <tr><td>headphones</td><td><i class="icon3-headphones"></i></td><td><i class="icon2-headphones"></i></td><td><i class="glyphicon-headphones"></i></td><td><i class="elusive-headphones"></i></td></tr>
-        <tr><td>hearing-impaired</td><td><i class="icon3-hearing-impaired"></i></td><td><i class="icon2-hearing-impaired"></i></td><td><i class="glyphicon-hearing-impaired"></i></td><td><i class="elusive-hearing-impaired"></i></td></tr>
-        <tr><td>heart</td><td><i class="icon3-heart"></i></td><td><i class="icon2-heart"></i></td><td><i class="glyphicon-heart"></i></td><td><i class="elusive-heart"></i></td></tr>
-        <tr><td>heart-alt</td><td><i class="icon3-heart-alt"></i></td><td><i class="icon2-heart-alt"></i></td><td><i class="glyphicon-heart-alt"></i></td><td><i class="elusive-heart-alt"></i></td></tr>
-        <tr><td>heart-empty</td><td><i class="icon3-heart-empty"></i></td><td><i class="icon2-heart-empty"></i></td><td><i class="glyphicon-heart-empty"></i></td><td><i class="elusive-heart-empty"></i></td></tr>
-        <tr><td>home</td><td><i class="icon3-home"></i></td><td><i class="icon2-home"></i></td><td><i class="glyphicon-home"></i></td><td><i class="elusive-home"></i></td></tr>
-        <tr><td>home-alt</td><td><i class="icon3-home-alt"></i></td><td><i class="icon2-home-alt"></i></td><td><i class="glyphicon-home-alt"></i></td><td><i class="elusive-home-alt"></i></td></tr>
-        <tr><td>hospital</td><td><i class="icon3-hospital"></i></td><td><i class="icon2-hospital"></i></td><td><i class="glyphicon-hospital"></i></td><td><i class="elusive-hospital"></i></td></tr>
-        <tr><td>h-sign</td><td><i class="icon3-h-sign"></i></td><td><i class="icon2-h-sign"></i></td><td><i class="glyphicon-h-sign"></i></td><td><i class="elusive-h-sign"></i></td></tr>
-        <tr><td>idea</td><td><i class="icon3-idea"></i></td><td><i class="icon2-idea"></i></td><td><i class="glyphicon-idea"></i></td><td><i class="elusive-idea"></i></td></tr>
-        <tr><td>idea-alt</td><td><i class="icon3-idea-alt"></i></td><td><i class="icon2-idea-alt"></i></td><td><i class="glyphicon-idea-alt"></i></td><td><i class="elusive-idea-alt"></i></td></tr>
-        <tr><td>inbox</td><td><i class="icon3-inbox"></i></td><td><i class="icon2-inbox"></i></td><td><i class="glyphicon-inbox"></i></td><td><i class="elusive-inbox"></i></td></tr>
-        <tr><td>inbox-alt</td><td><i class="icon3-inbox-alt"></i></td><td><i class="icon2-inbox-alt"></i></td><td><i class="glyphicon-inbox-alt"></i></td><td><i class="elusive-inbox-alt"></i></td></tr>
-        <tr><td>inbox-box</td><td><i class="icon3-inbox-box"></i></td><td><i class="icon2-inbox-box"></i></td><td><i class="glyphicon-inbox-box"></i></td><td><i class="elusive-inbox-box"></i></td></tr>
-        <tr><td>indent-left</td><td><i class="icon3-indent-left"></i></td><td><i class="icon2-indent-left"></i></td><td><i class="glyphicon-indent-left"></i></td><td><i class="elusive-indent-left"></i></td></tr>
-        <tr><td>indent-right</td><td><i class="icon3-indent-right"></i></td><td><i class="icon2-indent-right"></i></td><td><i class="glyphicon-indent-right"></i></td><td><i class="elusive-indent-right"></i></td></tr>
-        <tr><td>info-sign</td><td><i class="icon3-info-sign"></i></td><td><i class="icon2-info-sign"></i></td><td><i class="glyphicon-info-sign"></i></td><td><i class="elusive-info-sign"></i></td></tr>
-        <tr><td>instagram</td><td><i class="icon3-instagram"></i></td><td><i class="icon2-instagram"></i></td><td><i class="glyphicon-instagram"></i></td><td><i class="elusive-instagram"></i></td></tr>
-        <tr><td>iphone-home</td><td><i class="icon3-iphone-home"></i></td><td><i class="icon2-iphone-home"></i></td><td><i class="glyphicon-iphone-home"></i></td><td><i class="elusive-iphone-home"></i></td></tr>
-        <tr><td>italic</td><td><i class="icon3-italic"></i></td><td><i class="icon2-italic"></i></td><td><i class="glyphicon-italic"></i></td><td><i class="elusive-italic"></i></td></tr>
-        <tr><td>key</td><td><i class="icon3-key"></i></td><td><i class="icon2-key"></i></td><td><i class="glyphicon-key"></i></td><td><i class="elusive-key"></i></td></tr>
-        <tr><td>laptop</td><td><i class="icon3-laptop"></i></td><td><i class="icon2-laptop"></i></td><td><i class="glyphicon-laptop"></i></td><td><i class="elusive-laptop"></i></td></tr>
-        <tr><td>laptop-alt</td><td><i class="icon3-laptop-alt"></i></td><td><i class="icon2-laptop-alt"></i></td><td><i class="glyphicon-laptop-alt"></i></td><td><i class="elusive-laptop-alt"></i></td></tr>
-        <tr><td>leaf</td><td><i class="icon3-leaf"></i></td><td><i class="icon2-leaf"></i></td><td><i class="glyphicon-leaf"></i></td><td><i class="elusive-leaf"></i></td></tr>
-        <tr><td>legal</td><td><i class="icon3-legal"></i></td><td><i class="icon2-legal"></i></td><td><i class="glyphicon-legal"></i></td><td><i class="elusive-legal"></i></td></tr>
-        <tr><td>lemon</td><td><i class="icon3-lemon"></i></td><td><i class="icon2-lemon"></i></td><td><i class="glyphicon-lemon"></i></td><td><i class="elusive-lemon"></i></td></tr>
-        <tr><td>lightbulb</td><td><i class="icon3-lightbulb"></i></td><td><i class="icon2-lightbulb"></i></td><td><i class="glyphicon-lightbulb"></i></td><td><i class="elusive-lightbulb"></i></td></tr>
-        <tr><td>link</td><td><i class="icon3-link"></i></td><td><i class="icon2-link"></i></td><td><i class="glyphicon-link"></i></td><td><i class="elusive-link"></i></td></tr>
-        <tr><td>linkedin</td><td><i class="icon3-linkedin"></i></td><td><i class="icon2-linkedin"></i></td><td><i class="glyphicon-linkedin"></i></td><td><i class="elusive-linkedin"></i></td></tr>
-        <tr><td>linkedin-sign</td><td><i class="icon3-linkedin-sign"></i></td><td><i class="icon2-linkedin-sign"></i></td><td><i class="glyphicon-linkedin-sign"></i></td><td><i class="elusive-linkedin-sign"></i></td></tr>
-        <tr><td>list</td><td><i class="icon3-list"></i></td><td><i class="icon2-list"></i></td><td><i class="glyphicon-list"></i></td><td><i class="elusive-list"></i></td></tr>
-        <tr><td>list-alt</td><td><i class="icon3-list-alt"></i></td><td><i class="icon2-list-alt"></i></td><td><i class="glyphicon-list-alt"></i></td><td><i class="elusive-list-alt"></i></td></tr>
-        <tr><td>list-ol</td><td><i class="icon3-list-ol"></i></td><td><i class="icon2-list-ol"></i></td><td><i class="glyphicon-list-ol"></i></td><td><i class="elusive-list-ol"></i></td></tr>
-        <tr><td>list-ul</td><td><i class="icon3-list-ul"></i></td><td><i class="icon2-list-ul"></i></td><td><i class="glyphicon-list-ul"></i></td><td><i class="elusive-list-ul"></i></td></tr>
-        <tr><td>lock</td><td><i class="icon3-lock"></i></td><td><i class="icon2-lock"></i></td><td><i class="glyphicon-lock"></i></td><td><i class="elusive-lock"></i></td></tr>
-        <tr><td>lock-alt</td><td><i class="icon3-lock-alt"></i></td><td><i class="icon2-lock-alt"></i></td><td><i class="glyphicon-lock-alt"></i></td><td><i class="elusive-lock-alt"></i></td></tr>
-        <tr><td>magic</td><td><i class="icon3-magic"></i></td><td><i class="icon2-magic"></i></td><td><i class="glyphicon-magic"></i></td><td><i class="elusive-magic"></i></td></tr>
-        <tr><td>magnet</td><td><i class="icon3-magnet"></i></td><td><i class="icon2-magnet"></i></td><td><i class="glyphicon-magnet"></i></td><td><i class="elusive-magnet"></i></td></tr>
-        <tr><td>mail-alt</td><td><i class="icon3-mail-alt"></i></td><td><i class="icon2-mail-alt"></i></td><td><i class="glyphicon-mail-alt"></i></td><td><i class="elusive-mail-alt"></i></td></tr>
-        <tr><td>male</td><td><i class="icon3-male"></i></td><td><i class="icon2-male"></i></td><td><i class="glyphicon-male"></i></td><td><i class="elusive-male"></i></td></tr>
-        <tr><td>map-marker</td><td><i class="icon3-map-marker"></i></td><td><i class="icon2-map-marker"></i></td><td><i class="glyphicon-map-marker"></i></td><td><i class="elusive-map-marker"></i></td></tr>
-        <tr><td>map-marker-alt</td><td><i class="icon3-map-marker-alt"></i></td><td><i class="icon2-map-marker-alt"></i></td><td><i class="glyphicon-map-marker-alt"></i></td><td><i class="elusive-map-marker-alt"></i></td></tr>
-        <tr><td>medkit</td><td><i class="icon3-medkit"></i></td><td><i class="icon2-medkit"></i></td><td><i class="glyphicon-medkit"></i></td><td><i class="elusive-medkit"></i></td></tr>
-        <tr><td>mic</td><td><i class="icon3-mic"></i></td><td><i class="icon2-mic"></i></td><td><i class="glyphicon-mic"></i></td><td><i class="elusive-mic"></i></td></tr>
-        <tr><td>mic-alt</td><td><i class="icon3-mic-alt"></i></td><td><i class="icon2-mic-alt"></i></td><td><i class="glyphicon-mic-alt"></i></td><td><i class="elusive-mic-alt"></i></td></tr>
-        <tr><td>minus</td><td><i class="icon3-minus"></i></td><td><i class="icon2-minus"></i></td><td><i class="glyphicon-minus"></i></td><td><i class="elusive-minus"></i></td></tr>
-        <tr><td>minus-sign</td><td><i class="icon3-minus-sign"></i></td><td><i class="icon2-minus-sign"></i></td><td><i class="glyphicon-minus-sign"></i></td><td><i class="elusive-minus-sign"></i></td></tr>
-        <tr><td>mobile-phone</td><td><i class="icon3-mobile-phone"></i></td><td><i class="icon2-mobile-phone"></i></td><td><i class="glyphicon-mobile-phone"></i></td><td><i class="elusive-mobile-phone"></i></td></tr>
-        <tr><td>money</td><td><i class="icon3-money"></i></td><td><i class="icon2-money"></i></td><td><i class="glyphicon-money"></i></td><td><i class="elusive-money"></i></td></tr>
-        <tr><td>move</td><td><i class="icon3-move"></i></td><td><i class="icon2-move"></i></td><td><i class="glyphicon-move"></i></td><td><i class="elusive-move"></i></td></tr>
-        <tr><td>music</td><td><i class="icon3-music"></i></td><td><i class="icon2-music"></i></td><td><i class="glyphicon-music"></i></td><td><i class="elusive-music"></i></td></tr>
-        <tr><td>network</td><td><i class="icon3-network"></i></td><td><i class="icon2-network"></i></td><td><i class="glyphicon-network"></i></td><td><i class="elusive-network"></i></td></tr>
-        <tr><td>off</td><td><i class="icon3-off"></i></td><td><i class="icon2-off"></i></td><td><i class="glyphicon-off"></i></td><td><i class="elusive-off"></i></td></tr>
-        <tr><td>ok</td><td><i class="icon3-ok"></i></td><td><i class="icon2-ok"></i></td><td><i class="glyphicon-ok"></i></td><td><i class="elusive-ok"></i></td></tr>
-        <tr><td>ok-circle</td><td><i class="icon3-ok-circle"></i></td><td><i class="icon2-ok-circle"></i></td><td><i class="glyphicon-ok-circle"></i></td><td><i class="elusive-ok-circle"></i></td></tr>
-        <tr><td>ok-sign</td><td><i class="icon3-ok-sign"></i></td><td><i class="icon2-ok-sign"></i></td><td><i class="glyphicon-ok-sign"></i></td><td><i class="elusive-ok-sign"></i></td></tr>
-        <tr class="warning"><td>paperclip</td><td><i class="icon3-paperclip"></i></td><td><i class="icon2-paperclip"></i></td><td><i class="glyphicon-paperclip"></i></td><td><i class="elusive-paperclip"></i></td></tr>
-        <tr class="warning"><td>paper-clip<br/><small class="muted">should be: paperclip</small></td><td><i class="icon3-paper-clip"></i></td><td><i class="icon2-paper-clip"></i></td><td><i class="glyphicon-paper-clip"></i></td><td><i class="elusive-paper-clip"></i></td></tr>
-        <tr><td>paper-clip-alt</td><td><i class="icon3-paper-clip-alt"></i></td><td><i class="icon2-paper-clip-alt"></i></td><td><i class="glyphicon-paper-clip-alt"></i></td><td><i class="elusive-paper-clip-alt"></i></td></tr>
-        <tr><td>paste</td><td><i class="icon3-paste"></i></td><td><i class="icon2-paste"></i></td><td><i class="glyphicon-paste"></i></td><td><i class="elusive-paste"></i></td></tr>
-        <tr><td>path</td><td><i class="icon3-path"></i></td><td><i class="icon2-path"></i></td><td><i class="glyphicon-path"></i></td><td><i class="elusive-path"></i></td></tr>
-        <tr><td>pause</td><td><i class="icon3-pause"></i></td><td><i class="icon2-pause"></i></td><td><i class="glyphicon-pause"></i></td><td><i class="elusive-pause"></i></td></tr>
-        <tr><td>pause-alt</td><td><i class="icon3-pause-alt"></i></td><td><i class="icon2-pause-alt"></i></td><td><i class="glyphicon-pause-alt"></i></td><td><i class="elusive-pause-alt"></i></td></tr>
-        <tr><td>pencil</td><td><i class="icon3-pencil"></i></td><td><i class="icon2-pencil"></i></td><td><i class="glyphicon-pencil"></i></td><td><i class="elusive-pencil"></i></td></tr>
-        <tr><td>pencil-alt</td><td><i class="icon3-pencil-alt"></i></td><td><i class="icon2-pencil-alt"></i></td><td><i class="glyphicon-pencil-alt"></i></td><td><i class="elusive-pencil-alt"></i></td></tr>
-        <tr><td>person</td><td><i class="icon3-person"></i></td><td><i class="icon2-person"></i></td><td><i class="glyphicon-person"></i></td><td><i class="elusive-person"></i></td></tr>
-        <tr><td>phone</td><td><i class="icon3-phone"></i></td><td><i class="icon2-phone"></i></td><td><i class="glyphicon-phone"></i></td><td><i class="elusive-phone"></i></td></tr>
-        <tr><td>phone-alt</td><td><i class="icon3-phone-alt"></i></td><td><i class="icon2-phone-alt"></i></td><td><i class="glyphicon-phone-alt"></i></td><td><i class="elusive-phone-alt"></i></td></tr>
-        <tr><td>phone-sign</td><td><i class="icon3-phone-sign"></i></td><td><i class="icon2-phone-sign"></i></td><td><i class="glyphicon-phone-sign"></i></td><td><i class="elusive-phone-sign"></i></td></tr>
-        <tr><td>photo</td><td><i class="icon3-photo"></i></td><td><i class="icon2-photo"></i></td><td><i class="glyphicon-photo"></i></td><td><i class="elusive-photo"></i></td></tr>
-        <tr><td>photo-alt</td><td><i class="icon3-photo-alt"></i></td><td><i class="icon2-photo-alt"></i></td><td><i class="glyphicon-photo-alt"></i></td><td><i class="elusive-photo-alt"></i></td></tr>
-        <tr><td>picasa</td><td><i class="icon3-picasa"></i></td><td><i class="icon2-picasa"></i></td><td><i class="glyphicon-picasa"></i></td><td><i class="elusive-picasa"></i></td></tr>
-        <tr><td>picture</td><td><i class="icon3-picture"></i></td><td><i class="icon2-picture"></i></td><td><i class="glyphicon-picture"></i></td><td><i class="elusive-picture"></i></td></tr>
-        <tr><td>pinterest</td><td><i class="icon3-pinterest"></i></td><td><i class="icon2-pinterest"></i></td><td><i class="glyphicon-pinterest"></i></td><td><i class="elusive-pinterest"></i></td></tr>
-        <tr><td>pinterest-sign</td><td><i class="icon3-pinterest-sign"></i></td><td><i class="icon2-pinterest-sign"></i></td><td><i class="glyphicon-pinterest-sign"></i></td><td><i class="elusive-pinterest-sign"></i></td></tr>
-        <tr><td>plane</td><td><i class="icon3-plane"></i></td><td><i class="icon2-plane"></i></td><td><i class="glyphicon-plane"></i></td><td><i class="elusive-plane"></i></td></tr>
-        <tr><td>play</td><td><i class="icon3-play"></i></td><td><i class="icon2-play"></i></td><td><i class="glyphicon-play"></i></td><td><i class="elusive-play"></i></td></tr>
-        <tr><td>play-alt</td><td><i class="icon3-play-alt"></i></td><td><i class="icon2-play-alt"></i></td><td><i class="glyphicon-play-alt"></i></td><td><i class="elusive-play-alt"></i></td></tr>
-        <tr><td>play-circle</td><td><i class="icon3-play-circle"></i></td><td><i class="icon2-play-circle"></i></td><td><i class="glyphicon-play-circle"></i></td><td><i class="elusive-play-circle"></i></td></tr>
-        <tr><td>plus</td><td><i class="icon3-plus"></i></td><td><i class="icon2-plus"></i></td><td><i class="glyphicon-plus"></i></td><td><i class="elusive-plus"></i></td></tr>
-        <tr><td>plus-sign</td><td><i class="icon3-plus-sign"></i></td><td><i class="icon2-plus-sign"></i></td><td><i class="glyphicon-plus-sign"></i></td><td><i class="elusive-plus-sign"></i></td></tr>
-        <tr><td>plus-sign-alt</td><td><i class="icon3-plus-sign-alt"></i></td><td><i class="icon2-plus-sign-alt"></i></td><td><i class="glyphicon-plus-sign-alt"></i></td><td><i class="elusive-plus-sign-alt"></i></td></tr>
-        <tr><td>print</td><td><i class="icon3-print"></i></td><td><i class="icon2-print"></i></td><td><i class="glyphicon-print"></i></td><td><i class="elusive-print"></i></td></tr>
-        <tr><td>pushpin</td><td><i class="icon3-pushpin"></i></td><td><i class="icon2-pushpin"></i></td><td><i class="glyphicon-pushpin"></i></td><td><i class="elusive-pushpin"></i></td></tr>
-        <tr><td>qrcode</td><td><i class="icon3-qrcode"></i></td><td><i class="icon2-qrcode"></i></td><td><i class="glyphicon-qrcode"></i></td><td><i class="elusive-qrcode"></i></td></tr>
-        <tr><td>question</td><td><i class="icon3-question"></i></td><td><i class="icon2-question"></i></td><td><i class="glyphicon-question"></i></td><td><i class="elusive-question"></i></td></tr>
-        <tr><td>question-sign</td><td><i class="icon3-question-sign"></i></td><td><i class="icon2-question-sign"></i></td><td><i class="glyphicon-question-sign"></i></td><td><i class="elusive-question-sign"></i></td></tr>
-        <tr><td>quote-left</td><td><i class="icon3-quote-left"></i></td><td><i class="icon2-quote-left"></i></td><td><i class="glyphicon-quote-left"></i></td><td><i class="elusive-quote-left"></i></td></tr>
-        <tr><td>quote-right</td><td><i class="icon3-quote-right"></i></td><td><i class="icon2-quote-right"></i></td><td><i class="glyphicon-quote-right"></i></td><td><i class="elusive-quote-right"></i></td></tr>
-        <tr><td>quotes</td><td><i class="icon3-quotes"></i></td><td><i class="icon2-quotes"></i></td><td><i class="glyphicon-quotes"></i></td><td><i class="elusive-quotes"></i></td></tr>
-        <tr><td>quotes-alt</td><td><i class="icon3-quotes-alt"></i></td><td><i class="icon2-quotes-alt"></i></td><td><i class="glyphicon-quotes-alt"></i></td><td><i class="elusive-quotes-alt"></i></td></tr>
-        <tr><td>random</td><td><i class="icon3-random"></i></td><td><i class="icon2-random"></i></td><td><i class="glyphicon-random"></i></td><td><i class="elusive-random"></i></td></tr>
-        <tr><td>record</td><td><i class="icon3-record"></i></td><td><i class="icon2-record"></i></td><td><i class="glyphicon-record"></i></td><td><i class="elusive-record"></i></td></tr>
-        <tr><td>reddit</td><td><i class="icon3-reddit"></i></td><td><i class="icon2-reddit"></i></td><td><i class="glyphicon-reddit"></i></td><td><i class="elusive-reddit"></i></td></tr>
-        <tr><td>refresh</td><td><i class="icon3-refresh"></i></td><td><i class="icon2-refresh"></i></td><td><i class="glyphicon-refresh"></i></td><td><i class="elusive-refresh"></i></td></tr>
-        <tr><td>remove</td><td><i class="icon3-remove"></i></td><td><i class="icon2-remove"></i></td><td><i class="glyphicon-remove"></i></td><td><i class="elusive-remove"></i></td></tr>
-        <tr><td>remove-circle</td><td><i class="icon3-remove-circle"></i></td><td><i class="icon2-remove-circle"></i></td><td><i class="glyphicon-remove-circle"></i></td><td><i class="elusive-remove-circle"></i></td></tr>
-        <tr><td>remove-sign</td><td><i class="icon3-remove-sign"></i></td><td><i class="icon2-remove-sign"></i></td><td><i class="glyphicon-remove-sign"></i></td><td><i class="elusive-remove-sign"></i></td></tr>
-        <tr><td>reorder</td><td><i class="icon3-reorder"></i></td><td><i class="icon2-reorder"></i></td><td><i class="glyphicon-reorder"></i></td><td><i class="elusive-reorder"></i></td></tr>
-        <tr><td>repeat</td><td><i class="icon3-repeat"></i></td><td><i class="icon2-repeat"></i></td><td><i class="glyphicon-repeat"></i></td><td><i class="elusive-repeat"></i></td></tr>
-        <tr><td>repeat-alt</td><td><i class="icon3-repeat-alt"></i></td><td><i class="icon2-repeat-alt"></i></td><td><i class="glyphicon-repeat-alt"></i></td><td><i class="elusive-repeat-alt"></i></td></tr>
-        <tr><td>reply</td><td><i class="icon3-reply"></i></td><td><i class="icon2-reply"></i></td><td><i class="glyphicon-reply"></i></td><td><i class="elusive-reply"></i></td></tr>
-        <tr><td>resize-full</td><td><i class="icon3-resize-full"></i></td><td><i class="icon2-resize-full"></i></td><td><i class="glyphicon-resize-full"></i></td><td><i class="elusive-resize-full"></i></td></tr>
-        <tr><td>resize-horizontal</td><td><i class="icon3-resize-horizontal"></i></td><td><i class="icon2-resize-horizontal"></i></td><td><i class="glyphicon-resize-horizontal"></i></td><td><i class="elusive-resize-horizontal"></i></td></tr>
-        <tr><td>resize-small</td><td><i class="icon3-resize-small"></i></td><td><i class="icon2-resize-small"></i></td><td><i class="glyphicon-resize-small"></i></td><td><i class="elusive-resize-small"></i></td></tr>
-        <tr><td>resize-vertical</td><td><i class="icon3-resize-vertical"></i></td><td><i class="icon2-resize-vertical"></i></td><td><i class="glyphicon-resize-vertical"></i></td><td><i class="elusive-resize-vertical"></i></td></tr>
-        <tr><td>retweet</td><td><i class="icon3-retweet"></i></td><td><i class="icon2-retweet"></i></td><td><i class="glyphicon-retweet"></i></td><td><i class="elusive-retweet"></i></td></tr>
-        <tr><td>reverse-alt</td><td><i class="icon3-reverse-alt"></i></td><td><i class="icon2-reverse-alt"></i></td><td><i class="glyphicon-reverse-alt"></i></td><td><i class="elusive-reverse-alt"></i></td></tr>
-        <tr><td>road</td><td><i class="icon3-road"></i></td><td><i class="icon2-road"></i></td><td><i class="glyphicon-road"></i></td><td><i class="elusive-road"></i></td></tr>
-        <tr><td>rss</td><td><i class="icon3-rss"></i></td><td><i class="icon2-rss"></i></td><td><i class="glyphicon-rss"></i></td><td><i class="elusive-rss"></i></td></tr>
-        <tr><td>save</td><td><i class="icon3-save"></i></td><td><i class="icon2-save"></i></td><td><i class="glyphicon-save"></i></td><td><i class="elusive-save"></i></td></tr>
-        <tr><td>screen</td><td><i class="icon3-screen"></i></td><td><i class="icon2-screen"></i></td><td><i class="glyphicon-screen"></i></td><td><i class="elusive-screen"></i></td></tr>
-        <tr><td>screen-alt</td><td><i class="icon3-screen-alt"></i></td><td><i class="icon2-screen-alt"></i></td><td><i class="glyphicon-screen-alt"></i></td><td><i class="elusive-screen-alt"></i></td></tr>
-        <tr><td>screenshot</td><td><i class="icon3-screenshot"></i></td><td><i class="icon2-screenshot"></i></td><td><i class="glyphicon-screenshot"></i></td><td><i class="elusive-screenshot"></i></td></tr>
-        <tr><td>search</td><td><i class="icon3-search"></i></td><td><i class="icon2-search"></i></td><td><i class="glyphicon-search"></i></td><td><i class="elusive-search"></i></td></tr>
-        <tr><td>search-alt</td><td><i class="icon3-search-alt"></i></td><td><i class="icon2-search-alt"></i></td><td><i class="glyphicon-search-alt"></i></td><td><i class="elusive-search-alt"></i></td></tr>
-        <tr><td>share</td><td><i class="icon3-share"></i></td><td><i class="icon2-share"></i></td><td><i class="glyphicon-share"></i></td><td><i class="elusive-share"></i></td></tr>
-        <tr><td>share-alt</td><td><i class="icon3-share-alt"></i></td><td><i class="icon2-share-alt"></i></td><td><i class="glyphicon-share-alt"></i></td><td><i class="elusive-share-alt"></i></td></tr>
-        <tr><td>shopping-cart</td><td><i class="icon3-shopping-cart"></i></td><td><i class="icon2-shopping-cart"></i></td><td><i class="glyphicon-shopping-cart"></i></td><td><i class="elusive-shopping-cart"></i></td></tr>
-        <tr><td>shopping-cart-sign</td><td><i class="icon3-shopping-cart-sign"></i></td><td><i class="icon2-shopping-cart-sign"></i></td><td><i class="glyphicon-shopping-cart-sign"></i></td><td><i class="elusive-shopping-cart-sign"></i></td></tr>
-        <tr><td>signal</td><td><i class="icon3-signal"></i></td><td><i class="icon2-signal"></i></td><td><i class="glyphicon-signal"></i></td><td><i class="elusive-signal"></i></td></tr>
-        <tr><td>sign-blank</td><td><i class="icon3-sign-blank"></i></td><td><i class="icon2-sign-blank"></i></td><td><i class="glyphicon-sign-blank"></i></td><td><i class="elusive-sign-blank"></i></td></tr>
-        <tr><td>signin</td><td><i class="icon3-signin"></i></td><td><i class="icon2-signin"></i></td><td><i class="glyphicon-signin"></i></td><td><i class="elusive-signin"></i></td></tr>
-        <tr><td>signout</td><td><i class="icon3-signout"></i></td><td><i class="icon2-signout"></i></td><td><i class="glyphicon-signout"></i></td><td><i class="elusive-signout"></i></td></tr>
-        <tr><td>sitemap</td><td><i class="icon3-sitemap"></i></td><td><i class="icon2-sitemap"></i></td><td><i class="glyphicon-sitemap"></i></td><td><i class="elusive-sitemap"></i></td></tr>
-        <tr><td>skype</td><td><i class="icon3-skype"></i></td><td><i class="icon2-skype"></i></td><td><i class="glyphicon-skype"></i></td><td><i class="elusive-skype"></i></td></tr>
-        <tr><td>slideshare</td><td><i class="icon3-slideshare"></i></td><td><i class="icon2-slideshare"></i></td><td><i class="glyphicon-slideshare"></i></td><td><i class="elusive-slideshare"></i></td></tr>
-        <tr><td>smiley</td><td><i class="icon3-smiley"></i></td><td><i class="icon2-smiley"></i></td><td><i class="glyphicon-smiley"></i></td><td><i class="elusive-smiley"></i></td></tr>
-        <tr><td>smiley-alt</td><td><i class="icon3-smiley-alt"></i></td><td><i class="icon2-smiley-alt"></i></td><td><i class="glyphicon-smiley-alt"></i></td><td><i class="elusive-smiley-alt"></i></td></tr>
-        <tr><td>sort</td><td><i class="icon3-sort"></i></td><td><i class="icon2-sort"></i></td><td><i class="glyphicon-sort"></i></td><td><i class="elusive-sort"></i></td></tr>
-        <tr class="error"><td>sort-by-alphabet</td><td><i class="icon3-sort-by-alphabet"></i></td><td><i class="icon2-sort-by-alphabet"></i></td><td><i class="glyphicon-sort-by-alphabet"></i></td><td><i class="elusive-sort-by-alphabet"></i></td></tr>
-        <tr class="error"><td>sort-by-alphabet-alt</td><td><i class="icon3-sort-by-alphabet-alt"></i></td><td><i class="icon2-sort-by-alphabet-alt"></i></td><td><i class="glyphicon-sort-by-alphabet-alt"></i></td><td><i class="elusive-sort-by-alphabet-alt"></i></td></tr>
-        <tr class="error"><td>sort-by-attributes</td><td><i class="icon3-sort-by-attributes"></i></td><td><i class="icon2-sort-by-attributes"></i></td><td><i class="glyphicon-sort-by-attributes"></i></td><td><i class="elusive-sort-by-attributes"></i></td></tr>
-        <tr class="error"><td>sort-by-attributes-alt</td><td><i class="icon3-sort-by-attributes-alt"></i></td><td><i class="icon2-sort-by-attributes-alt"></i></td><td><i class="glyphicon-sort-by-attributes-alt"></i></td><td><i class="elusive-sort-by-attributes-alt"></i></td></tr>
-        <tr class="error"><td>sort-by-order</td><td><i class="icon3-sort-by-order"></i></td><td><i class="icon2-sort-by-order"></i></td><td><i class="glyphicon-sort-by-order"></i></td><td><i class="elusive-sort-by-order"></i></td></tr>
-        <tr class="error"><td>sort-by-order-alt</td><td><i class="icon3-sort-by-order-alt"></i></td><td><i class="icon2-sort-by-order-alt"></i></td><td><i class="glyphicon-sort-by-order-alt"></i></td><td><i class="elusive-sort-by-order-alt"></i></td></tr>
-        <tr><td>sort-down</td><td><i class="icon3-sort-down"></i></td><td><i class="icon2-sort-down"></i></td><td><i class="glyphicon-sort-down"></i></td><td><i class="elusive-sort-down"></i></td></tr>
-        <tr><td>sort-up</td><td><i class="icon3-sort-up"></i></td><td><i class="icon2-sort-up"></i></td><td><i class="glyphicon-sort-up"></i></td><td><i class="elusive-sort-up"></i></td></tr>
-        <tr><td>speaker</td><td><i class="icon3-speaker"></i></td><td><i class="icon2-speaker"></i></td><td><i class="glyphicon-speaker"></i></td><td><i class="elusive-speaker"></i></td></tr>
-        <tr><td>spinner</td><td><i class="icon3-spinner"></i></td><td><i class="icon2-spinner"></i></td><td><i class="glyphicon-spinner"></i></td><td><i class="elusive-spinner"></i></td></tr>
-        <tr><td>stackoverflow</td><td><i class="icon3-stackoverflow"></i></td><td><i class="icon2-stackoverflow"></i></td><td><i class="glyphicon-stackoverflow"></i></td><td><i class="elusive-stackoverflow"></i></td></tr>
-        <tr><td>star</td><td><i class="icon3-star"></i></td><td><i class="icon2-star"></i></td><td><i class="glyphicon-star"></i></td><td><i class="elusive-star"></i></td></tr>
-        <tr><td>star-alt</td><td><i class="icon3-star-alt"></i></td><td><i class="icon2-star-alt"></i></td><td><i class="glyphicon-star-alt"></i></td><td><i class="elusive-star-alt"></i></td></tr>
-        <tr><td>star-empty</td><td><i class="icon3-star-empty"></i></td><td><i class="icon2-star-empty"></i></td><td><i class="glyphicon-star-empty"></i></td><td><i class="elusive-star-empty"></i></td></tr>
-        <tr><td>star-half</td><td><i class="icon3-star-half"></i></td><td><i class="icon2-star-half"></i></td><td><i class="glyphicon-star-half"></i></td><td><i class="elusive-star-half"></i></td></tr>
-        <tr><td>step-backward</td><td><i class="icon3-step-backward"></i></td><td><i class="icon2-step-backward"></i></td><td><i class="glyphicon-step-backward"></i></td><td><i class="elusive-step-backward"></i></td></tr>
-        <tr><td>step-forward</td><td><i class="icon3-step-forward"></i></td><td><i class="icon2-step-forward"></i></td><td><i class="glyphicon-step-forward"></i></td><td><i class="elusive-step-forward"></i></td></tr>
-        <tr><td>stethoscope</td><td><i class="icon3-stethoscope"></i></td><td><i class="icon2-stethoscope"></i></td><td><i class="glyphicon-stethoscope"></i></td><td><i class="elusive-stethoscope"></i></td></tr>
-        <tr><td>stop</td><td><i class="icon3-stop"></i></td><td><i class="icon2-stop"></i></td><td><i class="glyphicon-stop"></i></td><td><i class="elusive-stop"></i></td></tr>
-        <tr><td>stop-alt</td><td><i class="icon3-stop-alt"></i></td><td><i class="icon2-stop-alt"></i></td><td><i class="glyphicon-stop-alt"></i></td><td><i class="elusive-stop-alt"></i></td></tr>
-        <tr><td>strikethrough</td><td><i class="icon3-strikethrough"></i></td><td><i class="icon2-strikethrough"></i></td><td><i class="glyphicon-strikethrough"></i></td><td><i class="elusive-strikethrough"></i></td></tr>
-        <tr><td>stumbleupon</td><td><i class="icon3-stumbleupon"></i></td><td><i class="icon2-stumbleupon"></i></td><td><i class="glyphicon-stumbleupon"></i></td><td><i class="elusive-stumbleupon"></i></td></tr>
-        <tr><td>suitcase</td><td><i class="icon3-suitcase"></i></td><td><i class="icon2-suitcase"></i></td><td><i class="glyphicon-suitcase"></i></td><td><i class="elusive-suitcase"></i></td></tr>
-        <tr><td>table</td><td><i class="icon3-table"></i></td><td><i class="icon2-table"></i></td><td><i class="glyphicon-table"></i></td><td><i class="elusive-table"></i></td></tr>
-        <tr><td>tablet</td><td><i class="icon3-tablet"></i></td><td><i class="icon2-tablet"></i></td><td><i class="glyphicon-tablet"></i></td><td><i class="elusive-tablet"></i></td></tr>
-        <tr><td>tag</td><td><i class="icon3-tag"></i></td><td><i class="icon2-tag"></i></td><td><i class="glyphicon-tag"></i></td><td><i class="elusive-tag"></i></td></tr>
-        <tr><td>tags</td><td><i class="icon3-tags"></i></td><td><i class="icon2-tags"></i></td><td><i class="glyphicon-tags"></i></td><td><i class="elusive-tags"></i></td></tr>
-        <tr><td>tasks</td><td><i class="icon3-tasks"></i></td><td><i class="icon2-tasks"></i></td><td><i class="glyphicon-tasks"></i></td><td><i class="elusive-tasks"></i></td></tr>
-        <tr><td>text-height</td><td><i class="icon3-text-height"></i></td><td><i class="icon2-text-height"></i></td><td><i class="glyphicon-text-height"></i></td><td><i class="elusive-text-height"></i></td></tr>
-        <tr><td>text-width</td><td><i class="icon3-text-width"></i></td><td><i class="icon2-text-width"></i></td><td><i class="glyphicon-text-width"></i></td><td><i class="elusive-text-width"></i></td></tr>
-        <tr><td>th</td><td><i class="icon3-th"></i></td><td><i class="icon2-th"></i></td><td><i class="glyphicon-th"></i></td><td><i class="elusive-th"></i></td></tr>
-        <tr><td>th-large</td><td><i class="icon3-th-large"></i></td><td><i class="icon2-th-large"></i></td><td><i class="glyphicon-th-large"></i></td><td><i class="elusive-th-large"></i></td></tr>
-        <tr><td>th-list</td><td><i class="icon3-th-list"></i></td><td><i class="icon2-th-list"></i></td><td><i class="glyphicon-th-list"></i></td><td><i class="elusive-th-list"></i></td></tr>
-        <tr><td>thumbs-down</td><td><i class="icon3-thumbs-down"></i></td><td><i class="icon2-thumbs-down"></i></td><td><i class="glyphicon-thumbs-down"></i></td><td><i class="elusive-thumbs-down"></i></td></tr>
-        <tr><td>thumbs-up</td><td><i class="icon3-thumbs-up"></i></td><td><i class="icon2-thumbs-up"></i></td><td><i class="glyphicon-thumbs-up"></i></td><td><i class="elusive-thumbs-up"></i></td></tr>
-        <tr><td>time</td><td><i class="icon3-time"></i></td><td><i class="icon2-time"></i></td><td><i class="glyphicon-time"></i></td><td><i class="elusive-time"></i></td></tr>
-        <tr><td>time-alt</td><td><i class="icon3-time-alt"></i></td><td><i class="icon2-time-alt"></i></td><td><i class="glyphicon-time-alt"></i></td><td><i class="elusive-time-alt"></i></td></tr>
-        <tr><td>tint</td><td><i class="icon3-tint"></i></td><td><i class="icon2-tint"></i></td><td><i class="glyphicon-tint"></i></td><td><i class="elusive-tint"></i></td></tr>
-        <tr><td>torso</td><td><i class="icon3-torso"></i></td><td><i class="icon2-torso"></i></td><td><i class="glyphicon-torso"></i></td><td><i class="elusive-torso"></i></td></tr>
-        <tr><td>trash</td><td><i class="icon3-trash"></i></td><td><i class="icon2-trash"></i></td><td><i class="glyphicon-trash"></i></td><td><i class="elusive-trash"></i></td></tr>
-        <tr><td>trash-alt</td><td><i class="icon3-trash-alt"></i></td><td><i class="icon2-trash-alt"></i></td><td><i class="glyphicon-trash-alt"></i></td><td><i class="elusive-trash-alt"></i></td></tr>
-        <tr><td>trophy</td><td><i class="icon3-trophy"></i></td><td><i class="icon2-trophy"></i></td><td><i class="glyphicon-trophy"></i></td><td><i class="elusive-trophy"></i></td></tr>
-        <tr><td>truck</td><td><i class="icon3-truck"></i></td><td><i class="icon2-truck"></i></td><td><i class="glyphicon-truck"></i></td><td><i class="elusive-truck"></i></td></tr>
-        <tr><td>tumblr</td><td><i class="icon3-tumblr"></i></td><td><i class="icon2-tumblr"></i></td><td><i class="glyphicon-tumblr"></i></td><td><i class="elusive-tumblr"></i></td></tr>
-        <tr><td>twitter</td><td><i class="icon3-twitter"></i></td><td><i class="icon2-twitter"></i></td><td><i class="glyphicon-twitter"></i></td><td><i class="elusive-twitter"></i></td></tr>
-        <tr><td>twitter-sign</td><td><i class="icon3-twitter-sign"></i></td><td><i class="icon2-twitter-sign"></i></td><td><i class="glyphicon-twitter-sign"></i></td><td><i class="elusive-twitter-sign"></i></td></tr>
-        <tr><td>umbrella</td><td><i class="icon3-umbrella"></i></td><td><i class="icon2-umbrella"></i></td><td><i class="glyphicon-umbrella"></i></td><td><i class="elusive-umbrella"></i></td></tr>
-        <tr class="warning"><td>unchecked</td><td><i class="icon3-unchecked"></i></td><td><i class="icon2-unchecked"></i></td><td><i class="glyphicon-unchecked"></i></td><td><i class="elusive-unchecked"></i></td></tr>
-        <tr><td>underline</td><td><i class="icon3-underline"></i></td><td><i class="icon2-underline"></i></td><td><i class="glyphicon-underline"></i></td><td><i class="elusive-underline"></i></td></tr>
-        <tr><td>undo</td><td><i class="icon3-undo"></i></td><td><i class="icon2-undo"></i></td><td><i class="glyphicon-undo"></i></td><td><i class="elusive-undo"></i></td></tr>
-        <tr><td>universal-access</td><td><i class="icon3-universal-access"></i></td><td><i class="icon2-universal-access"></i></td><td><i class="glyphicon-universal-access"></i></td><td><i class="elusive-universal-access"></i></td></tr>
-        <tr><td>unlock</td><td><i class="icon3-unlock"></i></td><td><i class="icon2-unlock"></i></td><td><i class="glyphicon-unlock"></i></td><td><i class="elusive-unlock"></i></td></tr>
-        <tr><td>unlock-alt</td><td><i class="icon3-unlock-alt"></i></td><td><i class="icon2-unlock-alt"></i></td><td><i class="glyphicon-unlock-alt"></i></td><td><i class="elusive-unlock-alt"></i></td></tr>
-        <tr><td>upload</td><td><i class="icon3-upload"></i></td><td><i class="icon2-upload"></i></td><td><i class="glyphicon-upload"></i></td><td><i class="elusive-upload"></i></td></tr>
-        <tr><td>upload-alt</td><td><i class="icon3-upload-alt"></i></td><td><i class="icon2-upload-alt"></i></td><td><i class="glyphicon-upload-alt"></i></td><td><i class="elusive-upload-alt"></i></td></tr>
-        <tr class="error"><td>usd</td><td><i class="icon3-usd"></i></td><td><i class="icon2-usd"></i></td><td><i class="glyphicon-usd"></i></td><td><i class="elusive-usd"></i></td></tr>
-        <tr><td>user</td><td><i class="icon3-user"></i></td><td><i class="icon2-user"></i></td><td><i class="glyphicon-user"></i></td><td><i class="elusive-user"></i></td></tr>
-        <tr><td>user-md</td><td><i class="icon3-user-md"></i></td><td><i class="icon2-user-md"></i></td><td><i class="glyphicon-user-md"></i></td><td><i class="elusive-user-md"></i></td></tr>
-        <tr><td>video</td><td><i class="icon3-video"></i></td><td><i class="icon2-video"></i></td><td><i class="glyphicon-video"></i></td><td><i class="elusive-video"></i></td></tr>
-        <tr><td>video-alt</td><td><i class="icon3-video-alt"></i></td><td><i class="icon2-video-alt"></i></td><td><i class="glyphicon-video-alt"></i></td><td><i class="elusive-video-alt"></i></td></tr>
-        <tr><td>video-chat</td><td><i class="icon3-video-chat"></i></td><td><i class="icon2-video-chat"></i></td><td><i class="glyphicon-video-chat"></i></td><td><i class="elusive-video-chat"></i></td></tr>
-        <tr><td>view-mode</td><td><i class="icon3-view-mode"></i></td><td><i class="icon2-view-mode"></i></td><td><i class="glyphicon-view-mode"></i></td><td><i class="elusive-view-mode"></i></td></tr>
-        <tr><td>vimeo</td><td><i class="icon3-vimeo"></i></td><td><i class="icon2-vimeo"></i></td><td><i class="glyphicon-vimeo"></i></td><td><i class="elusive-vimeo"></i></td></tr>
-        <tr><td>vkontakte</td><td><i class="icon3-vkontakte"></i></td><td><i class="icon2-vkontakte"></i></td><td><i class="glyphicon-vkontakte"></i></td><td><i class="elusive-vkontakte"></i></td></tr>
-        <tr><td>volume-down</td><td><i class="icon3-volume-down"></i></td><td><i class="icon2-volume-down"></i></td><td><i class="glyphicon-volume-down"></i></td><td><i class="elusive-volume-down"></i></td></tr>
-        <tr><td>volume-off</td><td><i class="icon3-volume-off"></i></td><td><i class="icon2-volume-off"></i></td><td><i class="glyphicon-volume-off"></i></td><td><i class="elusive-volume-off"></i></td></tr>
-        <tr><td>volume-up</td><td><i class="icon3-volume-up"></i></td><td><i class="icon2-volume-up"></i></td><td><i class="glyphicon-volume-up"></i></td><td><i class="elusive-volume-up"></i></td></tr>
-        <tr><td>w3c</td><td><i class="icon3-w3c"></i></td><td><i class="icon2-w3c"></i></td><td><i class="glyphicon-w3c"></i></td><td><i class="elusive-w3c"></i></td></tr>
-        <tr><td>warning-sign</td><td><i class="icon3-warning-sign"></i></td><td><i class="icon2-warning-sign"></i></td><td><i class="glyphicon-warning-sign"></i></td><td><i class="elusive-warning-sign"></i></td></tr>
-        <tr><td>website</td><td><i class="icon3-website"></i></td><td><i class="icon2-website"></i></td><td><i class="glyphicon-website"></i></td><td><i class="elusive-website"></i></td></tr>
-        <tr><td>website-alt</td><td><i class="icon3-website-alt"></i></td><td><i class="icon2-website-alt"></i></td><td><i class="glyphicon-website-alt"></i></td><td><i class="elusive-website-alt"></i></td></tr>
-        <tr><td>wheelchair</td><td><i class="icon3-wheelchair"></i></td><td><i class="icon2-wheelchair"></i></td><td><i class="glyphicon-wheelchair"></i></td><td><i class="elusive-wheelchair"></i></td></tr>
-        <tr><td>wordpress</td><td><i class="icon3-wordpress"></i></td><td><i class="icon2-wordpress"></i></td><td><i class="glyphicon-wordpress"></i></td><td><i class="elusive-wordpress"></i></td></tr>
-        <tr><td>wrench</td><td><i class="icon3-wrench"></i></td><td><i class="icon2-wrench"></i></td><td><i class="glyphicon-wrench"></i></td><td><i class="elusive-wrench"></i></td></tr>
-        <tr><td>wrench-alt</td><td><i class="icon3-wrench-alt"></i></td><td><i class="icon2-wrench-alt"></i></td><td><i class="glyphicon-wrench-alt"></i></td><td><i class="elusive-wrench-alt"></i></td></tr>
-        <tr><td>youtube</td><td><i class="icon3-youtube"></i></td><td><i class="icon2-youtube"></i></td><td><i class="glyphicon-youtube"></i></td><td><i class="elusive-youtube"></i></td></tr>
-        <tr><td>zoom-in</td><td><i class="icon3-zoom-in"></i></td><td><i class="icon2-zoom-in"></i></td><td><i class="glyphicon-zoom-in"></i></td><td><i class="elusive-zoom-in"></i></td></tr>
-        <tr><td>zoom-out</td><td><i class="icon3-zoom-out"></i></td><td><i class="icon2-zoom-out"></i></td><td><i class="glyphicon-zoom-out"></i></td><td><i class="elusive-zoom-out"></i></td></tr>
-      </tbody>
-    </table>
-    <footer>
-      <p><i class="icon3-github"></i> <a href="https://github.com/tagliala/vectoriconsroundup">tagliala/vectoriconsroundup</a></p>
-    </footer>
-  </div>
 </body>
 </html>
