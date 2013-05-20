@@ -6,7 +6,6 @@
   <title>Vector Icons Roundup - Font Awesome vs Glyphicons vs Elusive-Icons</title>
   <meta name="description" content="Vector Icons Roundup: a comparison between FontAwesome, Glyphicons, Elusive-Icons"/>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/font-awesome.css"/>
   <link rel="stylesheet" href="css/glyphicons.css"/>
@@ -137,7 +136,7 @@
             <input type="checkbox" id="show-borders"> Show icon borders
           </label>
         </form>
-        <table class="table">
+        <table class="table" id="main-table">
           <thead>
             <tr>
               <th>Icon name</th>
@@ -406,7 +405,7 @@
             <tr><td>minus</td><td><i class="fontawesome-minus"></i></td><td><i class="glyphicon glyphicon-minus"></i></td><td><i class="elusive-minus"></i></td><td></td></tr>
             <tr><td>minus-sign</td><td><i class="fontawesome-minus-sign"></i></td><td><i class="glyphicon glyphicon-minus-sign"></i></td><td><i class="elusive-minus-sign"></i></td><td></td></tr>
             <tr><td>minus-sign-alt</td><td><i class="fontawesome-minus-sign-alt"></i></td><td><i class="glyphicon glyphicon-minus-sign-alt"></i></td><td><i class="elusive-minus-sign-alt"></i></td><td></td></tr>
-            <tr><td>mobile-phone</td><td><i class="fontawesome-mobile-phone"></i></td><td><i class="glyphicon glyphicon-mobile-phone"></i></td><td><i class="elusive-mobile-phone"></i></td><td></td></tr>
+            <tr class="warning"><td>mobile-phone</td><td><i class="fontawesome-mobile-phone"></i></td><td><i class="glyphicon glyphicon-mobile-phone"></i></td><td><i class="elusive-mobile-phone"></i></td><td><small class="muted">FA should rename as <code>phone</code></small></td></tr>
             <tr><td>money</td><td><i class="fontawesome-money"></i></td><td><i class="glyphicon glyphicon-money"></i></td><td><i class="elusive-money"></i></td><td></td></tr>
             <tr><td>move</td><td><i class="fontawesome-move"></i></td><td><i class="glyphicon glyphicon-move"></i></td><td><i class="elusive-move"></i></td><td></td></tr>
             <tr><td>music</td><td><i class="fontawesome-music"></i></td><td><i class="glyphicon glyphicon-music"></i></td><td><i class="elusive-music"></i></td><td></td></tr>
@@ -426,7 +425,7 @@
             <tr><td>pencil</td><td><i class="fontawesome-pencil"></i></td><td><i class="glyphicon glyphicon-pencil"></i></td><td><i class="elusive-pencil"></i></td><td></td></tr>
             <tr><td>pencil-alt</td><td><i class="fontawesome-pencil-alt"></i></td><td><i class="glyphicon glyphicon-pencil-alt"></i></td><td><i class="elusive-pencil-alt"></i></td><td></td></tr>
             <tr><td>person</td><td><i class="fontawesome-person"></i></td><td><i class="glyphicon glyphicon-person"></i></td><td><i class="elusive-person"></i></td><td></td></tr>
-            <tr><td>phone</td><td><i class="fontawesome-phone"></i></td><td><i class="glyphicon glyphicon-phone"></i></td><td><i class="elusive-phone"></i></td><td></td></tr>
+            <tr class="warning"><td>phone</td><td><i class="fontawesome-phone"></i></td><td><i class="glyphicon glyphicon-phone"></i></td><td><i class="elusive-phone"></i></td><td><small class="muted">FA and ELS should rename this</small></td></tr>
             <tr><td>phone-alt</td><td><i class="fontawesome-phone-alt"></i></td><td><i class="glyphicon glyphicon-phone-alt"></i></td><td><i class="elusive-phone-alt"></i></td><td></td></tr>
             <tr><td>phone-sign</td><td><i class="fontawesome-phone-sign"></i></td><td><i class="glyphicon glyphicon-phone-sign"></i></td><td><i class="elusive-phone-sign"></i></td><td></td></tr>
             <tr><td>photo</td><td><i class="fontawesome-photo"></i></td><td><i class="glyphicon glyphicon-photo"></i></td><td><i class="elusive-photo"></i></td><td></td></tr>
@@ -595,10 +594,16 @@
     </div>
   </div>
   <script>
-    $(function() {
-      return $('#show-borders').on('change', function() {
-        return $('table').toggleClass('bordered-icons');
-      });
+    var el;
+
+    el = document.getElementById('main-table');
+
+    document.getElementById('show-borders').addEventListener('change', function() {
+      if (this.checked) {
+        return el.classList.add('bordered-icons');
+      } else {
+        return el.classList.remove('bordered-icons');
+      }
     });
   </script>
 </body>
