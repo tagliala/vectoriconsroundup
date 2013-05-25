@@ -12,20 +12,24 @@
   <link rel="stylesheet" href="css/elusive-webfont.css"/>
   <style>
     body {
-      font-family: 'Lato', "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-    .table {
+    #pictograms-table {
       width: auto
     }
-    td:not(:first-child) {
+    #pictograms-table td:not(:first-child) {
       text-align: center;
       vertical-align: middle;
     }
-    td:last-child {
+    #pictograms-table td:last-child {
       text-align: left;
     }
-    table.bordered-icons i::before  {
+    #pictograms-table.bordered-icons i::before  {
       border: 1px solid red !important;
+    }
+    #features-table th,
+    #features-table td {
+      text-align: center;
     }
     .jumbotron {
       background: #0088cc;
@@ -64,8 +68,9 @@
       }
     }
     @media(max-width: 479px) {
-      td:first-child,
-      td:last-child {
+      #features-table th:first-child,
+      #pictograms-table td:first-child,
+      #pictograms-table td:last-child {
         font-size: 10px;
       }
     }
@@ -89,7 +94,7 @@
   <div class="container">
     <div class="row text-center">
       <div class="span12">
-        <h2>Three icon sets</h2>
+        <h2>Icon sets</h2>
       </div>
     </div>
     <div class="row text-center">
@@ -105,6 +110,12 @@
       <div class="span4">
         <h3 class="no-margin-bottom">Glyphicons 1.7</h3>
         <p>Bootstrap 3.0's default icon font.</p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=twitter&repo=bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=twitter&repo=bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20"></iframe>
+        <ul class="inline">
+          <li><i class="fontawesome-twitter"></i> <a href="http://twitter.com/fat">@fat</a></li>
+          <li><i class="fontawesome-twitter"></i> <a href="http://twitter.com/mdo">@mdo</a></li>
+        </ul>
         <p class="muted">BS 3.0 is under development at the moment</p>
       </div>
       <div class="span4">
@@ -120,7 +131,82 @@
     <hr>
     <div class="row text-center">
       <div class="span12">
-        <h2>One huge table</h2>
+        <h2>Features</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <table class="table table-striped" id="features-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th><span class="hidden-phone">Font Awesome</span><span class="visible-phone">FA</span></th>
+              <th><span class="hidden-phone">Glyphicons</span><span class="visible-phone">GL</span></th>
+              <th><span class="hidden-phone">Elusive-Icons</span><span class="visible-phone">ELS</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Number of Icons <small class="muted">(in CSS)</small></th>
+              <td>304</td>
+              <td>160</td>
+              <td>284</td>
+            </tr>
+            <tr>
+              <th>License</th>
+              <td>SIL OFL 1.1</td>
+              <td>Free to use<sup>1</sup></td>
+              <td>SIL</td>
+            </tr>
+            <tr>
+              <th>Pixel perfect <small class="muted">(at base font size)</small></th>
+              <td><i class="text-success fontawesome-ok"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+            </tr>
+            <tr>
+              <th>Icons have the same size</th>
+              <td><i class="text-error fontawesome-remove"></i></td>
+              <td><i class="text-success fontawesome-ok"></i></td>
+              <td><i class="text-success fontawesome-ok"></i></td>
+            </tr>
+            <tr>
+              <th>Bulleted Lists</th>
+              <td><i class="text-success fontawesome-ok"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+            </tr>
+            <tr>
+              <th>Rotation and Flipping</th>
+              <td><i class="text-success fontawesome-ok"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+            </tr>
+            <tr>
+              <th>Stacked Icons</th>
+              <td><i class="text-success fontawesome-ok"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+            </tr>
+            <tr>
+              <th>Animated Spinner</th>
+              <td><i class="text-success fontawesome-ok"></i><sup>2</sup></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+              <td><i class="text-error fontawesome-remove"></i></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <sup>1</sup> <small>Glyphicons Halflings are normally not available for free, but an arrangement between Bootstrap and the Glyphicons creator have made this possible at no cost to you as developers. As a thank you, we ask you to include an optional link back to <a href="http://glyphicons.com/">Glyphicons</a> whenever practical.</small>
+          <br>
+          <sup>2</sup> <small>CPU Intensive</small>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row text-center">
+      <div class="span12">
+        <h2>Pictograms</h2>
       </div>
     </div>
     <div class="row">
@@ -136,7 +222,7 @@
             <input type="checkbox" id="show-borders"> Show icon borders
           </label>
         </form>
-        <table class="table" id="main-table">
+        <table class="table" id="pictograms-table">
           <thead>
             <tr>
               <th>Icon name</th>
@@ -592,11 +678,18 @@
         </table>
       </div>
     </div>
+    <hr>
+    <footer>
+      <ul class="inline">
+        <li><i class="fontawesome-github"></i> <a href="https://github.com/tagliala/vectoriconsroundup">tagliala/vectoriconsroundup</a></li>
+        <li><i class="fontawesome-twitter"></i> <a href="https://twitter.com/gtagliala">@gtagliala</a></li>
+      </ul>
+    </footer>
   </div>
   <script>
     var el;
 
-    el = document.getElementById('main-table');
+    el = document.getElementById('pictograms-table');
 
     document.getElementById('show-borders').addEventListener('change', function() {
       if (this.checked) {
