@@ -24,8 +24,17 @@
     #pictograms-table td:last-child {
       text-align: left;
     }
-    #pictograms-table.bordered-icons i::before  {
+    #pictograms-table.bordered-icons i::before {
       border: 1px solid red !important;
+    }
+    #pictograms-table.grid-icons i::before {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAAE8ahlKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAQ0lEQVR4nIVMsQ0AMAhi4BlnT/YdjyoNHerQlAQNArKq2N2bmUnJiKB4FAAJTXrpvMVwcGHGhuOO4dQx8ADvlD9+GguiuRVnst4HMwAAAB1JREFUeJxj+c8ChAwgxAAiGUA0CosBRQzOw84AANDUBzYGd9ePAAAAAElFTkSuQmCC);
+      //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAF1CoEkAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAALklEQVR4nFWK0QkAIBBC/XD/JXRPy6OIHoiKMgklVQDYaru+60vE0O3ccOkJPwv2YBqgRmDssQAAABtJREFUeJxj+c8ChAxAAogZQJiFAYyAHDADCAC5agcmkKWTqgAAAABJRU5ErkJggg==);
+      -webkit-background-size: 8px 8px;
+         -moz-background-size: 8px 8px;
+           -o-background-size: 8px 8px;
+              background-size: 8px 8px;
+      font-size: 4em;
     }
     #features-table th,
     #features-table td {
@@ -214,6 +223,9 @@
         <form action="#">
           <label class="checkbox inline">
             <input type="checkbox" id="show-borders"> Show icon borders
+          </label>
+          <label class="checkbox inline">
+            <input type="checkbox" id="show-grid"> Show grid
           </label>
         </form>
         <table class="table" id="pictograms-table">
@@ -737,6 +749,14 @@
         return el.classList.add('bordered-icons');
       } else {
         return el.classList.remove('bordered-icons');
+      }
+    });
+
+    document.getElementById('show-grid').addEventListener('change', function() {
+      if (this.checked) {
+        return el.classList.add('grid-icons');
+      } else {
+        return el.classList.remove('grid-icons');
       }
     });
   </script>
