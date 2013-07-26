@@ -24,10 +24,10 @@
     #pictograms-table td:last-child {
       text-align: left;
     }
-    #pictograms-table.bordered-icons i::before {
+    #pictograms-table.bordered-icons i:before {
       border: 1px solid red !important;
     }
-    #pictograms-table.grid-icons i::before {
+    #pictograms-table.grid-icons i:before {
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAAE8ahlKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAQ0lEQVR4nIVMsQ0AMAhi4BlnT/YdjyoNHerQlAQNArKq2N2bmUnJiKB4FAAJTXrpvMVwcGHGhuOO4dQx8ADvlD9+GguiuRVnst4HMwAAAB1JREFUeJxj+c8ChAwgxAAiGUA0CosBRQzOw84AANDUBzYGd9ePAAAAAElFTkSuQmCC);
       //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAF1CoEkAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAALklEQVR4nFWK0QkAIBBC/XD/JXRPy6OIHoiKMgklVQDYaru+60vE0O3ccOkJPwv2YBqgRmDssQAAABtJREFUeJxj+c8ChAxAAogZQJiFAYyAHDADCAC5agcmkKWTqgAAAABJRU5ErkJggg==);
       -webkit-background-size: 8px 8px;
@@ -57,6 +57,12 @@
       padding-top: 10px;
       background: #eeeeee;
     }
+    .form-filter {
+      margin: 0;
+    }
+    .input-block-level {
+      *min-height: 20px;
+    }
     @media(max-width: 767px) {
       #main-title,
       #asocial {
@@ -84,6 +90,20 @@
       }
     }
   </style>
+  <!--[if lt IE 9]>
+    <style>
+      .input-block-level {
+        min-height: 20px;
+      }
+    </style>
+    <script>
+      if(typeof String.prototype.trim !== 'function') {
+        String.prototype.trim = function() {
+          return this.replace(/^\s+|\s+$/g, '');
+        }
+      }
+    </script>
+  <![endif]-->
 </head>
 <body>
   <div id="main-title" class="jumbotron">
@@ -230,6 +250,9 @@
         </form>
         <table class="table" id="pictograms-table">
           <thead>
+            <tr>
+              <th colspan="5"><form class="form-filter"><input id="input-filter" class="input-block-level" type="text" placeholder="Filter by name"></input></form></th>
+            </tr>
             <tr>
               <th>Icon name</th>
               <th>FA</th>
@@ -739,25 +762,31 @@
       </ul>
     </footer>
   </div>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script>
-    var el;
+    $(function() {
+      var $pictogramsTable;
 
-    el = document.getElementById('pictograms-table');
+      $pictogramsTable = $('#pictograms-table');
 
-    document.getElementById('show-borders').addEventListener('change', function() {
-      if (this.checked) {
-        return el.classList.add('bordered-icons');
-      } else {
-        return el.classList.remove('bordered-icons');
-      }
-    });
+      $('#show-borders').on('change', function() {
+        $pictogramsTable.toggleClass('bordered-icons');
+      });
 
-    document.getElementById('show-grid').addEventListener('change', function() {
-      if (this.checked) {
-        return el.classList.add('grid-icons');
-      } else {
-        return el.classList.remove('grid-icons');
-      }
+      $('#show-grid').on('change', function() {
+        $pictogramsTable.toggleClass('grid-icons');
+      });
+
+      $('#input-filter').on('keyup blur', function() {
+        var term = $('#input-filter').val().trim();
+        if (term != '') {
+          $pictogramsTable.find('tbody tr').addClass('hide');
+          $pictogramsTable.find('a[name*="' + term + '"]').closest('tr').removeClass('hide');
+        }
+        else {
+          $pictogramsTable.find('tbody tr').removeClass('hide');
+        }
+      });
     });
   </script>
 </body>
