@@ -36,6 +36,10 @@
               background-size: 8px 8px;
       font-size: 4em;
     }
+    #pictograms-table.mozilla-font-smoothing i:before {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
     #features-table th,
     #features-table td {
       text-align: center;
@@ -253,6 +257,10 @@
           </label>
           <label class="checkbox inline">
             <input type="checkbox" id="show-grid"> Show grid
+          </label>
+          <br>
+          <label class="checkbox inline">
+            <input type="checkbox" id="enable-mozilla-font-smoothing"> Mozilla Font Smoothing (OSX 10.8+, Firefox 25+)
           </label>
         </form>
         <table class="table" id="pictograms-table">
@@ -797,6 +805,10 @@
 
       $('#show-grid').on('change', function() {
         $pictogramsTable.toggleClass('grid-icons');
+      });
+
+      $('#enable-mozilla-font-smoothing').on('change', function() {
+        $pictogramsTable.toggleClass('mozilla-font-smoothing');
       });
 
       $('#input-filter').on('keyup blur', filterIcon);
