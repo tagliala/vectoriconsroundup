@@ -1,913 +1,913 @@
 @font-face {
-  font-family: 'Elusive-Icons';
-  src:url('../elusive/Elusive-Icons.eot');
-  src:url('../elusive/Elusive-Icons.eot?#iefix') format('embedded-opentype'),
-    url('../elusive/Elusive-Icons.woff') format('woff'),
-    url('../elusive/Elusive-Icons.ttf') format('truetype'),
-    url('../elusive/Elusive-Icons.svg#Elusive-Icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Elusive-Icons';
+	src:url('../fonts/Elusive-Icons.eot');
+	src:url('../fonts/Elusive-Icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Elusive-Icons.woff') format('woff'),
+		url('../fonts/Elusive-Icons.ttf') format('truetype'),
+		url('../fonts/Elusive-Icons.svg#Elusive-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-  font-family: 'Elusive-Icons';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Elusive-Icons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
-[class*="elusive-icon-"] {
+[class*="icon-"] {
 */
-.elusive-align-left, .elusive-align-right, .elusive-align-center, .elusive-align-justify, .elusive-lines, .elusive-address-book, .elusive-asterisk, .elusive-plane, .elusive-tag, .elusive-tags, .elusive-zoom-out, .elusive-zoom-in, .elusive-youtube, .elusive-wrench-alt, .elusive-wrench, .elusive-wordpress, .elusive-wheelchair, .elusive-website-alt, .elusive-website, .elusive-warning-sign, .elusive-w3c, .elusive-volume-up, .elusive-volume-off, .elusive-volume-down, .elusive-vkontakte, .elusive-vimeo, .elusive-view-mode, .elusive-video-chat, .elusive-video-alt, .elusive-video, .elusive-viadeo, .elusive-user, .elusive-upload, .elusive-unlock-alt, .elusive-unlock, .elusive-universal-access, .elusive-twitter, .elusive-tumblr, .elusive-trash-alt, .elusive-trash, .elusive-torso, .elusive-tint, .elusive-time-alt, .elusive-time, .elusive-thumbs-down, .elusive-thumbs-up, .elusive-th-list, .elusive-th-large, .elusive-th, .elusive-text-width, .elusive-text-height, .elusive-tasks, .elusive-stumbleupon, .elusive-stop-alt, .elusive-stop, .elusive-step-forward, .elusive-step-backward, .elusive-star-empty, .elusive-star-alt, .elusive-star, .elusive-stackoverflow, .elusive-spotify, .elusive-speaker, .elusive-soundcloud, .elusive-smiley-alt, .elusive-smiley, .elusive-slideshare, .elusive-skype, .elusive-signal, .elusive-shopping-cart-sign, .elusive-shopping-cart, .elusive-share-alt, .elusive-share, .elusive-search-alt, .elusive-search, .elusive-screenshot, .elusive-screen-alt, .elusive-screen, .elusive-rss, .elusive-road, .elusive-reverse-alt, .elusive-retweet, .elusive-return-key, .elusive-resize-vertical, .elusive-resize-small, .elusive-resize-horizontal, .elusive-resize-full, .elusive-repeat-alt, .elusive-repeat, .elusive-remove-sign, .elusive-remove-circle, .elusive-remove, .elusive-refresh, .elusive-reddit, .elusive-record, .elusive-random, .elusive-quotes-alt, .elusive-quotes, .elusive-question-sign, .elusive-question, .elusive-qrcode, .elusive-print, .elusive-plus-sign, .elusive-plus, .elusive-play-circle, .elusive-play-alt, .elusive-play, .elusive-pinterest, .elusive-picture, .elusive-picasa, .elusive-photo-alt, .elusive-photo, .elusive-phone-alt, .elusive-phone, .elusive-person, .elusive-pencil-alt, .elusive-pencil, .elusive-pause-alt, .elusive-pause, .elusive-path, .elusive-paper-clip-alt, .elusive-paper-clip, .elusive-ok-sign, .elusive-ok-circle, .elusive-ok, .elusive-off, .elusive-network, .elusive-myspace, .elusive-music, .elusive-move, .elusive-minus-sign, .elusive-minus, .elusive-mic-alt, .elusive-mic, .elusive-map-marker-alt, .elusive-map-marker, .elusive-male, .elusive-magnet, .elusive-magic, .elusive-lock-alt, .elusive-lock, .elusive-livejournal, .elusive-list-alt, .elusive-list, .elusive-linkedin, .elusive-link, .elusive-leaf, .elusive-lastfm, .elusive-laptop-alt, .elusive-laptop, .elusive-key, .elusive-italic, .elusive-iphone-home, .elusive-instagram, .elusive-info-sign, .elusive-indent-right, .elusive-indent-left, .elusive-inbox-box, .elusive-inbox-alt, .elusive-inbox, .elusive-idea-alt, .elusive-home-alt, .elusive-home, .elusive-heart-empty, .elusive-heart-alt, .elusive-heart, .elusive-hearing-impaired, .elusive-headphones, .elusive-hdd, .elusive-hand-up, .elusive-hand-right, .elusive-hand-left, .elusive-hand-down, .elusive-guidedog, .elusive-group-alt, .elusive-group, .elusive-graph-alt, .elusive-graph, .elusive-googleplus, .elusive-globe-alt, .elusive-globe, .elusive-glasses, .elusive-glass, .elusive-github-text, .elusive-github, .elusive-bookmark-empty, .elusive-gift, .elusive-fullscreen, .elusive-friendfeed-rect, .elusive-friendfeed, .elusive-foursquare, .elusive-forward-alt, .elusive-forward, .elusive-fork, .elusive-fontsize, .elusive-font, .elusive-folder-sign, .elusive-folder-open, .elusive-folder-close, .elusive-folder, .elusive-flickr, .elusive-flag-alt, .elusive-flag, .elusive-fire, .elusive-filter, .elusive-film, .elusive-file-new-alt, .elusive-file-new, .elusive-file-edit-alt, .elusive-file-edit, .elusive-file-alt, .elusive-file, .elusive-female, .elusive-fast-forward, .elusive-fast-backward, .elusive-facetime-video, .elusive-facebook, .elusive-eye-open, .elusive-eye-close, .elusive-exclamation-sign, .elusive-error-alt, .elusive-error, .elusive-envelope-alt, .elusive-envelope, .elusive-eject, .elusive-edit, .elusive-dribbble, .elusive-download-alt, .elusive-download, .elusive-digg, .elusive-deviantart, .elusive-delicious, .elusive-dashboard, .elusive-css, .elusive-credit-card, .elusive-compass-alt, .elusive-compass, .elusive-comment-alt, .elusive-comment, .elusive-cogs, .elusive-cog-alt, .elusive-cog, .elusive-cloud-alt, .elusive-cloud, .elusive-circle-arrow-up, .elusive-circle-arrow-right, .elusive-circle-arrow-left, .elusive-circle-arrow-down, .elusive-child, .elusive-chevron-up, .elusive-chevron-right, .elusive-chevron-left, .elusive-chevron-down, .elusive-check-empty, .elusive-check, .elusive-briefcase, .elusive-certificate, .elusive-cc, .elusive-caret-up, .elusive-caret-right, .elusive-caret-left, .elusive-caret-down, .elusive-car, .elusive-camera, .elusive-calendar-sign, .elusive-calendar, .elusive-bullhorn, .elusive-idea, .elusive-bulb, .elusive-brush, .elusive-broom, .elusive-braille, .elusive-bookmark, .elusive-book, .elusive-bold, .elusive-blogger, .elusive-blind, .elusive-bell, .elusive-behance, .elusive-barcode, .elusive-ban-circle, .elusive-backward, .elusive-asl, .elusive-arrow-up, .elusive-arrow-right, .elusive-arrow-left, .elusive-arrow-down, .elusive-adult, .elusive-adjust-alt, .elusive-adjust, .elusive-address-book-alt {
-  font-family: 'Elusive-Icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-.elusive-align-left:before {
-  content: "\f05c";
-}
-.elusive-align-right:before {
-  content: "\e000";
-}
-.elusive-align-center:before {
-  content: "\e001";
-}
-.elusive-align-justify:before {
-  content: "\e002";
-}
-.elusive-lines:before {
-  content: "\e003";
-}
-.elusive-address-book:before {
-  content: "\e004";
-}
-.elusive-asterisk:before {
-  content: "\e005";
-}
-.elusive-plane:before {
-  content: "\e006";
-}
-.elusive-tag:before {
-  content: "\e007";
-}
-.elusive-tags:before {
-  content: "\e008";
+.elusive-zoom-out, .elusive-zoom-in, .elusive-youtube, .elusive-wrench-alt, .elusive-wrench, .elusive-wordpress, .elusive-wheelchair, .elusive-website-alt, .elusive-website, .elusive-warning-sign, .elusive-w3c, .elusive-volume-up, .elusive-volume-off, .elusive-volume-down, .elusive-vkontakte, .elusive-vimeo, .elusive-view-mode, .elusive-video-chat, .elusive-video-alt, .elusive-video, .elusive-viadeo, .elusive-user, .elusive-upload, .elusive-unlock-alt, .elusive-unlock, .elusive-universal-access, .elusive-twitter, .elusive-tumblr, .elusive-trash-alt, .elusive-trash, .elusive-torso, .elusive-tint, .elusive-time-alt, .elusive-time, .elusive-thumbs-up, .elusive-thumbs-down, .elusive-th-list, .elusive-th-large, .elusive-th, .elusive-text-width, .elusive-text-height, .elusive-tasks, .elusive-tags, .elusive-tag, .elusive-stumbleupon, .elusive-stop-alt, .elusive-stop, .elusive-step-forward, .elusive-step-backward, .elusive-star-empty, .elusive-star-alt, .elusive-star, .elusive-stackoverflow, .elusive-spotify, .elusive-speaker, .elusive-soundcloud, .elusive-smiley-alt, .elusive-smiley, .elusive-slideshare, .elusive-skype, .elusive-signal, .elusive-shopping-cart-sign, .elusive-shopping-cart, .elusive-share-alt, .elusive-share, .elusive-search-alt, .elusive-search, .elusive-screenshot, .elusive-screen-alt, .elusive-screen, .elusive-rss, .elusive-road, .elusive-reverse-alt, .elusive-retweet, .elusive-return-key, .elusive-resize-vertical, .elusive-resize-small, .elusive-resize-horizontal, .elusive-resize-full, .elusive-repeat-alt, .elusive-repeat, .elusive-remove-sign, .elusive-remove-circle, .elusive-remove, .elusive-refresh, .elusive-reddit, .elusive-record, .elusive-random, .elusive-quotes-alt, .elusive-quotes, .elusive-question-sign, .elusive-question, .elusive-qrcode, .elusive-print, .elusive-plus-sign, .elusive-plus, .elusive-play-circle, .elusive-play-alt, .elusive-play, .elusive-plane, .elusive-pinterest, .elusive-picture, .elusive-picasa, .elusive-photo-alt, .elusive-photo, .elusive-phone-alt, .elusive-phone, .elusive-person, .elusive-pencil-alt, .elusive-pencil, .elusive-pause-alt, .elusive-pause, .elusive-path, .elusive-paper-clip-alt, .elusive-paper-clip, .elusive-ok-sign, .elusive-ok-circle, .elusive-ok, .elusive-off, .elusive-network, .elusive-myspace, .elusive-music, .elusive-move, .elusive-minus-sign, .elusive-minus, .elusive-mic-alt, .elusive-mic, .elusive-map-marker-alt, .elusive-map-marker, .elusive-male, .elusive-magnet, .elusive-magic, .elusive-lock-alt, .elusive-lock, .elusive-livejournal, .elusive-list-alt, .elusive-list, .elusive-linkedin, .elusive-link, .elusive-lines, .elusive-leaf, .elusive-lastfm, .elusive-laptop-alt, .elusive-laptop, .elusive-key, .elusive-italic, .elusive-iphone-home, .elusive-instagram, .elusive-info-sign, .elusive-indent-right, .elusive-indent-left, .elusive-inbox-box, .elusive-inbox-alt, .elusive-inbox, .elusive-idea-alt, .elusive-idea, .elusive-home-alt, .elusive-home, .elusive-heart-empty, .elusive-heart-alt, .elusive-heart, .elusive-hearing-impaired, .elusive-headphones, .elusive-hdd, .elusive-hand-up, .elusive-hand-right, .elusive-hand-left, .elusive-hand-down, .elusive-guidedog, .elusive-group-alt, .elusive-group, .elusive-graph-alt, .elusive-graph, .elusive-googleplus, .elusive-globe-alt, .elusive-globe, .elusive-glasses, .elusive-glass, .elusive-github-text, .elusive-github, .elusive-gift, .elusive-fullscreen, .elusive-friendfeed-rect, .elusive-friendfeed, .elusive-foursquare, .elusive-forward-alt, .elusive-forward, .elusive-fork, .elusive-fontsize, .elusive-font, .elusive-folder-sign, .elusive-folder-open, .elusive-folder-close, .elusive-folder, .elusive-flickr, .elusive-flag-alt, .elusive-flag, .elusive-fire, .elusive-filter, .elusive-film, .elusive-file-new-alt, .elusive-file-new, .elusive-file-edit-alt, .elusive-file-edit, .elusive-file-alt, .elusive-file, .elusive-female, .elusive-fast-forward, .elusive-fast-backward, .elusive-facetime-video, .elusive-facebook, .elusive-eye-open, .elusive-eye-close, .elusive-exclamation-sign, .elusive-error-alt, .elusive-error, .elusive-envelope-alt, .elusive-envelope, .elusive-eject, .elusive-edit, .elusive-dribbble, .elusive-download-alt, .elusive-download, .elusive-digg, .elusive-deviantart, .elusive-delicious, .elusive-dashboard, .elusive-css, .elusive-credit-card, .elusive-compass-alt, .elusive-compass, .elusive-comment-alt, .elusive-comment, .elusive-cogs, .elusive-cog-alt, .elusive-cog, .elusive-cloud-alt, .elusive-cloud, .elusive-circle-arrow-up, .elusive-circle-arrow-right, .elusive-circle-arrow-left, .elusive-circle-arrow-down, .elusive-child, .elusive-chevron-up, .elusive-chevron-right, .elusive-chevron-left, .elusive-chevron-down, .elusive-check-empty, .elusive-check, .elusive-certificate, .elusive-cc, .elusive-caret-up, .elusive-caret-right, .elusive-caret-left, .elusive-caret-down, .elusive-car, .elusive-camera, .elusive-calendar-sign, .elusive-calendar, .elusive-bullhorn, .elusive-bulb, .elusive-brush, .elusive-broom, .elusive-briefcase, .elusive-braille, .elusive-bookmark-empty, .elusive-bookmark, .elusive-book, .elusive-bold, .elusive-blogger, .elusive-blind, .elusive-bell, .elusive-behance, .elusive-barcode, .elusive-ban-circle, .elusive-backward, .elusive-asterisk, .elusive-asl, .elusive-arrow-up, .elusive-arrow-right, .elusive-arrow-left, .elusive-arrow-down, .elusive-align-right, .elusive-align-left, .elusive-align-justify, .elusive-align-center, .elusive-adult, .elusive-adjust-alt, .elusive-adjust, .elusive-address-book-alt, .elusive-address-book {
+	font-family: 'Elusive-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
 }
 .elusive-zoom-out:before {
-  content: "\e009";
+	content: "\f05c";
 }
 .elusive-zoom-in:before {
-  content: "\e00a";
+	content: "\e000";
 }
 .elusive-youtube:before {
-  content: "\e00b";
+	content: "\e001";
 }
 .elusive-wrench-alt:before {
-  content: "\e00c";
+	content: "\e002";
 }
 .elusive-wrench:before {
-  content: "\e00d";
+	content: "\e003";
 }
 .elusive-wordpress:before {
-  content: "\e00e";
+	content: "\e004";
 }
 .elusive-wheelchair:before {
-  content: "\e00f";
+	content: "\e005";
 }
 .elusive-website-alt:before {
-  content: "\e010";
+	content: "\e006";
 }
 .elusive-website:before {
-  content: "\e011";
+	content: "\e007";
 }
 .elusive-warning-sign:before {
-  content: "\e012";
+	content: "\e008";
 }
 .elusive-w3c:before {
-  content: "\e013";
+	content: "\e009";
 }
 .elusive-volume-up:before {
-  content: "\e014";
+	content: "\e00a";
 }
 .elusive-volume-off:before {
-  content: "\e015";
+	content: "\e00b";
 }
 .elusive-volume-down:before {
-  content: "\e016";
+	content: "\e00c";
 }
 .elusive-vkontakte:before {
-  content: "\e017";
+	content: "\e00d";
 }
 .elusive-vimeo:before {
-  content: "\e018";
+	content: "\e00e";
 }
 .elusive-view-mode:before {
-  content: "\e019";
+	content: "\e00f";
 }
 .elusive-video-chat:before {
-  content: "\e01a";
+	content: "\e010";
 }
 .elusive-video-alt:before {
-  content: "\e01b";
+	content: "\e011";
 }
 .elusive-video:before {
-  content: "\e01c";
+	content: "\e012";
 }
 .elusive-viadeo:before {
-  content: "\e01d";
+	content: "\e013";
 }
 .elusive-user:before {
-  content: "\e01e";
+	content: "\e014";
 }
 .elusive-upload:before {
-  content: "\e01f";
+	content: "\e015";
 }
 .elusive-unlock-alt:before {
-  content: "\e020";
+	content: "\e016";
 }
 .elusive-unlock:before {
-  content: "\e021";
+	content: "\e017";
 }
 .elusive-universal-access:before {
-  content: "\e022";
+	content: "\e018";
 }
 .elusive-twitter:before {
-  content: "\e023";
+	content: "\e019";
 }
 .elusive-tumblr:before {
-  content: "\e024";
+	content: "\e01a";
 }
 .elusive-trash-alt:before {
-  content: "\e025";
+	content: "\e01b";
 }
 .elusive-trash:before {
-  content: "\e026";
+	content: "\e01c";
 }
 .elusive-torso:before {
-  content: "\e027";
+	content: "\e01d";
 }
 .elusive-tint:before {
-  content: "\e028";
+	content: "\e01e";
 }
 .elusive-time-alt:before {
-  content: "\e029";
+	content: "\e01f";
 }
 .elusive-time:before {
-  content: "\e02a";
-}
-.elusive-thumbs-down:before {
-  content: "\e02b";
+	content: "\e020";
 }
 .elusive-thumbs-up:before {
-  content: "\e02c";
+	content: "\e021";
+}
+.elusive-thumbs-down:before {
+	content: "\e022";
 }
 .elusive-th-list:before {
-  content: "\e02d";
+	content: "\e023";
 }
 .elusive-th-large:before {
-  content: "\e02e";
+	content: "\e024";
 }
 .elusive-th:before {
-  content: "\e02f";
+	content: "\e025";
 }
 .elusive-text-width:before {
-  content: "\e030";
+	content: "\e026";
 }
 .elusive-text-height:before {
-  content: "\e031";
+	content: "\e027";
 }
 .elusive-tasks:before {
-  content: "\e032";
+	content: "\e028";
+}
+.elusive-tags:before {
+	content: "\e029";
+}
+.elusive-tag:before {
+	content: "\e02a";
 }
 .elusive-stumbleupon:before {
-  content: "\e033";
+	content: "\e02b";
 }
 .elusive-stop-alt:before {
-  content: "\e034";
+	content: "\e02c";
 }
 .elusive-stop:before {
-  content: "\e035";
+	content: "\e02d";
 }
 .elusive-step-forward:before {
-  content: "\e036";
+	content: "\e02e";
 }
 .elusive-step-backward:before {
-  content: "\e037";
+	content: "\e02f";
 }
 .elusive-star-empty:before {
-  content: "\e038";
+	content: "\e030";
 }
 .elusive-star-alt:before {
-  content: "\e039";
+	content: "\e031";
 }
 .elusive-star:before {
-  content: "\e03a";
+	content: "\e032";
 }
 .elusive-stackoverflow:before {
-  content: "\e03b";
+	content: "\e033";
 }
 .elusive-spotify:before {
-  content: "\e03c";
+	content: "\e034";
 }
 .elusive-speaker:before {
-  content: "\e03d";
+	content: "\e035";
 }
 .elusive-soundcloud:before {
-  content: "\e03e";
+	content: "\e036";
 }
 .elusive-smiley-alt:before {
-  content: "\e03f";
+	content: "\e037";
 }
 .elusive-smiley:before {
-  content: "\e040";
+	content: "\e038";
 }
 .elusive-slideshare:before {
-  content: "\e041";
+	content: "\e039";
 }
 .elusive-skype:before {
-  content: "\e042";
+	content: "\e03a";
 }
 .elusive-signal:before {
-  content: "\e043";
+	content: "\e03b";
 }
 .elusive-shopping-cart-sign:before {
-  content: "\e044";
+	content: "\e03c";
 }
 .elusive-shopping-cart:before {
-  content: "\e045";
+	content: "\e03d";
 }
 .elusive-share-alt:before {
-  content: "\e046";
+	content: "\e03e";
 }
 .elusive-share:before {
-  content: "\e047";
+	content: "\e03f";
 }
 .elusive-search-alt:before {
-  content: "\e048";
+	content: "\e040";
 }
 .elusive-search:before {
-  content: "\e049";
+	content: "\e041";
 }
 .elusive-screenshot:before {
-  content: "\e04a";
+	content: "\e042";
 }
 .elusive-screen-alt:before {
-  content: "\e04b";
+	content: "\e043";
 }
 .elusive-screen:before {
-  content: "\e04c";
+	content: "\e044";
 }
 .elusive-rss:before {
-  content: "\e04d";
+	content: "\e045";
 }
 .elusive-road:before {
-  content: "\e04e";
+	content: "\e046";
 }
 .elusive-reverse-alt:before {
-  content: "\e04f";
+	content: "\e047";
 }
 .elusive-retweet:before {
-  content: "\e050";
+	content: "\e048";
 }
 .elusive-return-key:before {
-  content: "\e051";
+	content: "\e049";
 }
 .elusive-resize-vertical:before {
-  content: "\e052";
+	content: "\e04a";
 }
 .elusive-resize-small:before {
-  content: "\e053";
+	content: "\e04b";
 }
 .elusive-resize-horizontal:before {
-  content: "\e054";
+	content: "\e04c";
 }
 .elusive-resize-full:before {
-  content: "\e055";
+	content: "\e04d";
 }
 .elusive-repeat-alt:before {
-  content: "\e056";
+	content: "\e04e";
 }
 .elusive-repeat:before {
-  content: "\e057";
+	content: "\e04f";
 }
 .elusive-remove-sign:before {
-  content: "\e058";
+	content: "\e050";
 }
 .elusive-remove-circle:before {
-  content: "\e059";
+	content: "\e051";
 }
 .elusive-remove:before {
-  content: "\e05a";
+	content: "\e052";
 }
 .elusive-refresh:before {
-  content: "\e05b";
+	content: "\e053";
 }
 .elusive-reddit:before {
-  content: "\e05c";
+	content: "\e054";
 }
 .elusive-record:before {
-  content: "\e05d";
+	content: "\e055";
 }
 .elusive-random:before {
-  content: "\e05e";
+	content: "\e056";
 }
 .elusive-quotes-alt:before {
-  content: "\e05f";
+	content: "\e057";
 }
 .elusive-quotes:before {
-  content: "\e060";
+	content: "\e058";
 }
 .elusive-question-sign:before {
-  content: "\e061";
+	content: "\e059";
 }
 .elusive-question:before {
-  content: "\e062";
+	content: "\e05a";
 }
 .elusive-qrcode:before {
-  content: "\e063";
+	content: "\e05b";
 }
 .elusive-print:before {
-  content: "\e064";
+	content: "\e05c";
 }
 .elusive-plus-sign:before {
-  content: "\e065";
+	content: "\e05d";
 }
 .elusive-plus:before {
-  content: "\e066";
+	content: "\e05e";
 }
 .elusive-play-circle:before {
-  content: "\e067";
+	content: "\e05f";
 }
 .elusive-play-alt:before {
-  content: "\e068";
+	content: "\e060";
 }
 .elusive-play:before {
-  content: "\e069";
+	content: "\e061";
+}
+.elusive-plane:before {
+	content: "\e062";
 }
 .elusive-pinterest:before {
-  content: "\e06a";
+	content: "\e063";
 }
 .elusive-picture:before {
-  content: "\e06b";
+	content: "\e064";
 }
 .elusive-picasa:before {
-  content: "\e06c";
+	content: "\e065";
 }
 .elusive-photo-alt:before {
-  content: "\e06d";
+	content: "\e066";
 }
 .elusive-photo:before {
-  content: "\e06e";
+	content: "\e067";
 }
 .elusive-phone-alt:before {
-  content: "\e06f";
+	content: "\e068";
 }
 .elusive-phone:before {
-  content: "\e070";
+	content: "\e069";
 }
 .elusive-person:before {
-  content: "\e071";
+	content: "\e06a";
 }
 .elusive-pencil-alt:before {
-  content: "\e072";
+	content: "\e06b";
 }
 .elusive-pencil:before {
-  content: "\e073";
+	content: "\e06c";
 }
 .elusive-pause-alt:before {
-  content: "\e074";
+	content: "\e06d";
 }
 .elusive-pause:before {
-  content: "\e075";
+	content: "\e06e";
 }
 .elusive-path:before {
-  content: "\e076";
+	content: "\e06f";
 }
 .elusive-paper-clip-alt:before {
-  content: "\e077";
+	content: "\e070";
 }
 .elusive-paper-clip:before {
-  content: "\e078";
+	content: "\e071";
 }
 .elusive-ok-sign:before {
-  content: "\e079";
+	content: "\e072";
 }
 .elusive-ok-circle:before {
-  content: "\e07a";
+	content: "\e073";
 }
 .elusive-ok:before {
-  content: "\e07b";
+	content: "\e074";
 }
 .elusive-off:before {
-  content: "\e07c";
+	content: "\e075";
 }
 .elusive-network:before {
-  content: "\e07d";
+	content: "\e076";
 }
 .elusive-myspace:before {
-  content: "\e07e";
+	content: "\e077";
 }
 .elusive-music:before {
-  content: "\e07f";
+	content: "\e078";
 }
 .elusive-move:before {
-  content: "\e080";
+	content: "\e079";
 }
 .elusive-minus-sign:before {
-  content: "\e081";
+	content: "\e07a";
 }
 .elusive-minus:before {
-  content: "\e082";
+	content: "\e07b";
 }
 .elusive-mic-alt:before {
-  content: "\e083";
+	content: "\e07c";
 }
 .elusive-mic:before {
-  content: "\e084";
+	content: "\e07d";
 }
 .elusive-map-marker-alt:before {
-  content: "\e085";
+	content: "\e07e";
 }
 .elusive-map-marker:before {
-  content: "\e086";
+	content: "\e07f";
 }
 .elusive-male:before {
-  content: "\e087";
+	content: "\e080";
 }
 .elusive-magnet:before {
-  content: "\e088";
+	content: "\e081";
 }
 .elusive-magic:before {
-  content: "\e089";
+	content: "\e082";
 }
 .elusive-lock-alt:before {
-  content: "\e08a";
+	content: "\e083";
 }
 .elusive-lock:before {
-  content: "\e08b";
+	content: "\e084";
 }
 .elusive-livejournal:before {
-  content: "\e08c";
+	content: "\e085";
 }
 .elusive-list-alt:before {
-  content: "\e08d";
+	content: "\e086";
 }
 .elusive-list:before {
-  content: "\e08e";
+	content: "\e087";
 }
 .elusive-linkedin:before {
-  content: "\e08f";
+	content: "\e088";
 }
 .elusive-link:before {
-  content: "\e090";
+	content: "\e089";
+}
+.elusive-lines:before {
+	content: "\e08a";
 }
 .elusive-leaf:before {
-  content: "\e091";
+	content: "\e08b";
 }
 .elusive-lastfm:before {
-  content: "\e092";
+	content: "\e08c";
 }
 .elusive-laptop-alt:before {
-  content: "\e093";
+	content: "\e08d";
 }
 .elusive-laptop:before {
-  content: "\e094";
+	content: "\e08e";
 }
 .elusive-key:before {
-  content: "\e095";
+	content: "\e08f";
 }
 .elusive-italic:before {
-  content: "\e096";
+	content: "\e090";
 }
 .elusive-iphone-home:before {
-  content: "\e097";
+	content: "\e091";
 }
 .elusive-instagram:before {
-  content: "\e098";
+	content: "\e092";
 }
 .elusive-info-sign:before {
-  content: "\e099";
+	content: "\e093";
 }
 .elusive-indent-right:before {
-  content: "\e09a";
+	content: "\e094";
 }
 .elusive-indent-left:before {
-  content: "\e09b";
+	content: "\e095";
 }
 .elusive-inbox-box:before {
-  content: "\e09c";
+	content: "\e096";
 }
 .elusive-inbox-alt:before {
-  content: "\e09d";
+	content: "\e097";
 }
 .elusive-inbox:before {
-  content: "\e09e";
+	content: "\e098";
 }
 .elusive-idea-alt:before {
-  content: "\e09f";
-}
-.elusive-home-alt:before {
-  content: "\e0a0";
-}
-.elusive-home:before {
-  content: "\e0a1";
-}
-.elusive-heart-empty:before {
-  content: "\e0a2";
-}
-.elusive-heart-alt:before {
-  content: "\e0a3";
-}
-.elusive-heart:before {
-  content: "\e0a4";
-}
-.elusive-hearing-impaired:before {
-  content: "\e0a5";
-}
-.elusive-headphones:before {
-  content: "\e0a6";
-}
-.elusive-hdd:before {
-  content: "\e0a7";
-}
-.elusive-hand-up:before {
-  content: "\e0a8";
-}
-.elusive-hand-right:before {
-  content: "\e0a9";
-}
-.elusive-hand-left:before {
-  content: "\e0aa";
-}
-.elusive-hand-down:before {
-  content: "\e0ab";
-}
-.elusive-guidedog:before {
-  content: "\e0ac";
-}
-.elusive-group-alt:before {
-  content: "\e0ad";
-}
-.elusive-group:before {
-  content: "\e0ae";
-}
-.elusive-graph-alt:before {
-  content: "\e0af";
-}
-.elusive-graph:before {
-  content: "\e0b0";
-}
-.elusive-googleplus:before {
-  content: "\e0b1";
-}
-.elusive-globe-alt:before {
-  content: "\e0b2";
-}
-.elusive-globe:before {
-  content: "\e0b3";
-}
-.elusive-glasses:before {
-  content: "\e0b4";
-}
-.elusive-glass:before {
-  content: "\e0b5";
-}
-.elusive-github-text:before {
-  content: "\e0b6";
-}
-.elusive-github:before {
-  content: "\e0b7";
-}
-.elusive-bookmark-empty:before {
-  content: "\e0b8";
-}
-.elusive-gift:before {
-  content: "\e0b9";
-}
-.elusive-fullscreen:before {
-  content: "\e0ba";
-}
-.elusive-friendfeed-rect:before {
-  content: "\e0bb";
-}
-.elusive-friendfeed:before {
-  content: "\e0bc";
-}
-.elusive-foursquare:before {
-  content: "\e0bd";
-}
-.elusive-forward-alt:before {
-  content: "\e0be";
-}
-.elusive-forward:before {
-  content: "\e0bf";
-}
-.elusive-fork:before {
-  content: "\e0c0";
-}
-.elusive-fontsize:before {
-  content: "\e0c1";
-}
-.elusive-font:before {
-  content: "\e0c2";
-}
-.elusive-folder-sign:before {
-  content: "\e0c3";
-}
-.elusive-folder-open:before {
-  content: "\e0c4";
-}
-.elusive-folder-close:before {
-  content: "\e0c5";
-}
-.elusive-folder:before {
-  content: "\e0c6";
-}
-.elusive-flickr:before {
-  content: "\e0c7";
-}
-.elusive-flag-alt:before {
-  content: "\e0c8";
-}
-.elusive-flag:before {
-  content: "\e0c9";
-}
-.elusive-fire:before {
-  content: "\e0ca";
-}
-.elusive-filter:before {
-  content: "\e0cb";
-}
-.elusive-film:before {
-  content: "\e0cc";
-}
-.elusive-file-new-alt:before {
-  content: "\e0cd";
-}
-.elusive-file-new:before {
-  content: "\e0ce";
-}
-.elusive-file-edit-alt:before {
-  content: "\e0cf";
-}
-.elusive-file-edit:before {
-  content: "\e0d0";
-}
-.elusive-file-alt:before {
-  content: "\e0d1";
-}
-.elusive-file:before {
-  content: "\e0d2";
-}
-.elusive-female:before {
-  content: "\e0d3";
-}
-.elusive-fast-forward:before {
-  content: "\e0d4";
-}
-.elusive-fast-backward:before {
-  content: "\e0d5";
-}
-.elusive-facetime-video:before {
-  content: "\e0d6";
-}
-.elusive-facebook:before {
-  content: "\e0d7";
-}
-.elusive-eye-open:before {
-  content: "\e0d8";
-}
-.elusive-eye-close:before {
-  content: "\e0d9";
-}
-.elusive-exclamation-sign:before {
-  content: "\e0da";
-}
-.elusive-error-alt:before {
-  content: "\e0db";
-}
-.elusive-error:before {
-  content: "\e0dc";
-}
-.elusive-envelope-alt:before {
-  content: "\e0dd";
-}
-.elusive-envelope:before {
-  content: "\e0de";
-}
-.elusive-eject:before {
-  content: "\e0df";
-}
-.elusive-edit:before {
-  content: "\e0e0";
-}
-.elusive-dribbble:before {
-  content: "\e0e1";
-}
-.elusive-download-alt:before {
-  content: "\e0e2";
-}
-.elusive-download:before {
-  content: "\e0e3";
-}
-.elusive-digg:before {
-  content: "\e0e4";
-}
-.elusive-deviantart:before {
-  content: "\e0e5";
-}
-.elusive-delicious:before {
-  content: "\e0e6";
-}
-.elusive-dashboard:before {
-  content: "\e0e7";
-}
-.elusive-css:before {
-  content: "\e0e8";
-}
-.elusive-credit-card:before {
-  content: "\e0e9";
-}
-.elusive-compass-alt:before {
-  content: "\e0ea";
-}
-.elusive-compass:before {
-  content: "\e0eb";
-}
-.elusive-comment-alt:before {
-  content: "\e0ec";
-}
-.elusive-comment:before {
-  content: "\e0ed";
-}
-.elusive-cogs:before {
-  content: "\e0ee";
-}
-.elusive-cog-alt:before {
-  content: "\e0ef";
-}
-.elusive-cog:before {
-  content: "\e0f0";
-}
-.elusive-cloud-alt:before {
-  content: "\e0f1";
-}
-.elusive-cloud:before {
-  content: "\e0f2";
-}
-.elusive-circle-arrow-up:before {
-  content: "\e0f3";
-}
-.elusive-circle-arrow-right:before {
-  content: "\e0f4";
-}
-.elusive-circle-arrow-left:before {
-  content: "\e0f5";
-}
-.elusive-circle-arrow-down:before {
-  content: "\e0f6";
-}
-.elusive-child:before {
-  content: "\e0f7";
-}
-.elusive-chevron-up:before {
-  content: "\e0f8";
-}
-.elusive-chevron-right:before {
-  content: "\e0f9";
-}
-.elusive-chevron-left:before {
-  content: "\e0fa";
-}
-.elusive-chevron-down:before {
-  content: "\e0fb";
-}
-.elusive-check-empty:before {
-  content: "\e0fc";
-}
-.elusive-check:before {
-  content: "\e0fd";
-}
-.elusive-briefcase:before {
-  content: "\e0fe";
-}
-.elusive-certificate:before {
-  content: "\e0ff";
-}
-.elusive-cc:before {
-  content: "\e100";
-}
-.elusive-caret-up:before {
-  content: "\e101";
-}
-.elusive-caret-right:before {
-  content: "\e102";
-}
-.elusive-caret-left:before {
-  content: "\e103";
-}
-.elusive-caret-down:before {
-  content: "\e104";
-}
-.elusive-car:before {
-  content: "\e105";
-}
-.elusive-camera:before {
-  content: "\e106";
-}
-.elusive-calendar-sign:before {
-  content: "\e107";
-}
-.elusive-calendar:before {
-  content: "\e108";
-}
-.elusive-bullhorn:before {
-  content: "\e109";
+	content: "\e099";
 }
 .elusive-idea:before {
-  content: "\e10a";
+	content: "\e09a";
+}
+.elusive-home-alt:before {
+	content: "\e09b";
+}
+.elusive-home:before {
+	content: "\e09c";
+}
+.elusive-heart-empty:before {
+	content: "\e09d";
+}
+.elusive-heart-alt:before {
+	content: "\e09e";
+}
+.elusive-heart:before {
+	content: "\e09f";
+}
+.elusive-hearing-impaired:before {
+	content: "\e0a0";
+}
+.elusive-headphones:before {
+	content: "\e0a1";
+}
+.elusive-hdd:before {
+	content: "\e0a2";
+}
+.elusive-hand-up:before {
+	content: "\e0a3";
+}
+.elusive-hand-right:before {
+	content: "\e0a4";
+}
+.elusive-hand-left:before {
+	content: "\e0a5";
+}
+.elusive-hand-down:before {
+	content: "\e0a6";
+}
+.elusive-guidedog:before {
+	content: "\e0a7";
+}
+.elusive-group-alt:before {
+	content: "\e0a8";
+}
+.elusive-group:before {
+	content: "\e0a9";
+}
+.elusive-graph-alt:before {
+	content: "\e0aa";
+}
+.elusive-graph:before {
+	content: "\e0ab";
+}
+.elusive-googleplus:before {
+	content: "\e0ac";
+}
+.elusive-globe-alt:before {
+	content: "\e0ad";
+}
+.elusive-globe:before {
+	content: "\e0ae";
+}
+.elusive-glasses:before {
+	content: "\e0af";
+}
+.elusive-glass:before {
+	content: "\e0b0";
+}
+.elusive-github-text:before {
+	content: "\e0b1";
+}
+.elusive-github:before {
+	content: "\e0b2";
+}
+.elusive-gift:before {
+	content: "\e0b3";
+}
+.elusive-fullscreen:before {
+	content: "\e0b4";
+}
+.elusive-friendfeed-rect:before {
+	content: "\e0b5";
+}
+.elusive-friendfeed:before {
+	content: "\e0b6";
+}
+.elusive-foursquare:before {
+	content: "\e0b7";
+}
+.elusive-forward-alt:before {
+	content: "\e0b8";
+}
+.elusive-forward:before {
+	content: "\e0b9";
+}
+.elusive-fork:before {
+	content: "\e0ba";
+}
+.elusive-fontsize:before {
+	content: "\e0bb";
+}
+.elusive-font:before {
+	content: "\e0bc";
+}
+.elusive-folder-sign:before {
+	content: "\e0bd";
+}
+.elusive-folder-open:before {
+	content: "\e0be";
+}
+.elusive-folder-close:before {
+	content: "\e0bf";
+}
+.elusive-folder:before {
+	content: "\e0c0";
+}
+.elusive-flickr:before {
+	content: "\e0c1";
+}
+.elusive-flag-alt:before {
+	content: "\e0c2";
+}
+.elusive-flag:before {
+	content: "\e0c3";
+}
+.elusive-fire:before {
+	content: "\e0c4";
+}
+.elusive-filter:before {
+	content: "\e0c5";
+}
+.elusive-film:before {
+	content: "\e0c6";
+}
+.elusive-file-new-alt:before {
+	content: "\e0c7";
+}
+.elusive-file-new:before {
+	content: "\e0c8";
+}
+.elusive-file-edit-alt:before {
+	content: "\e0c9";
+}
+.elusive-file-edit:before {
+	content: "\e0ca";
+}
+.elusive-file-alt:before {
+	content: "\e0cb";
+}
+.elusive-file:before {
+	content: "\e0cc";
+}
+.elusive-female:before {
+	content: "\e0cd";
+}
+.elusive-fast-forward:before {
+	content: "\e0ce";
+}
+.elusive-fast-backward:before {
+	content: "\e0cf";
+}
+.elusive-facetime-video:before {
+	content: "\e0d0";
+}
+.elusive-facebook:before {
+	content: "\e0d1";
+}
+.elusive-eye-open:before {
+	content: "\e0d2";
+}
+.elusive-eye-close:before {
+	content: "\e0d3";
+}
+.elusive-exclamation-sign:before {
+	content: "\e0d4";
+}
+.elusive-error-alt:before {
+	content: "\e0d5";
+}
+.elusive-error:before {
+	content: "\e0d6";
+}
+.elusive-envelope-alt:before {
+	content: "\e0d7";
+}
+.elusive-envelope:before {
+	content: "\e0d8";
+}
+.elusive-eject:before {
+	content: "\e0d9";
+}
+.elusive-edit:before {
+	content: "\e0da";
+}
+.elusive-dribbble:before {
+	content: "\e0db";
+}
+.elusive-download-alt:before {
+	content: "\e0dc";
+}
+.elusive-download:before {
+	content: "\e0dd";
+}
+.elusive-digg:before {
+	content: "\e0de";
+}
+.elusive-deviantart:before {
+	content: "\e0df";
+}
+.elusive-delicious:before {
+	content: "\e0e0";
+}
+.elusive-dashboard:before {
+	content: "\e0e1";
+}
+.elusive-css:before {
+	content: "\e0e2";
+}
+.elusive-credit-card:before {
+	content: "\e0e3";
+}
+.elusive-compass-alt:before {
+	content: "\e0e4";
+}
+.elusive-compass:before {
+	content: "\e0e5";
+}
+.elusive-comment-alt:before {
+	content: "\e0e6";
+}
+.elusive-comment:before {
+	content: "\e0e7";
+}
+.elusive-cogs:before {
+	content: "\e0e8";
+}
+.elusive-cog-alt:before {
+	content: "\e0e9";
+}
+.elusive-cog:before {
+	content: "\e0ea";
+}
+.elusive-cloud-alt:before {
+	content: "\e0eb";
+}
+.elusive-cloud:before {
+	content: "\e0ec";
+}
+.elusive-circle-arrow-up:before {
+	content: "\e0ed";
+}
+.elusive-circle-arrow-right:before {
+	content: "\e0ee";
+}
+.elusive-circle-arrow-left:before {
+	content: "\e0ef";
+}
+.elusive-circle-arrow-down:before {
+	content: "\e0f0";
+}
+.elusive-child:before {
+	content: "\e0f1";
+}
+.elusive-chevron-up:before {
+	content: "\e0f2";
+}
+.elusive-chevron-right:before {
+	content: "\e0f3";
+}
+.elusive-chevron-left:before {
+	content: "\e0f4";
+}
+.elusive-chevron-down:before {
+	content: "\e0f5";
+}
+.elusive-check-empty:before {
+	content: "\e0f6";
+}
+.elusive-check:before {
+	content: "\e0f7";
+}
+.elusive-certificate:before {
+	content: "\e0f8";
+}
+.elusive-cc:before {
+	content: "\e0f9";
+}
+.elusive-caret-up:before {
+	content: "\e0fa";
+}
+.elusive-caret-right:before {
+	content: "\e0fb";
+}
+.elusive-caret-left:before {
+	content: "\e0fc";
+}
+.elusive-caret-down:before {
+	content: "\e0fd";
+}
+.elusive-car:before {
+	content: "\e0fe";
+}
+.elusive-camera:before {
+	content: "\e0ff";
+}
+.elusive-calendar-sign:before {
+	content: "\e100";
+}
+.elusive-calendar:before {
+	content: "\e101";
+}
+.elusive-bullhorn:before {
+	content: "\e102";
 }
 .elusive-bulb:before {
-  content: "\e10b";
+	content: "\e103";
 }
 .elusive-brush:before {
-  content: "\e10c";
+	content: "\e104";
 }
 .elusive-broom:before {
-  content: "\e10d";
+	content: "\e105";
+}
+.elusive-briefcase:before {
+	content: "\e106";
 }
 .elusive-braille:before {
-  content: "\e10e";
+	content: "\e107";
+}
+.elusive-bookmark-empty:before {
+	content: "\e108";
 }
 .elusive-bookmark:before {
-  content: "\e10f";
+	content: "\e109";
 }
 .elusive-book:before {
-  content: "\e110";
+	content: "\e10a";
 }
 .elusive-bold:before {
-  content: "\e111";
+	content: "\e10b";
 }
 .elusive-blogger:before {
-  content: "\e112";
+	content: "\e10c";
 }
 .elusive-blind:before {
-  content: "\e113";
+	content: "\e10d";
 }
 .elusive-bell:before {
-  content: "\e114";
+	content: "\e10e";
 }
 .elusive-behance:before {
-  content: "\e115";
+	content: "\e10f";
 }
 .elusive-barcode:before {
-  content: "\e116";
+	content: "\e110";
 }
 .elusive-ban-circle:before {
-  content: "\e117";
+	content: "\e111";
 }
 .elusive-backward:before {
-  content: "\e118";
+	content: "\e112";
+}
+.elusive-asterisk:before {
+	content: "\e113";
 }
 .elusive-asl:before {
-  content: "\e119";
+	content: "\e114";
 }
 .elusive-arrow-up:before {
-  content: "\e11a";
+	content: "\e115";
 }
 .elusive-arrow-right:before {
-  content: "\e11b";
+	content: "\e116";
 }
 .elusive-arrow-left:before {
-  content: "\e11c";
+	content: "\e117";
 }
 .elusive-arrow-down:before {
-  content: "\e11d";
+	content: "\e118";
+}
+.elusive-align-right:before {
+	content: "\e119";
+}
+.elusive-align-left:before {
+	content: "\e11a";
+}
+.elusive-align-justify:before {
+	content: "\e11b";
+}
+.elusive-align-center:before {
+	content: "\e11c";
 }
 .elusive-adult:before {
-  content: "\e11e";
+	content: "\e11d";
 }
 .elusive-adjust-alt:before {
-  content: "\e11f";
+	content: "\e11e";
 }
 .elusive-adjust:before {
-  content: "\e120";
+	content: "\e11f";
 }
 .elusive-address-book-alt:before {
-  content: "\e121";
+	content: "\e120";
+}
+.elusive-address-book:before {
+	content: "\e121";
 }
