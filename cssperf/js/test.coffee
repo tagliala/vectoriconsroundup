@@ -1,3 +1,7 @@
+ICON_NAMES = ["home", "glass", "star", "male", "female", "bug"]
+icons = []
+iconsHTML = []
+
 calculateMean = (a) ->
   sum = 0
 
@@ -19,19 +23,14 @@ calculateStdDev = (a) ->
   Math.sqrt calculateVariance(a)
 
 initIcons = (iconClass) ->
-  ICONS = ["home", "glass", "star", "male", "female", "bug"]
-  window.bench = {}
-  window.bench.icons = []
-  window.bench.iconsHTML = []
-
-  for i in [0..6]
-    window.bench.icons.push document.getElementById("test_#{i}")
-    window.bench.iconsHTML.push "<i class=\"#{iconClass}-#{ICONS[i]}\"></i>"
+  for i in [0...6]
+    icons.push document.getElementById("test_#{i}")
+    iconsHTML.push "<i class=\"#{iconClass}-#{ICON_NAMES[i]}\"></i>"
   return
 
 setIcons = (iconClass, start) ->
-  for i in [0..6]
-    window.bench.icons[(i + start) % 6].innerHTML = window.bench.iconsHTML[i]
+  for i in [0...6]
+    icons[(i + start) % 6].innerHTML = iconsHTML[i]
   return
 
 attachEvent = (element) ->
