@@ -6,13 +6,18 @@
 
 .glyphicon {
   position: relative;
-  top: 2px;
+  top: 1px;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
-  -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:empty {
+    width: 1em;
+  }
 }
 
 .glyphicon-asterisk:before {

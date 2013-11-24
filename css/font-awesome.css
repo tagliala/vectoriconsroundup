@@ -1,145 +1,69 @@
 /*!
- *  Font Awesome 3.2.1
- *  the iconic font designed for Bootstrap
- *  ------------------------------------------------------------------------------
- *  The full suite of pictographic icons, examples, and documentation can be
- *  found at http://fontawesome.io.  Stay up to date on Twitter at
- *  http://twitter.com/fontawesome.
- *
- *  License
- *  ------------------------------------------------------------------------------
- *  - The Font Awesome font is licensed under SIL OFL 1.1 -
- *    http://scripts.sil.org/OFL
- *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
- *    http://opensource.org/licenses/mit-license.html
- *  - Font Awesome documentation licensed under CC BY 3.0 -
- *    http://creativecommons.org/licenses/by/3.0/
- *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
- *    "Font Awesome by Dave Gandy - http://fontawesome.io"
- *
- *  Author - Dave Gandy
- *  ------------------------------------------------------------------------------
- *  Email: dave@fontawesome.io
- *  Twitter: http://twitter.com/davegandy
- *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=3.2.1');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-/* FONT AWESOME CORE
- * -------------------------- */
-[class^="fontawesome-"],
-[class*=" fontawesome-"] {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  *margin-right: .3em;
-}
-[class^="fontawesome-"]:before,
-[class*=" fontawesome-"]:before {
-  text-decoration: inherit;
+.fa {
   display: inline-block;
-  speak: none;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* makes the font 33% larger relative to the icon container */
-.fontawesome-large:before {
-  vertical-align: -10%;
+.fa-lg {
   font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
-/* makes sure icons active on rollover in links */
-a [class^="fontawesome-"],
-a [class*=" fontawesome-"] {
-  display: inline;
+.fa-2x {
+  font-size: 2em;
 }
-/* increased font size for fontawesome-large */
-[class^="fontawesome-"].fontawesome-fixed-width,
-[class*=" fontawesome-"].fontawesome-fixed-width {
-  display: inline-block;
-  width: 1.1428571428571428em;
-  text-align: right;
-  padding-right: 0.2857142857142857em;
+.fa-3x {
+  font-size: 3em;
 }
-[class^="fontawesome-"].fontawesome-fixed-width.fontawesome-large,
-[class*=" fontawesome-"].fontawesome-fixed-width.fontawesome-large {
-  width: 1.4285714285714286em;
+.fa-4x {
+  font-size: 4em;
 }
-.icons-ul {
+.fa-5x {
+  font-size: 5em;
+}
+.fa-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+.fa-ul {
+  padding-left: 0;
   margin-left: 2.142857142857143em;
   list-style-type: none;
 }
-.icons-ul > li {
+.fa-ul > li {
   position: relative;
 }
-.icons-ul .fontawesome-li {
+.fa-li {
   position: absolute;
   left: -2.142857142857143em;
   width: 2.142857142857143em;
+  top: 0.14285714285714285em;
   text-align: center;
-  line-height: inherit;
 }
-[class^="fontawesome-"].hide,
-[class*=" fontawesome-"].hide {
-  display: none;
+.fa-li.fa-lg {
+  left: -1.8571428571428572em;
 }
-.fontawesome-muted {
-  color: #eeeeee;
-}
-.fontawesome-light {
-  color: #ffffff;
-}
-.fontawesome-dark {
-  color: #333333;
-}
-.fontawesome-border {
-  border: solid 1px #eeeeee;
+.fa-border {
   padding: .2em .25em .15em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.fontawesome-2x {
-  font-size: 2em;
-}
-.fontawesome-2x.fontawesome-border {
-  border-width: 2px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.fontawesome-3x {
-  font-size: 3em;
-}
-.fontawesome-3x.fontawesome-border {
-  border-width: 3px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-.fontawesome-4x {
-  font-size: 4em;
-}
-.fontawesome-4x.fontawesome-border {
-  border-width: 4px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-.fontawesome-5x {
-  font-size: 5em;
-}
-.fontawesome-5x.fontawesome-border {
-  border-width: 5px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
 }
 .pull-right {
   float: right;
@@ -147,146 +71,17 @@ a [class*=" fontawesome-"] {
 .pull-left {
   float: left;
 }
-[class^="fontawesome-"].pull-left,
-[class*=" fontawesome-"].pull-left {
+.fa.pull-left {
   margin-right: .3em;
 }
-[class^="fontawesome-"].pull-right,
-[class*=" fontawesome-"].pull-right {
+.fa.pull-right {
   margin-left: .3em;
 }
-/* BOOTSTRAP SPECIFIC CLASSES
- * -------------------------- */
-/* Bootstrap 2.0 sprites.less reset */
-[class^="fontawesome-"],
-[class*=" fontawesome-"] {
-  display: inline;
-  width: auto;
-  height: auto;
-  line-height: normal;
-  vertical-align: baseline;
-  background-image: none;
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  margin-top: 0;
-}
-/* more sprites.less reset */
-.fontawesome-white,
-.nav-pills > .active > a > [class^="fontawesome-"],
-.nav-pills > .active > a > [class*=" fontawesome-"],
-.nav-list > .active > a > [class^="fontawesome-"],
-.nav-list > .active > a > [class*=" fontawesome-"],
-.navbar-inverse .nav > .active > a > [class^="fontawesome-"],
-.navbar-inverse .nav > .active > a > [class*=" fontawesome-"],
-.dropdown-menu > li > a:hover > [class^="fontawesome-"],
-.dropdown-menu > li > a:hover > [class*=" fontawesome-"],
-.dropdown-menu > .active > a > [class^="fontawesome-"],
-.dropdown-menu > .active > a > [class*=" fontawesome-"],
-.dropdown-submenu:hover > a > [class^="fontawesome-"],
-.dropdown-submenu:hover > a > [class*=" fontawesome-"] {
-  background-image: none;
-}
-/* keeps Bootstrap styles with and without icons the same */
-.btn [class^="fontawesome-"].fontawesome-large,
-.nav [class^="fontawesome-"].fontawesome-large,
-.btn [class*=" fontawesome-"].fontawesome-large,
-.nav [class*=" fontawesome-"].fontawesome-large {
-  line-height: .9em;
-}
-.btn [class^="fontawesome-"].fontawesome-spin,
-.nav [class^="fontawesome-"].fontawesome-spin,
-.btn [class*=" fontawesome-"].fontawesome-spin,
-.nav [class*=" fontawesome-"].fontawesome-spin {
-  display: inline-block;
-}
-.nav-tabs [class^="fontawesome-"],
-.nav-pills [class^="fontawesome-"],
-.nav-tabs [class*=" fontawesome-"],
-.nav-pills [class*=" fontawesome-"],
-.nav-tabs [class^="fontawesome-"].fontawesome-large,
-.nav-pills [class^="fontawesome-"].fontawesome-large,
-.nav-tabs [class*=" fontawesome-"].fontawesome-large,
-.nav-pills [class*=" fontawesome-"].fontawesome-large {
-  line-height: .9em;
-}
-.btn [class^="fontawesome-"].pull-left.fontawesome-2x,
-.btn [class*=" fontawesome-"].pull-left.fontawesome-2x,
-.btn [class^="fontawesome-"].pull-right.fontawesome-2x,
-.btn [class*=" fontawesome-"].pull-right.fontawesome-2x {
-  margin-top: .18em;
-}
-.btn [class^="fontawesome-"].fontawesome-spin.fontawesome-large,
-.btn [class*=" fontawesome-"].fontawesome-spin.fontawesome-large {
-  line-height: .8em;
-}
-.btn.btn-small [class^="fontawesome-"].pull-left.fontawesome-2x,
-.btn.btn-small [class*=" fontawesome-"].pull-left.fontawesome-2x,
-.btn.btn-small [class^="fontawesome-"].pull-right.fontawesome-2x,
-.btn.btn-small [class*=" fontawesome-"].pull-right.fontawesome-2x {
-  margin-top: .25em;
-}
-.btn.btn-large [class^="fontawesome-"],
-.btn.btn-large [class*=" fontawesome-"] {
-  margin-top: 0;
-}
-.btn.btn-large [class^="fontawesome-"].pull-left.fontawesome-2x,
-.btn.btn-large [class*=" fontawesome-"].pull-left.fontawesome-2x,
-.btn.btn-large [class^="fontawesome-"].pull-right.fontawesome-2x,
-.btn.btn-large [class*=" fontawesome-"].pull-right.fontawesome-2x {
-  margin-top: .05em;
-}
-.btn.btn-large [class^="fontawesome-"].pull-left.fontawesome-2x,
-.btn.btn-large [class*=" fontawesome-"].pull-left.fontawesome-2x {
-  margin-right: .2em;
-}
-.btn.btn-large [class^="fontawesome-"].pull-right.fontawesome-2x,
-.btn.btn-large [class*=" fontawesome-"].pull-right.fontawesome-2x {
-  margin-left: .2em;
-}
-/* Fixes alignment in nav lists */
-.nav-list [class^="fontawesome-"],
-.nav-list [class*=" fontawesome-"] {
-  line-height: inherit;
-}
-/* EXTRAS
- * -------------------------- */
-/* Stacked and layered icon */
-.fontawesome-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: -35%;
-}
-.fontawesome-stack [class^="fontawesome-"],
-.fontawesome-stack [class*=" fontawesome-"] {
-  display: block;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 1em;
-  line-height: inherit;
-  *line-height: 2em;
-}
-.fontawesome-stack .fontawesome-stack-base {
-  font-size: 2em;
-  *line-height: 1em;
-}
-/* Animated rotating icon */
-.fontawesome-spin {
-  display: inline-block;
+.fa-spin {
+  -webkit-animation: spin 2s infinite linear;
   -moz-animation: spin 2s infinite linear;
   -o-animation: spin 2s infinite linear;
-  -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
-}
-/* Prevent stack and spinners from being taken inline when inside a link */
-a .fontawesome-stack,
-a .fontawesome-spin {
-  display: inline-block;
-  text-decoration: none;
 }
 @-moz-keyframes spin {
   0% {
@@ -328,1152 +123,1216 @@ a .fontawesome-spin {
     transform: rotate(359deg);
   }
 }
-/* Icon rotations and mirroring */
-.fontawesome-rotate-90:before {
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
-.fontawesome-rotate-180:before {
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
-.fontawesome-rotate-270:before {
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
-.fontawesome-flip-horizontal:before {
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
   -webkit-transform: scale(-1, 1);
   -moz-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   -o-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
-.fontawesome-flip-vertical:before {
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
   -webkit-transform: scale(1, -1);
   -moz-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
-/* ensure rotation occurs inside anchor tags */
-a .fontawesome-rotate-90:before,
-a .fontawesome-rotate-180:before,
-a .fontawesome-rotate-270:before,
-a .fontawesome-flip-horizontal:before,
-a .fontawesome-flip-vertical:before {
+.fa-stack {
+  position: relative;
   display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.fa-stack-1x,
+.fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.fa-stack-1x {
+  line-height: inherit;
+}
+.fa-stack-2x {
+  font-size: 2em;
+}
+.fa-inverse {
+  color: #ffffff;
 }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
-.fontawesome-glass:before {
+.fa-glass:before {
   content: "\f000";
 }
-.fontawesome-music:before {
+.fa-music:before {
   content: "\f001";
 }
-.fontawesome-search:before {
+.fa-search:before {
   content: "\f002";
 }
-.fontawesome-envelope-alt:before {
+.fa-envelope-o:before {
   content: "\f003";
 }
-.fontawesome-heart:before {
+.fa-heart:before {
   content: "\f004";
 }
-.fontawesome-star:before {
+.fa-star:before {
   content: "\f005";
 }
-.fontawesome-star-empty:before {
+.fa-star-o:before {
   content: "\f006";
 }
-.fontawesome-user:before {
+.fa-user:before {
   content: "\f007";
 }
-.fontawesome-film:before {
+.fa-film:before {
   content: "\f008";
 }
-.fontawesome-th-large:before {
+.fa-th-large:before {
   content: "\f009";
 }
-.fontawesome-th:before {
+.fa-th:before {
   content: "\f00a";
 }
-.fontawesome-th-list:before {
+.fa-th-list:before {
   content: "\f00b";
 }
-.fontawesome-ok:before {
+.fa-check:before {
   content: "\f00c";
 }
-.fontawesome-remove:before {
+.fa-times:before {
   content: "\f00d";
 }
-.fontawesome-zoom-in:before {
+.fa-search-plus:before {
   content: "\f00e";
 }
-.fontawesome-zoom-out:before {
+.fa-search-minus:before {
   content: "\f010";
 }
-.fontawesome-power-off:before,
-.fontawesome-off:before {
+.fa-power-off:before {
   content: "\f011";
 }
-.fontawesome-signal:before {
+.fa-signal:before {
   content: "\f012";
 }
-.fontawesome-gear:before,
-.fontawesome-cog:before {
+.fa-gear:before,
+.fa-cog:before {
   content: "\f013";
 }
-.fontawesome-trash:before {
+.fa-trash-o:before {
   content: "\f014";
 }
-.fontawesome-home:before {
+.fa-home:before {
   content: "\f015";
 }
-.fontawesome-file-alt:before {
+.fa-file-o:before {
   content: "\f016";
 }
-.fontawesome-time:before {
+.fa-clock-o:before {
   content: "\f017";
 }
-.fontawesome-road:before {
+.fa-road:before {
   content: "\f018";
 }
-.fontawesome-download-alt:before {
+.fa-download:before {
   content: "\f019";
 }
-.fontawesome-download:before {
+.fa-arrow-circle-o-down:before {
   content: "\f01a";
 }
-.fontawesome-upload:before {
+.fa-arrow-circle-o-up:before {
   content: "\f01b";
 }
-.fontawesome-inbox:before {
+.fa-inbox:before {
   content: "\f01c";
 }
-.fontawesome-play-circle:before {
+.fa-play-circle-o:before {
   content: "\f01d";
 }
-.fontawesome-rotate-right:before,
-.fontawesome-repeat:before {
+.fa-rotate-right:before,
+.fa-repeat:before {
   content: "\f01e";
 }
-.fontawesome-refresh:before {
+.fa-refresh:before {
   content: "\f021";
 }
-.fontawesome-list-alt:before {
+.fa-list-alt:before {
   content: "\f022";
 }
-.fontawesome-lock:before {
+.fa-lock:before {
   content: "\f023";
 }
-.fontawesome-flag:before {
+.fa-flag:before {
   content: "\f024";
 }
-.fontawesome-headphones:before {
+.fa-headphones:before {
   content: "\f025";
 }
-.fontawesome-volume-off:before {
+.fa-volume-off:before {
   content: "\f026";
 }
-.fontawesome-volume-down:before {
+.fa-volume-down:before {
   content: "\f027";
 }
-.fontawesome-volume-up:before {
+.fa-volume-up:before {
   content: "\f028";
 }
-.fontawesome-qrcode:before {
+.fa-qrcode:before {
   content: "\f029";
 }
-.fontawesome-barcode:before {
+.fa-barcode:before {
   content: "\f02a";
 }
-.fontawesome-tag:before {
+.fa-tag:before {
   content: "\f02b";
 }
-.fontawesome-tags:before {
+.fa-tags:before {
   content: "\f02c";
 }
-.fontawesome-book:before {
+.fa-book:before {
   content: "\f02d";
 }
-.fontawesome-bookmark:before {
+.fa-bookmark:before {
   content: "\f02e";
 }
-.fontawesome-print:before {
+.fa-print:before {
   content: "\f02f";
 }
-.fontawesome-camera:before {
+.fa-camera:before {
   content: "\f030";
 }
-.fontawesome-font:before {
+.fa-font:before {
   content: "\f031";
 }
-.fontawesome-bold:before {
+.fa-bold:before {
   content: "\f032";
 }
-.fontawesome-italic:before {
+.fa-italic:before {
   content: "\f033";
 }
-.fontawesome-text-height:before {
+.fa-text-height:before {
   content: "\f034";
 }
-.fontawesome-text-width:before {
+.fa-text-width:before {
   content: "\f035";
 }
-.fontawesome-align-left:before {
+.fa-align-left:before {
   content: "\f036";
 }
-.fontawesome-align-center:before {
+.fa-align-center:before {
   content: "\f037";
 }
-.fontawesome-align-right:before {
+.fa-align-right:before {
   content: "\f038";
 }
-.fontawesome-align-justify:before {
+.fa-align-justify:before {
   content: "\f039";
 }
-.fontawesome-list:before {
+.fa-list:before {
   content: "\f03a";
 }
-.fontawesome-indent-left:before {
+.fa-dedent:before,
+.fa-outdent:before {
   content: "\f03b";
 }
-.fontawesome-indent-right:before {
+.fa-indent:before {
   content: "\f03c";
 }
-.fontawesome-facetime-video:before {
+.fa-video-camera:before {
   content: "\f03d";
 }
-.fontawesome-picture:before {
+.fa-picture-o:before {
   content: "\f03e";
 }
-.fontawesome-pencil:before {
+.fa-pencil:before {
   content: "\f040";
 }
-.fontawesome-map-marker:before {
+.fa-map-marker:before {
   content: "\f041";
 }
-.fontawesome-adjust:before {
+.fa-adjust:before {
   content: "\f042";
 }
-.fontawesome-tint:before {
+.fa-tint:before {
   content: "\f043";
 }
-.fontawesome-edit:before {
+.fa-edit:before,
+.fa-pencil-square-o:before {
   content: "\f044";
 }
-.fontawesome-share:before {
+.fa-share-square-o:before {
   content: "\f045";
 }
-.fontawesome-check:before {
+.fa-check-square-o:before {
   content: "\f046";
 }
-.fontawesome-move:before {
+.fa-arrows:before {
   content: "\f047";
 }
-.fontawesome-step-backward:before {
+.fa-step-backward:before {
   content: "\f048";
 }
-.fontawesome-fast-backward:before {
+.fa-fast-backward:before {
   content: "\f049";
 }
-.fontawesome-backward:before {
+.fa-backward:before {
   content: "\f04a";
 }
-.fontawesome-play:before {
+.fa-play:before {
   content: "\f04b";
 }
-.fontawesome-pause:before {
+.fa-pause:before {
   content: "\f04c";
 }
-.fontawesome-stop:before {
+.fa-stop:before {
   content: "\f04d";
 }
-.fontawesome-forward:before {
+.fa-forward:before {
   content: "\f04e";
 }
-.fontawesome-fast-forward:before {
+.fa-fast-forward:before {
   content: "\f050";
 }
-.fontawesome-step-forward:before {
+.fa-step-forward:before {
   content: "\f051";
 }
-.fontawesome-eject:before {
+.fa-eject:before {
   content: "\f052";
 }
-.fontawesome-chevron-left:before {
+.fa-chevron-left:before {
   content: "\f053";
 }
-.fontawesome-chevron-right:before {
+.fa-chevron-right:before {
   content: "\f054";
 }
-.fontawesome-plus-sign:before {
+.fa-plus-circle:before {
   content: "\f055";
 }
-.fontawesome-minus-sign:before {
+.fa-minus-circle:before {
   content: "\f056";
 }
-.fontawesome-remove-sign:before {
+.fa-times-circle:before {
   content: "\f057";
 }
-.fontawesome-ok-sign:before {
+.fa-check-circle:before {
   content: "\f058";
 }
-.fontawesome-question-sign:before {
+.fa-question-circle:before {
   content: "\f059";
 }
-.fontawesome-info-sign:before {
+.fa-info-circle:before {
   content: "\f05a";
 }
-.fontawesome-screenshot:before {
+.fa-crosshairs:before {
   content: "\f05b";
 }
-.fontawesome-remove-circle:before {
+.fa-times-circle-o:before {
   content: "\f05c";
 }
-.fontawesome-ok-circle:before {
+.fa-check-circle-o:before {
   content: "\f05d";
 }
-.fontawesome-ban-circle:before {
+.fa-ban:before {
   content: "\f05e";
 }
-.fontawesome-arrow-left:before {
+.fa-arrow-left:before {
   content: "\f060";
 }
-.fontawesome-arrow-right:before {
+.fa-arrow-right:before {
   content: "\f061";
 }
-.fontawesome-arrow-up:before {
+.fa-arrow-up:before {
   content: "\f062";
 }
-.fontawesome-arrow-down:before {
+.fa-arrow-down:before {
   content: "\f063";
 }
-.fontawesome-mail-forward:before,
-.fontawesome-share-alt:before {
+.fa-mail-forward:before,
+.fa-share:before {
   content: "\f064";
 }
-.fontawesome-resize-full:before {
+.fa-expand:before {
   content: "\f065";
 }
-.fontawesome-resize-small:before {
+.fa-compress:before {
   content: "\f066";
 }
-.fontawesome-plus:before {
+.fa-plus:before {
   content: "\f067";
 }
-.fontawesome-minus:before {
+.fa-minus:before {
   content: "\f068";
 }
-.fontawesome-asterisk:before {
+.fa-asterisk:before {
   content: "\f069";
 }
-.fontawesome-exclamation-sign:before {
+.fa-exclamation-circle:before {
   content: "\f06a";
 }
-.fontawesome-gift:before {
+.fa-gift:before {
   content: "\f06b";
 }
-.fontawesome-leaf:before {
+.fa-leaf:before {
   content: "\f06c";
 }
-.fontawesome-fire:before {
+.fa-fire:before {
   content: "\f06d";
 }
-.fontawesome-eye-open:before {
+.fa-eye:before {
   content: "\f06e";
 }
-.fontawesome-eye-close:before {
+.fa-eye-slash:before {
   content: "\f070";
 }
-.fontawesome-warning-sign:before {
+.fa-warning:before,
+.fa-exclamation-triangle:before {
   content: "\f071";
 }
-.fontawesome-plane:before {
+.fa-plane:before {
   content: "\f072";
 }
-.fontawesome-calendar:before {
+.fa-calendar:before {
   content: "\f073";
 }
-.fontawesome-random:before {
+.fa-random:before {
   content: "\f074";
 }
-.fontawesome-comment:before {
+.fa-comment:before {
   content: "\f075";
 }
-.fontawesome-magnet:before {
+.fa-magnet:before {
   content: "\f076";
 }
-.fontawesome-chevron-up:before {
+.fa-chevron-up:before {
   content: "\f077";
 }
-.fontawesome-chevron-down:before {
+.fa-chevron-down:before {
   content: "\f078";
 }
-.fontawesome-retweet:before {
+.fa-retweet:before {
   content: "\f079";
 }
-.fontawesome-shopping-cart:before {
+.fa-shopping-cart:before {
   content: "\f07a";
 }
-.fontawesome-folder-close:before {
+.fa-folder:before {
   content: "\f07b";
 }
-.fontawesome-folder-open:before {
+.fa-folder-open:before {
   content: "\f07c";
 }
-.fontawesome-resize-vertical:before {
+.fa-arrows-v:before {
   content: "\f07d";
 }
-.fontawesome-resize-horizontal:before {
+.fa-arrows-h:before {
   content: "\f07e";
 }
-.fontawesome-bar-chart:before {
+.fa-bar-chart-o:before {
   content: "\f080";
 }
-.fontawesome-twitter-sign:before {
+.fa-twitter-square:before {
   content: "\f081";
 }
-.fontawesome-facebook-sign:before {
+.fa-facebook-square:before {
   content: "\f082";
 }
-.fontawesome-camera-retro:before {
+.fa-camera-retro:before {
   content: "\f083";
 }
-.fontawesome-key:before {
+.fa-key:before {
   content: "\f084";
 }
-.fontawesome-gears:before,
-.fontawesome-cogs:before {
+.fa-gears:before,
+.fa-cogs:before {
   content: "\f085";
 }
-.fontawesome-comments:before {
+.fa-comments:before {
   content: "\f086";
 }
-.fontawesome-thumbs-up-alt:before {
+.fa-thumbs-o-up:before {
   content: "\f087";
 }
-.fontawesome-thumbs-down-alt:before {
+.fa-thumbs-o-down:before {
   content: "\f088";
 }
-.fontawesome-star-half:before {
+.fa-star-half:before {
   content: "\f089";
 }
-.fontawesome-heart-empty:before {
+.fa-heart-o:before {
   content: "\f08a";
 }
-.fontawesome-signout:before {
+.fa-sign-out:before {
   content: "\f08b";
 }
-.fontawesome-linkedin-sign:before {
+.fa-linkedin-square:before {
   content: "\f08c";
 }
-.fontawesome-pushpin:before {
+.fa-thumb-tack:before {
   content: "\f08d";
 }
-.fontawesome-external-link:before {
+.fa-external-link:before {
   content: "\f08e";
 }
-.fontawesome-signin:before {
+.fa-sign-in:before {
   content: "\f090";
 }
-.fontawesome-trophy:before {
+.fa-trophy:before {
   content: "\f091";
 }
-.fontawesome-github-sign:before {
+.fa-github-square:before {
   content: "\f092";
 }
-.fontawesome-upload-alt:before {
+.fa-upload:before {
   content: "\f093";
 }
-.fontawesome-lemon:before {
+.fa-lemon-o:before {
   content: "\f094";
 }
-.fontawesome-phone:before {
+.fa-phone:before {
   content: "\f095";
 }
-.fontawesome-unchecked:before,
-.fontawesome-check-empty:before {
+.fa-square-o:before {
   content: "\f096";
 }
-.fontawesome-bookmark-empty:before {
+.fa-bookmark-o:before {
   content: "\f097";
 }
-.fontawesome-phone-sign:before {
+.fa-phone-square:before {
   content: "\f098";
 }
-.fontawesome-twitter:before {
+.fa-twitter:before {
   content: "\f099";
 }
-.fontawesome-facebook:before {
+.fa-facebook:before {
   content: "\f09a";
 }
-.fontawesome-github:before {
+.fa-github:before {
   content: "\f09b";
 }
-.fontawesome-unlock:before {
+.fa-unlock:before {
   content: "\f09c";
 }
-.fontawesome-credit-card:before {
+.fa-credit-card:before {
   content: "\f09d";
 }
-.fontawesome-rss:before {
+.fa-rss:before {
   content: "\f09e";
 }
-.fontawesome-hdd:before {
+.fa-hdd-o:before {
   content: "\f0a0";
 }
-.fontawesome-bullhorn:before {
+.fa-bullhorn:before {
   content: "\f0a1";
 }
-.fontawesome-bell:before {
-  content: "\f0a2";
-}
-.fontawesome-certificate:before {
-  content: "\f0a3";
-}
-.fontawesome-hand-right:before {
-  content: "\f0a4";
-}
-.fontawesome-hand-left:before {
-  content: "\f0a5";
-}
-.fontawesome-hand-up:before {
-  content: "\f0a6";
-}
-.fontawesome-hand-down:before {
-  content: "\f0a7";
-}
-.fontawesome-circle-arrow-left:before {
-  content: "\f0a8";
-}
-.fontawesome-circle-arrow-right:before {
-  content: "\f0a9";
-}
-.fontawesome-circle-arrow-up:before {
-  content: "\f0aa";
-}
-.fontawesome-circle-arrow-down:before {
-  content: "\f0ab";
-}
-.fontawesome-globe:before {
-  content: "\f0ac";
-}
-.fontawesome-wrench:before {
-  content: "\f0ad";
-}
-.fontawesome-tasks:before {
-  content: "\f0ae";
-}
-.fontawesome-filter:before {
-  content: "\f0b0";
-}
-.fontawesome-briefcase:before {
-  content: "\f0b1";
-}
-.fontawesome-fullscreen:before {
-  content: "\f0b2";
-}
-.fontawesome-group:before {
-  content: "\f0c0";
-}
-.fontawesome-link:before {
-  content: "\f0c1";
-}
-.fontawesome-cloud:before {
-  content: "\f0c2";
-}
-.fontawesome-beaker:before {
-  content: "\f0c3";
-}
-.fontawesome-cut:before {
-  content: "\f0c4";
-}
-.fontawesome-copy:before {
-  content: "\f0c5";
-}
-.fontawesome-paperclip:before,
-.fontawesome-paper-clip:before {
-  content: "\f0c6";
-}
-.fontawesome-save:before {
-  content: "\f0c7";
-}
-.fontawesome-sign-blank:before {
-  content: "\f0c8";
-}
-.fontawesome-reorder:before {
-  content: "\f0c9";
-}
-.fontawesome-list-ul:before {
-  content: "\f0ca";
-}
-.fontawesome-list-ol:before {
-  content: "\f0cb";
-}
-.fontawesome-strikethrough:before {
-  content: "\f0cc";
-}
-.fontawesome-underline:before {
-  content: "\f0cd";
-}
-.fontawesome-table:before {
-  content: "\f0ce";
-}
-.fontawesome-magic:before {
-  content: "\f0d0";
-}
-.fontawesome-truck:before {
-  content: "\f0d1";
-}
-.fontawesome-pinterest:before {
-  content: "\f0d2";
-}
-.fontawesome-pinterest-sign:before {
-  content: "\f0d3";
-}
-.fontawesome-google-plus-sign:before {
-  content: "\f0d4";
-}
-.fontawesome-google-plus:before {
-  content: "\f0d5";
-}
-.fontawesome-money:before {
-  content: "\f0d6";
-}
-.fontawesome-caret-down:before {
-  content: "\f0d7";
-}
-.fontawesome-caret-up:before {
-  content: "\f0d8";
-}
-.fontawesome-caret-left:before {
-  content: "\f0d9";
-}
-.fontawesome-caret-right:before {
-  content: "\f0da";
-}
-.fontawesome-columns:before {
-  content: "\f0db";
-}
-.fontawesome-sort:before {
-  content: "\f0dc";
-}
-.fontawesome-sort-down:before {
-  content: "\f0dd";
-}
-.fontawesome-sort-up:before {
-  content: "\f0de";
-}
-.fontawesome-envelope:before {
-  content: "\f0e0";
-}
-.fontawesome-linkedin:before {
-  content: "\f0e1";
-}
-.fontawesome-rotate-left:before,
-.fontawesome-undo:before {
-  content: "\f0e2";
-}
-.fontawesome-legal:before {
-  content: "\f0e3";
-}
-.fontawesome-dashboard:before {
-  content: "\f0e4";
-}
-.fontawesome-comment-alt:before {
-  content: "\f0e5";
-}
-.fontawesome-comments-alt:before {
-  content: "\f0e6";
-}
-.fontawesome-bolt:before {
-  content: "\f0e7";
-}
-.fontawesome-sitemap:before {
-  content: "\f0e8";
-}
-.fontawesome-umbrella:before {
-  content: "\f0e9";
-}
-.fontawesome-paste:before {
-  content: "\f0ea";
-}
-.fontawesome-lightbulb:before {
-  content: "\f0eb";
-}
-.fontawesome-exchange:before {
-  content: "\f0ec";
-}
-.fontawesome-cloud-download:before {
-  content: "\f0ed";
-}
-.fontawesome-cloud-upload:before {
-  content: "\f0ee";
-}
-.fontawesome-user-md:before {
-  content: "\f0f0";
-}
-.fontawesome-stethoscope:before {
-  content: "\f0f1";
-}
-.fontawesome-suitcase:before {
-  content: "\f0f2";
-}
-.fontawesome-bell-alt:before {
+.fa-bell:before {
   content: "\f0f3";
 }
-.fontawesome-coffee:before {
+.fa-certificate:before {
+  content: "\f0a3";
+}
+.fa-hand-o-right:before {
+  content: "\f0a4";
+}
+.fa-hand-o-left:before {
+  content: "\f0a5";
+}
+.fa-hand-o-up:before {
+  content: "\f0a6";
+}
+.fa-hand-o-down:before {
+  content: "\f0a7";
+}
+.fa-arrow-circle-left:before {
+  content: "\f0a8";
+}
+.fa-arrow-circle-right:before {
+  content: "\f0a9";
+}
+.fa-arrow-circle-up:before {
+  content: "\f0aa";
+}
+.fa-arrow-circle-down:before {
+  content: "\f0ab";
+}
+.fa-globe:before {
+  content: "\f0ac";
+}
+.fa-wrench:before {
+  content: "\f0ad";
+}
+.fa-tasks:before {
+  content: "\f0ae";
+}
+.fa-filter:before {
+  content: "\f0b0";
+}
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+.fa-arrows-alt:before {
+  content: "\f0b2";
+}
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0";
+}
+.fa-chain:before,
+.fa-link:before {
+  content: "\f0c1";
+}
+.fa-cloud:before {
+  content: "\f0c2";
+}
+.fa-flask:before {
+  content: "\f0c3";
+}
+.fa-cut:before,
+.fa-scissors:before {
+  content: "\f0c4";
+}
+.fa-copy:before,
+.fa-files-o:before {
+  content: "\f0c5";
+}
+.fa-paperclip:before {
+  content: "\f0c6";
+}
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "\f0c7";
+}
+.fa-square:before {
+  content: "\f0c8";
+}
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-list-ul:before {
+  content: "\f0ca";
+}
+.fa-list-ol:before {
+  content: "\f0cb";
+}
+.fa-strikethrough:before {
+  content: "\f0cc";
+}
+.fa-underline:before {
+  content: "\f0cd";
+}
+.fa-table:before {
+  content: "\f0ce";
+}
+.fa-magic:before {
+  content: "\f0d0";
+}
+.fa-truck:before {
+  content: "\f0d1";
+}
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+.fa-pinterest-square:before {
+  content: "\f0d3";
+}
+.fa-google-plus-square:before {
+  content: "\f0d4";
+}
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+.fa-money:before {
+  content: "\f0d6";
+}
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+.fa-caret-up:before {
+  content: "\f0d8";
+}
+.fa-caret-left:before {
+  content: "\f0d9";
+}
+.fa-caret-right:before {
+  content: "\f0da";
+}
+.fa-columns:before {
+  content: "\f0db";
+}
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "\f0dc";
+}
+.fa-sort-down:before,
+.fa-sort-asc:before {
+  content: "\f0dd";
+}
+.fa-sort-up:before,
+.fa-sort-desc:before {
+  content: "\f0de";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "\f0e2";
+}
+.fa-legal:before,
+.fa-gavel:before {
+  content: "\f0e3";
+}
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "\f0e4";
+}
+.fa-comment-o:before {
+  content: "\f0e5";
+}
+.fa-comments-o:before {
+  content: "\f0e6";
+}
+.fa-flash:before,
+.fa-bolt:before {
+  content: "\f0e7";
+}
+.fa-sitemap:before {
+  content: "\f0e8";
+}
+.fa-umbrella:before {
+  content: "\f0e9";
+}
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "\f0ea";
+}
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+}
+.fa-exchange:before {
+  content: "\f0ec";
+}
+.fa-cloud-download:before {
+  content: "\f0ed";
+}
+.fa-cloud-upload:before {
+  content: "\f0ee";
+}
+.fa-user-md:before {
+  content: "\f0f0";
+}
+.fa-stethoscope:before {
+  content: "\f0f1";
+}
+.fa-suitcase:before {
+  content: "\f0f2";
+}
+.fa-bell-o:before {
+  content: "\f0a2";
+}
+.fa-coffee:before {
   content: "\f0f4";
 }
-.fontawesome-food:before {
+.fa-cutlery:before {
   content: "\f0f5";
 }
-.fontawesome-file-text-alt:before {
+.fa-file-text-o:before {
   content: "\f0f6";
 }
-.fontawesome-building:before {
+.fa-building-o:before {
   content: "\f0f7";
 }
-.fontawesome-hospital:before {
+.fa-hospital-o:before {
   content: "\f0f8";
 }
-.fontawesome-ambulance:before {
+.fa-ambulance:before {
   content: "\f0f9";
 }
-.fontawesome-medkit:before {
+.fa-medkit:before {
   content: "\f0fa";
 }
-.fontawesome-fighter-jet:before {
+.fa-fighter-jet:before {
   content: "\f0fb";
 }
-.fontawesome-beer:before {
+.fa-beer:before {
   content: "\f0fc";
 }
-.fontawesome-h-sign:before {
+.fa-h-square:before {
   content: "\f0fd";
 }
-.fontawesome-plus-sign-alt:before {
+.fa-plus-square:before {
   content: "\f0fe";
 }
-.fontawesome-double-angle-left:before {
+.fa-angle-double-left:before {
   content: "\f100";
 }
-.fontawesome-double-angle-right:before {
+.fa-angle-double-right:before {
   content: "\f101";
 }
-.fontawesome-double-angle-up:before {
+.fa-angle-double-up:before {
   content: "\f102";
 }
-.fontawesome-double-angle-down:before {
+.fa-angle-double-down:before {
   content: "\f103";
 }
-.fontawesome-angle-left:before {
+.fa-angle-left:before {
   content: "\f104";
 }
-.fontawesome-angle-right:before {
+.fa-angle-right:before {
   content: "\f105";
 }
-.fontawesome-angle-up:before {
+.fa-angle-up:before {
   content: "\f106";
 }
-.fontawesome-angle-down:before {
+.fa-angle-down:before {
   content: "\f107";
 }
-.fontawesome-desktop:before {
+.fa-desktop:before {
   content: "\f108";
 }
-.fontawesome-laptop:before {
+.fa-laptop:before {
   content: "\f109";
 }
-.fontawesome-tablet:before {
+.fa-tablet:before {
   content: "\f10a";
 }
-.fontawesome-mobile-phone:before {
+.fa-mobile-phone:before,
+.fa-mobile:before {
   content: "\f10b";
 }
-.fontawesome-circle-blank:before {
+.fa-circle-o:before {
   content: "\f10c";
 }
-.fontawesome-quote-left:before {
+.fa-quote-left:before {
   content: "\f10d";
 }
-.fontawesome-quote-right:before {
+.fa-quote-right:before {
   content: "\f10e";
 }
-.fontawesome-spinner:before {
+.fa-spinner:before {
   content: "\f110";
 }
-.fontawesome-circle:before {
+.fa-circle:before {
   content: "\f111";
 }
-.fontawesome-mail-reply:before,
-.fontawesome-reply:before {
+.fa-mail-reply:before,
+.fa-reply:before {
   content: "\f112";
 }
-.fontawesome-github-alt:before {
+.fa-github-alt:before {
   content: "\f113";
 }
-.fontawesome-folder-close-alt:before {
+.fa-folder-o:before {
   content: "\f114";
 }
-.fontawesome-folder-open-alt:before {
+.fa-folder-open-o:before {
   content: "\f115";
 }
-.fontawesome-expand-alt:before {
-  content: "\f116";
-}
-.fontawesome-collapse-alt:before {
-  content: "\f117";
-}
-.fontawesome-smile:before {
+.fa-smile-o:before {
   content: "\f118";
 }
-.fontawesome-frown:before {
+.fa-frown-o:before {
   content: "\f119";
 }
-.fontawesome-meh:before {
+.fa-meh-o:before {
   content: "\f11a";
 }
-.fontawesome-gamepad:before {
+.fa-gamepad:before {
   content: "\f11b";
 }
-.fontawesome-keyboard:before {
+.fa-keyboard-o:before {
   content: "\f11c";
 }
-.fontawesome-flag-alt:before {
+.fa-flag-o:before {
   content: "\f11d";
 }
-.fontawesome-flag-checkered:before {
+.fa-flag-checkered:before {
   content: "\f11e";
 }
-.fontawesome-terminal:before {
+.fa-terminal:before {
   content: "\f120";
 }
-.fontawesome-code:before {
+.fa-code:before {
   content: "\f121";
 }
-.fontawesome-reply-all:before {
+.fa-reply-all:before {
   content: "\f122";
 }
-.fontawesome-mail-reply-all:before {
+.fa-mail-reply-all:before {
   content: "\f122";
 }
-.fontawesome-star-half-full:before,
-.fontawesome-star-half-empty:before {
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
   content: "\f123";
 }
-.fontawesome-location-arrow:before {
+.fa-location-arrow:before {
   content: "\f124";
 }
-.fontawesome-crop:before {
+.fa-crop:before {
   content: "\f125";
 }
-.fontawesome-code-fork:before {
+.fa-code-fork:before {
   content: "\f126";
 }
-.fontawesome-unlink:before {
+.fa-unlink:before,
+.fa-chain-broken:before {
   content: "\f127";
 }
-.fontawesome-question:before {
+.fa-question:before {
   content: "\f128";
 }
-.fontawesome-info:before {
+.fa-info:before {
   content: "\f129";
 }
-.fontawesome-exclamation:before {
+.fa-exclamation:before {
   content: "\f12a";
 }
-.fontawesome-superscript:before {
+.fa-superscript:before {
   content: "\f12b";
 }
-.fontawesome-subscript:before {
+.fa-subscript:before {
   content: "\f12c";
 }
-.fontawesome-eraser:before {
+.fa-eraser:before {
   content: "\f12d";
 }
-.fontawesome-puzzle-piece:before {
+.fa-puzzle-piece:before {
   content: "\f12e";
 }
-.fontawesome-microphone:before {
+.fa-microphone:before {
   content: "\f130";
 }
-.fontawesome-microphone-off:before {
+.fa-microphone-slash:before {
   content: "\f131";
 }
-.fontawesome-shield:before {
+.fa-shield:before {
   content: "\f132";
 }
-.fontawesome-calendar-empty:before {
+.fa-calendar-o:before {
   content: "\f133";
 }
-.fontawesome-fire-extinguisher:before {
+.fa-fire-extinguisher:before {
   content: "\f134";
 }
-.fontawesome-rocket:before {
+.fa-rocket:before {
   content: "\f135";
 }
-.fontawesome-maxcdn:before {
+.fa-maxcdn:before {
   content: "\f136";
 }
-.fontawesome-chevron-sign-left:before {
+.fa-chevron-circle-left:before {
   content: "\f137";
 }
-.fontawesome-chevron-sign-right:before {
+.fa-chevron-circle-right:before {
   content: "\f138";
 }
-.fontawesome-chevron-sign-up:before {
+.fa-chevron-circle-up:before {
   content: "\f139";
 }
-.fontawesome-chevron-sign-down:before {
+.fa-chevron-circle-down:before {
   content: "\f13a";
 }
-.fontawesome-html5:before {
+.fa-html5:before {
   content: "\f13b";
 }
-.fontawesome-css3:before {
+.fa-css3:before {
   content: "\f13c";
 }
-.fontawesome-anchor:before {
+.fa-anchor:before {
   content: "\f13d";
 }
-.fontawesome-unlock-alt:before {
+.fa-unlock-alt:before {
   content: "\f13e";
 }
-.fontawesome-bullseye:before {
+.fa-bullseye:before {
   content: "\f140";
 }
-.fontawesome-ellipsis-horizontal:before {
+.fa-ellipsis-h:before {
   content: "\f141";
 }
-.fontawesome-ellipsis-vertical:before {
+.fa-ellipsis-v:before {
   content: "\f142";
 }
-.fontawesome-rss-sign:before {
+.fa-rss-square:before {
   content: "\f143";
 }
-.fontawesome-play-sign:before {
+.fa-play-circle:before {
   content: "\f144";
 }
-.fontawesome-ticket:before {
+.fa-ticket:before {
   content: "\f145";
 }
-.fontawesome-minus-sign-alt:before {
+.fa-minus-square:before {
   content: "\f146";
 }
-.fontawesome-check-minus:before {
+.fa-minus-square-o:before {
   content: "\f147";
 }
-.fontawesome-level-up:before {
+.fa-level-up:before {
   content: "\f148";
 }
-.fontawesome-level-down:before {
+.fa-level-down:before {
   content: "\f149";
 }
-.fontawesome-check-sign:before {
+.fa-check-square:before {
   content: "\f14a";
 }
-.fontawesome-edit-sign:before {
+.fa-pencil-square:before {
   content: "\f14b";
 }
-.fontawesome-external-link-sign:before {
+.fa-external-link-square:before {
   content: "\f14c";
 }
-.fontawesome-share-sign:before {
+.fa-share-square:before {
   content: "\f14d";
 }
-.fontawesome-compass:before {
+.fa-compass:before {
   content: "\f14e";
 }
-.fontawesome-collapse:before {
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
   content: "\f150";
 }
-.fontawesome-collapse-top:before {
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
   content: "\f151";
 }
-.fontawesome-expand:before {
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
   content: "\f152";
 }
-.fontawesome-euro:before,
-.fontawesome-eur:before {
+.fa-euro:before,
+.fa-eur:before {
   content: "\f153";
 }
-.fontawesome-gbp:before {
+.fa-gbp:before {
   content: "\f154";
 }
-.fontawesome-dollar:before,
-.fontawesome-usd:before {
+.fa-dollar:before,
+.fa-usd:before {
   content: "\f155";
 }
-.fontawesome-rupee:before,
-.fontawesome-inr:before {
+.fa-rupee:before,
+.fa-inr:before {
   content: "\f156";
 }
-.fontawesome-yen:before,
-.fontawesome-jpy:before {
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
   content: "\f157";
 }
-.fontawesome-renminbi:before,
-.fontawesome-cny:before {
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
   content: "\f158";
 }
-.fontawesome-won:before,
-.fontawesome-krw:before {
+.fa-won:before,
+.fa-krw:before {
   content: "\f159";
 }
-.fontawesome-bitcoin:before,
-.fontawesome-btc:before {
+.fa-bitcoin:before,
+.fa-btc:before {
   content: "\f15a";
 }
-.fontawesome-file:before {
+.fa-file:before {
   content: "\f15b";
 }
-.fontawesome-file-text:before {
+.fa-file-text:before {
   content: "\f15c";
 }
-.fontawesome-sort-by-alphabet:before {
+.fa-sort-alpha-asc:before {
   content: "\f15d";
 }
-.fontawesome-sort-by-alphabet-alt:before {
+.fa-sort-alpha-desc:before {
   content: "\f15e";
 }
-.fontawesome-sort-by-attributes:before {
+.fa-sort-amount-asc:before {
   content: "\f160";
 }
-.fontawesome-sort-by-attributes-alt:before {
+.fa-sort-amount-desc:before {
   content: "\f161";
 }
-.fontawesome-sort-by-order:before {
+.fa-sort-numeric-asc:before {
   content: "\f162";
 }
-.fontawesome-sort-by-order-alt:before {
+.fa-sort-numeric-desc:before {
   content: "\f163";
 }
-.fontawesome-thumbs-up:before {
+.fa-thumbs-up:before {
   content: "\f164";
 }
-.fontawesome-thumbs-down:before {
+.fa-thumbs-down:before {
   content: "\f165";
 }
-.fontawesome-youtube-sign:before {
+.fa-youtube-square:before {
   content: "\f166";
 }
-.fontawesome-youtube:before {
+.fa-youtube:before {
   content: "\f167";
 }
-.fontawesome-xing:before {
+.fa-xing:before {
   content: "\f168";
 }
-.fontawesome-xing-sign:before {
+.fa-xing-square:before {
   content: "\f169";
 }
-.fontawesome-youtube-play:before {
+.fa-youtube-play:before {
   content: "\f16a";
 }
-.fontawesome-dropbox:before {
+.fa-dropbox:before {
   content: "\f16b";
 }
-.fontawesome-stackexchange:before {
+.fa-stack-overflow:before {
   content: "\f16c";
 }
-.fontawesome-instagram:before {
+.fa-instagram:before {
   content: "\f16d";
 }
-.fontawesome-flickr:before {
+.fa-flickr:before {
   content: "\f16e";
 }
-.fontawesome-adn:before {
+.fa-adn:before {
   content: "\f170";
 }
-.fontawesome-bitbucket:before {
+.fa-bitbucket:before {
   content: "\f171";
 }
-.fontawesome-bitbucket-sign:before {
+.fa-bitbucket-square:before {
   content: "\f172";
 }
-.fontawesome-tumblr:before {
+.fa-tumblr:before {
   content: "\f173";
 }
-.fontawesome-tumblr-sign:before {
+.fa-tumblr-square:before {
   content: "\f174";
 }
-.fontawesome-long-arrow-down:before {
+.fa-long-arrow-down:before {
   content: "\f175";
 }
-.fontawesome-long-arrow-up:before {
+.fa-long-arrow-up:before {
   content: "\f176";
 }
-.fontawesome-long-arrow-left:before {
+.fa-long-arrow-left:before {
   content: "\f177";
 }
-.fontawesome-long-arrow-right:before {
+.fa-long-arrow-right:before {
   content: "\f178";
 }
-.fontawesome-apple:before {
+.fa-apple:before {
   content: "\f179";
 }
-.fontawesome-windows:before {
+.fa-windows:before {
   content: "\f17a";
 }
-.fontawesome-android:before {
+.fa-android:before {
   content: "\f17b";
 }
-.fontawesome-linux:before {
+.fa-linux:before {
   content: "\f17c";
 }
-.fontawesome-dribbble:before {
+.fa-dribbble:before {
   content: "\f17d";
 }
-.fontawesome-skype:before {
+.fa-skype:before {
   content: "\f17e";
 }
-.fontawesome-foursquare:before {
+.fa-foursquare:before {
   content: "\f180";
 }
-.fontawesome-trello:before {
+.fa-trello:before {
   content: "\f181";
 }
-.fontawesome-female:before {
+.fa-female:before {
   content: "\f182";
 }
-.fontawesome-male:before {
+.fa-male:before {
   content: "\f183";
 }
-.fontawesome-gittip:before {
+.fa-gittip:before {
   content: "\f184";
 }
-.fontawesome-sun:before {
+.fa-sun-o:before {
   content: "\f185";
 }
-.fontawesome-moon:before {
+.fa-moon-o:before {
   content: "\f186";
 }
-.fontawesome-archive:before {
+.fa-archive:before {
   content: "\f187";
 }
-.fontawesome-bug:before {
+.fa-bug:before {
   content: "\f188";
 }
-.fontawesome-vk:before {
+.fa-vk:before {
   content: "\f189";
 }
-.fontawesome-weibo:before {
+.fa-weibo:before {
   content: "\f18a";
 }
-.fontawesome-renren:before {
+.fa-renren:before {
   content: "\f18b";
+}
+.fa-pagelines:before {
+  content: "\f18c";
+}
+.fa-stack-exchange:before {
+  content: "\f18d";
+}
+.fa-arrow-circle-o-right:before {
+  content: "\f18e";
+}
+.fa-arrow-circle-o-left:before {
+  content: "\f190";
+}
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "\f191";
+}
+.fa-dot-circle-o:before {
+  content: "\f192";
+}
+.fa-wheelchair:before {
+  content: "\f193";
+}
+.fa-vimeo-square:before {
+  content: "\f194";
+}
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "\f195";
+}
+.fa-plus-square-o:before {
+  content: "\f196";
 }
