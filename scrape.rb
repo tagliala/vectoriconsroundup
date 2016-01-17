@@ -1,35 +1,69 @@
 require 'rest-client'
+require 'ostruct'
+require 'byebug'
 
-def icon_names(file, regexp)
-  response = RestClient.get file
-  response.scan(regexp).flatten
+fonts = [
+  OpenStruct.new(
+    name: 'Font Awesome',
+    url: 'https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/scss/_icons.scss',
+    regexp: /^\.\#{\$fa-css-prefix}-(.+):before/
+  ),
+  OpenStruct.new(
+    name: 'Glyphicons',
+    url: 'https://raw.githubusercontent.com/twbs/bootstrap-sass/master/assets/stylesheets/bootstrap/_glyphicons.scss',
+    regexp: /^\.glyphicon-(\S+)\s*{\s&:before/
+  ),
+  OpenStruct.new(
+    name: 'Foundation Icons',
+    url: 'https://raw.githubusercontent.com/zurb/foundation-icon-fonts/master/_foundation-icons.scss',
+    regexp: /^\.fi-(.+):before/
+  ),
+  OpenStruct.new(
+    name: 'Material Design Icons',
+    url: 'https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/master/css/materialdesignicons.css',
+    regexp: /^\.mdi-(.+):before/
+  ),
+  OpenStruct.new(
+    name: 'Ionicons',
+    url: 'https://raw.githubusercontent.com/driftyco/ionicons/master/scss/_ionicons-icons.scss',
+    regexp: /^\.\#{\$ionicons-prefix}(.+):before/
+  ),
+  OpenStruct.new(
+    name: 'Elusive icons',
+    url: 'https://raw.githubusercontent.com/reduxframework/elusive-icons/master/scss/_icons.scss',
+    regexp: /^\.\#{\$el-css-prefix}-(.+):before/
+  ),
+]
+
+def glyph_classes_from_font(font)
+  response = RestClient.get font.url
+  response.scan(font.regexp).flatten
 end
 
-puts "Scraping Font Awesome..."
-fa_icons = icon_names 'https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/scss/_icons.scss', /^\.\#{\$fa-css-prefix}-(.+):before/
-puts "Done. Found #{fa_icons.count} classes\n\n"
+def scrape(font)
+  puts "Scraping #{font.name}"
+  classes = glyph_classes_from_font font
+  puts "Done. Found #{classes.count} classes"
+  classes
+end
 
-puts "Scraping Glyphicons..."
-gl_icons = icon_names 'https://raw.githubusercontent.com/twbs/bootstrap-sass/master/assets/stylesheets/bootstrap/_glyphicons.scss', /^\.glyphicon-(\S+)\s*{\s&:before/
-puts "Done. Found #{gl_icons.count} classes\n\n"
+icons = []
 
-puts "Scraping Material Design Icons..."
-mdi_icons = icon_names 'https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/master/css/materialdesignicons.css', /^\.mdi-(.+):before/
-puts "Done. Found #{mdi_icons.count} classes\n\n"
+for font in fonts
+  icons += scrape(font)
+  puts "\n\n"
+end
 
-puts "Scraping Ionicons..."
-ion_icons = icon_names 'https://raw.githubusercontent.com/driftyco/ionicons/master/scss/_ionicons-icons.scss', /^\.\#{\$ionicons-prefix}(.+):before/
-puts "Done. Found #{ion_icons.count} classes\n\n"
+icons.uniq!.sort!
 
-puts "Scraping Elusive icons..."
-els_icons = icon_names 'https://raw.githubusercontent.com/reduxframework/elusive-icons/master/scss/_icons.scss', /^\.\#{\$el-css-prefix}-(.+):before/
-puts "Done. Found #{els_icons.count} classes\n\n"
-
-icons = (fa_icons + gl_icons + mdi_icons + ion_icons + els_icons).uniq.sort
-
-puts "Output table"
+output = ["        <tbody id=\"glyphs\">\n"]
 for icon in icons
-  puts <<-HTML
-        <tr><td><a href="##{icon}" id="#{icon}">#{icon}</a></td><td><i class="fa fa-#{icon}"></i></td><td><i class="glyphicon glyphicon-#{icon}"></i></td><td><i class="ion-#{icon}"></i></td><td><i class="mdi mdi-#{icon}"></i></td><td><i class="el el-#{icon}"></i></td></tr>
+  output << <<-HTML
+          <tr><td><a href="##{icon}" id="#{icon}">#{icon}</a></td><td><i class="fa fa-#{icon}"></i></td><td><i class="glyphicon glyphicon-#{icon}"></i></td><td><i class="fi-#{icon}"></i></td><td><i class="ion-#{icon}"></i></td><td><i class="mdi mdi-#{icon}"></i></td><td><i class="el el-#{icon}"></i></td></tr>
   HTML
 end
+output << "        </tbody>"
+
+contents = File.read('index.html')
+new_contents = contents.gsub(/^\s+<tbody id="glyphs">.*<\/tbody>/m, output.join)
+File.open('index.html', 'w') { |file| file.puts new_contents }
