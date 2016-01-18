@@ -14,7 +14,7 @@ fonts = [
     regexp: /^\.glyphicon-(\S+)\s*{\s&:before/
   ),
   OpenStruct.new(
-    name: 'Foundation Icons',
+    name: 'Foundation Icon Fonts',
     url: 'https://raw.githubusercontent.com/zurb/foundation-icon-fonts/master/_foundation-icons.scss',
     regexp: /^\.fi-(.+):before/
   ),
