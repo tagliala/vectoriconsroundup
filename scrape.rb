@@ -19,14 +19,14 @@ fonts = [
     regexp: /^\.fi-(.+):before/
   ),
   OpenStruct.new(
-    name: 'Material Design Icons',
-    url: 'https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/master/css/materialdesignicons.css',
-    regexp: /^\.mdi-(.+):before/
-  ),
-  OpenStruct.new(
     name: 'Ionicons',
     url: 'https://raw.githubusercontent.com/driftyco/ionicons/master/scss/_ionicons-icons.scss',
     regexp: /^\.\#{\$ionicons-prefix}(.+):before/
+  ),
+  OpenStruct.new(
+    name: 'Material Design Icons',
+    url: 'https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/master/css/materialdesignicons.css',
+    regexp: /^\.mdi-(.+):before/
   ),
   OpenStruct.new(
     name: 'Elusive icons',
@@ -56,7 +56,7 @@ end
 
 icons.uniq!.sort!
 
-output = ["        <tbody id=\"glyphs\">\n"]
+output = ["        <tbody id=\"glyphs-j\" class=\"glyphs\">\n"]
 for icon in icons
   output << <<-HTML
           <tr><td><a href="##{icon}" id="#{icon}">#{icon}</a></td><td><i class="fa fa-#{icon}"></i></td><td><i class="glyphicon glyphicon-#{icon}"></i></td><td><i class="fi-#{icon}"></i></td><td><i class="ion-#{icon}"></i></td><td><i class="mdi mdi-#{icon}"></i></td><td><i class="el el-#{icon}"></i></td></tr>
@@ -65,5 +65,5 @@ end
 output << "        </tbody>"
 
 contents = File.read('index.html')
-new_contents = contents.gsub(/^\s+<tbody id="glyphs">.*<\/tbody>/m, output.join)
+new_contents = contents.gsub(/^\s+<tbody id="glyphs-j" class="glyphs">.*<\/tbody>/m, output.join)
 File.open('index.html', 'w') { |file| file.puts new_contents }
