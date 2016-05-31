@@ -18,19 +18,36 @@
     .h1, .h2, .h3, .h4, .h5, .h6 {
       font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-    #pictograms-table {
+
+    iframe {
+      margin: 0;
+      border: none;
+      overflow: hidden;
+      background-color: transparent;
+    }
+
+    .features-table th,
+    .features-table td {
+      text-align: center;
+    }
+
+    .pictograms-table {
       width: auto
     }
-    #pictograms-table td {
+
+    .pictograms-table td {
       vertical-align: middle;
     }
-    #pictograms-table.font-16px tbody i:before {
+
+    .pictograms-table.font-16px tbody i:before {
       font-size: 16px;
     }
-    #pictograms-table.bordered-icons tbody i:before {
+
+    .pictograms-table.bordered-icons tbody i:before {
       border: 1px solid red !important;
     }
-    #pictograms-table.grid-icons tbody i:before {
+
+    .pictograms-table.grid-icons tbody i:before {
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAAE8ahlKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAQ0lEQVR4nIVMsQ0AMAhi4BlnT/YdjyoNHerQlAQNArKq2N2bmUnJiKB4FAAJTXrpvMVwcGHGhuOO4dQx8ADvlD9+GguiuRVnst4HMwAAAB1JREFUeJxj+c8ChAwgxAAiGUA0CosBRQzOw84AANDUBzYGd9ePAAAAAElFTkSuQmCC);
       //background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAIAAAF1CoEkAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAALklEQVR4nFWK0QkAIBBC/XD/JXRPy6OIHoiKMgklVQDYaru+60vE0O3ccOkJPwv2YBqgRmDssQAAABtJREFUeJxj+c8ChAxAAogZQJiFAYyAHDADCAC5agcmkKWTqgAAAABJRU5ErkJggg==);
       -webkit-background-size: 8px 8px;
@@ -39,55 +56,72 @@
               background-size: 8px 8px;
       font-size: 4em;
     }
-    #pictograms-table.mozilla-font-smoothing tbody i:before {
+
+    .pictograms-table.mozilla-font-smoothing tbody i:before {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    #features-table th,
-    #features-table td {
-      text-align: center;
-    }
-    #main-title {
+
+    .main-jumbotron {
       margin-bottom: 0;
       color: #fff;
       background: #3276b1;
     }
+
     .no-margin-bottom {
       margin-bottom: 0;
     }
+
     .twitter-follow-button {
       display: block;
       margin: 10px auto;
     }
-    #asocial {
+
+    .asocial {
       padding-top: 10px;
       background: #eeeeee;
     }
+
     .form-filter {
       margin: 0;
     }
+
     .form-filter .input-group {
       width: 100%;
     }
+
     .form-filter-cell {
       background: #eeeeee;
     }
-    iframe {
-      margin: 0;
-      border: none;
-      overflow: hidden;
-      background-color: transparent;
+
+    .glyphs i {
+      display: inline-block;
+      -webkit-transition: all .525s ease-in-out;
+      transition: all .525s ease-in-out;
+      -webkit-transform: scale(1);
+              transform: scale(1);
     }
-    #features-table th:first-child,
-    #pictograms-table td:first-child {
+
+    .glyphs i.zoom {
+      z-index: 2;
+      position: relative;
+      background: white;
+      -webkit-transform: scale(10);
+              transform: scale(10);
+    }
+
+    .features-table th:first-child,
+    .pictograms-table td:first-child {
       font-size: 10px;
     }
+
     @media(min-width: 481px) {
-      #features-table th:first-child,
-      #pictograms-table td:first-child {
+      .features-table th:first-child,
+      .pictograms-table td:first-child {
         font-size: 14px;
       }
     }
+
     .icons-ul {
       padding-left: 0;
     }
@@ -107,13 +141,13 @@
   <![endif]-->
 </head>
 <body>
-  <div id="main-title" class="jumbotron">
+  <div class="jumbotron main-jumbotron">
     <div class="container">
       <h1>Vector Icons Roundup</h1>
       <h2>A side-by-side comparison between popular icon fonts.</h2>
     </div>
   </div>
-  <div id="asocial">
+  <div class="asocial">
     <div class="container">
       <ul class="list-inline">
         <li><i class="fa fa-github"></i> <a href="https://github.com/tagliala/vectoriconsroundup">tagliala/vectoriconsroundup</a></li>
@@ -168,7 +202,7 @@
     <hr>
     <h2 class="text-center">Features</h2>
     <div class="table-responsive">
-      <table class="table table-striped" id="features-table">
+      <table class="table table-striped features-table">
         <thead>
           <tr>
             <th></th>
@@ -302,7 +336,7 @@
       </div>
     </form>
     <div class="table-responsive">
-      <table class="table" id="pictograms-table">
+      <table class="table pictograms-table" id="pictograms-table-j">
         <thead>
           <tr>
             <th colspan="7" class="form-filter-cell">
@@ -326,7 +360,7 @@
             <th>ELS</th>
           </tr>
         </thead>
-        <tbody id="glyphs">
+        <tbody id="glyphs-j" class="glyphs">
           <tr><td><a href="#500px" id="500px">500px</a></td><td><i class="fa fa-500px"></i></td><td><i class="glyphicon glyphicon-500px"></i></td><td><i class="fi-500px"></i></td><td><i class="ion-500px"></i></td><td><i class="mdi mdi-500px"></i></td><td><i class="el el-500px"></i></td></tr>
           <tr><td><a href="#access-point" id="access-point">access-point</a></td><td><i class="fa fa-access-point"></i></td><td><i class="glyphicon glyphicon-access-point"></i></td><td><i class="fi-access-point"></i></td><td><i class="ion-access-point"></i></td><td><i class="mdi mdi-access-point"></i></td><td><i class="el el-access-point"></i></td></tr>
           <tr><td><a href="#access-point-network" id="access-point-network">access-point-network</a></td><td><i class="fa fa-access-point-network"></i></td><td><i class="glyphicon glyphicon-access-point-network"></i></td><td><i class="fi-access-point-network"></i></td><td><i class="ion-access-point-network"></i></td><td><i class="mdi mdi-access-point-network"></i></td><td><i class="el el-access-point-network"></i></td></tr>
@@ -3293,7 +3327,7 @@
         }
       };
 
-      $pictogramsTable = $('#pictograms-table');
+      $pictogramsTable = $('#pictograms-table-j');
 
       $('#show-borders').on('change', function() {
         $pictogramsTable.toggleClass('bordered-icons');
@@ -3301,6 +3335,10 @@
 
       $('#show-grid').on('change', function() {
         $pictogramsTable.toggleClass('grid-icons');
+      });
+
+      $('#glyphs-j i').hover(function() {
+        $(this).toggleClass('zoom');
       });
 
       $('input[name="font-size"]').on('change', function() {
