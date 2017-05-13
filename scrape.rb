@@ -25,8 +25,8 @@ fonts = [
   ),
   OpenStruct.new(
     name: 'Material Design Icons',
-    url: 'https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/master/css/materialdesignicons.css',
-    regexp: /^\.mdi-(.+):before/
+    url: 'https://raw.githubusercontent.com/Templarian/MaterialDesign-Webfont/master/scss/_variables.scss',
+    regexp: /^    \"([^\"].+)\"\: /
   ),
   OpenStruct.new(
     name: 'Elusive icons',
